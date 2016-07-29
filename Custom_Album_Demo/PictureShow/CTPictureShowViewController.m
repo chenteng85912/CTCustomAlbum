@@ -31,6 +31,8 @@
     }
     return _dataDic;
 }
+
+//删除图片 动画
 - (void)deleteCell:(UIButton *)but{
     
 
@@ -75,10 +77,6 @@
     
     return CGSizeMake((Device_width-4)/3, (Device_width-4)/3);
     
-}
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
-{
-       
 }
 
 - (void)didReceiveMemoryWarning {

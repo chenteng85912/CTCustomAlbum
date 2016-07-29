@@ -11,7 +11,7 @@
 
 @interface CTPictureShowCollecionCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UIButton *deleteBtn;
-@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (weak, nonatomic) IBOutlet UIButton *deleteBtn;//删除按钮
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;//缩略图
 
 @end

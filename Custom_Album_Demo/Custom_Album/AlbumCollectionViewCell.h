@@ -10,9 +10,9 @@
 
 @interface AlbumCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UIButton *selectBut;
-@property (weak, nonatomic) IBOutlet UIImageView *cameraView;
-@property (weak, nonatomic) IBOutlet UIView *backView;
+@property (weak, nonatomic) IBOutlet UIButton *selectBut;//选择按钮
+@property (weak, nonatomic) IBOutlet UIImageView *cameraView;//拍照图标
+@property (weak, nonatomic) IBOutlet UIView *backView;//选中阴影背景
 
-@property (strong, nonatomic) IBOutlet UIImageView *imgView;
+@property (strong, nonatomic) IBOutlet UIImageView *imgView;//缩略图
 @end

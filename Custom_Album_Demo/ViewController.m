@@ -26,13 +26,18 @@
     
     // Do any additional setup after loading the view, typically from a nib.
 }
+
+//选择照片
 - (IBAction)selectPhotoAction:(UIButton *)sender {
+    
+    //选择单张照片 ONE
     if (sender.tag==0) {
         [ONEPhoto shareSigtonPhoto].delegate =self;
         [[ONEPhoto shareSigtonPhoto] openAlbum:self editModal:NO];//打开相册选择单张照片
         //[[ONEPhoto shareSigtonPhoto] openCamera:self editModal:NO];//打开摄像头拍摄单张照片
 
     }else{
+        //选择多张照片 MULTIPLE
         GroupAlbumViewController *album = [GroupAlbumViewController new];
         album.delegate = self;
         album.totalNum = 12;
@@ -41,6 +46,7 @@
     }
 }
 
+//GroupAlbumViewControllerDelegate 多张照片代理
 - (void)sendImageDictionary:(NSDictionary *)imageDic{
     self.oneImage.image = nil;
     if (!self.pictureShow) {
@@ -56,6 +62,8 @@
     [self.pictureShow.colView reloadData];
     
 }
+
+//ONEPhotoDelegate 单张照片代理
 - (void)sendOnePhoto:(UIImage *)image{
     [self.pictureShow.view removeFromSuperview];
     [self.pictureShow removeFromParentViewController];
@@ -65,6 +73,8 @@
     self.oneImage.frame = [self makeImageView:image];
     self.oneImage.center = CGPointMake(Device_width/2, Device_height/2);
 }
+
+//照片位置居中
 - (CGRect )makeImageView:(UIImage *)image{
     
     CGSize imageSize = image.size;

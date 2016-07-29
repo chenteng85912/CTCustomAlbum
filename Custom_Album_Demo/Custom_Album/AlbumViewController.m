@@ -72,6 +72,7 @@ static NSString *identify = @"albumTable";
     }
 }
 
+//裁剪图片
 - (void)scaleCellImageView:(UIImageView *)imgView withImage:(UIImage *)img{
     CGSize itemSize = CGSizeMake(60, 60);
     UIGraphicsBeginImageContextWithOptions(itemSize, NO,0.0);

@@ -42,6 +42,7 @@
     
 }
 
+//初始化界面
 - (void)initUI{
     
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
@@ -59,6 +60,8 @@
     self.colView = colView;
     
     [self.colView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"BigCollectionViewCell"];
+    
+    //双击放大图片手势
     UITapGestureRecognizer *doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doubleTap:)];
     [doubleTapGestureRecognizer setNumberOfTapsRequired:2];
     [self.view addGestureRecognizer:doubleTapGestureRecognizer];
@@ -86,6 +89,7 @@
     [self makeImageCell:cell withIndex:indexPath];
 
 }
+//单元格数据加载
 - (void)makeImageCell:(UICollectionViewCell *)mycell withIndex:(NSIndexPath *)indexPath{
     ALAsset *asset = self.dataArray[indexPath.row];
     
@@ -122,7 +126,7 @@
     }
     
 }
-#pragma mark 正在滑动
+//正在滑动
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
     if ([scrollView isKindOfClass:[UICollectionView class]]) {
@@ -132,7 +136,7 @@
     }
     
 }
-#pragma mark 选择照片
+//选择照片动作
 - (void)choosePicture:(UIButton *)btn{
     
     ALAsset *asset = self.dataArray[btn.tag];
@@ -149,7 +153,7 @@
     [self changeComfirnTitie];
     
 }
-#pragma mark 改变确认按钮状态
+//改变确认按钮状态
 - (void)changeComfirnTitie{
     
     if (self.selectDic.count==0) {
@@ -160,7 +164,7 @@
     self.navigationItem.rightBarButtonItem.title = [NSString stringWithFormat:@"确认(%ld/%ld)",(long)self.selectDic.count,(long)self.totalNum];
     
 }
-#pragma mark 照片选中按钮动画
+//照片选中按钮动画
 - (void)showAnimation:(UIButton *)but{
     but.selected = YES;
     [UIView animateWithDuration:0.1
@@ -193,7 +197,7 @@
                      }];
     
 }
-#pragma mark 图片确认选择
+//图片确认选择
 - (void)comfirnChoose{
     
     if ([self.delegate respondsToSelector:@selector(sendImageFromBig:)]) {
@@ -203,7 +207,7 @@
     }
     
 }
-#pragma mark 设置预览图片的大小
+//设置预览图片的大小
 - (CGRect)makeImageViewFrame:(UIImage *)image{
     CGSize imageSize = image.size;
     CGFloat scaleW = imageSize.width/Device_width;
@@ -222,7 +226,7 @@
     }
     return CGRectMake(0, 0, picW, picH);
 }
-#pragma mark 图片放大缩小后位置校正
+//图片放大缩小后位置校正
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView
 {
     UICollectionViewCell *mycell = self.colView.visibleCells[0];
@@ -237,6 +241,8 @@
     imgView.center = CGPointMake(scrView.contentSize.width * 0.5 + offsetX,
                                        scrView.contentSize.height * 0.5 + offsetY);
 }
+
+//手势放大图片
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)tmpScrollView
 {
     UICollectionViewCell *mycell = self.colView.visibleCells[0];
@@ -244,7 +250,7 @@
     UIImageView *imgView = (UIImageView *)[mycell viewWithTag:index.item+1000];
     return imgView;
 }
-#pragma mark 双击放大缩小
+//双击放大缩小
 -(void)doubleTap:(UITapGestureRecognizer *)gestureRecognize {
     
     UICollectionViewCell *mycell = self.colView.visibleCells[0];
