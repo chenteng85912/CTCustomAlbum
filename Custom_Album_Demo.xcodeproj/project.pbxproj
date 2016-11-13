@@ -406,6 +406,7 @@
 				A4F80EC81D4B9655004B6C77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
