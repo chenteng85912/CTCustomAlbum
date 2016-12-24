@@ -6,15 +6,15 @@
 //
 //
 
-#import "AlbumViewController.h"
+#import "ListGroupViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@interface AlbumViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface ListGroupViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 static NSString *identify = @"albumTable";
 
-@implementation AlbumViewController
+@implementation ListGroupViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -72,7 +72,6 @@ static NSString *identify = @"albumTable";
     }
 }
 
-//裁剪图片
 - (void)scaleCellImageView:(UIImageView *)imgView withImage:(UIImage *)img{
     CGSize itemSize = CGSizeMake(60, 60);
     UIGraphicsBeginImageContextWithOptions(itemSize, NO,0.0);

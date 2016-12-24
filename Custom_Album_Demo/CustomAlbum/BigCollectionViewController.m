@@ -14,8 +14,7 @@
 @interface BigCollectionViewController ()<UIScrollViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (strong, nonatomic) UICollectionView *colView;
-@property (strong, nonatomic) UILabel *titleLabel;
-
+@property (strong, nonatomic) UIView *waringView;
 @end
 
 @implementation BigCollectionViewController
@@ -29,20 +28,12 @@
     backItem.tintColor = [UIColor whiteColor];
     self.navigationItem.backBarButtonItem = backItem;
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
-    label.text = [NSString stringWithFormat:@"%ld/%lu",(long)self.index,(unsigned long)self.dataArray.count];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor whiteColor];
-    self.navigationItem.titleView = label;
-    
-    self.titleLabel = label;
-    
+    self.title = [NSString stringWithFormat:@"%ld/%lu",(long)self.index,(unsigned long)self.dataArray.count];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"确认" style:UIBarButtonItemStylePlain target:self action:@selector(comfirnChoose)];
     [self changeComfirnTitie];
     
 }
 
-//初始化界面
 - (void)initUI{
     
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
@@ -50,7 +41,12 @@
     layout.itemSize = CGSizeMake(Device_width+10, Device_height-64);
     layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 10);
 
-    UICollectionView *colView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, Device_width+20, Device_height-64) collectionViewLayout:layout];
+    CGRect colFrame = CGRectMake(0, 0, Device_width+20, Device_height-64);
+    if (self.navigationController.navigationBar.translucent) {
+        colFrame = CGRectMake(0, 0, Device_width+20, Device_height);
+
+    }
+    UICollectionView *colView = [[UICollectionView alloc] initWithFrame:colFrame collectionViewLayout:layout];
     colView.pagingEnabled = YES;
     colView.delegate = self;
     colView.dataSource = self;
@@ -60,13 +56,13 @@
     self.colView = colView;
     
     [self.colView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"BigCollectionViewCell"];
-    
-    //双击放大图片手势
     UITapGestureRecognizer *doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doubleTap:)];
     [doubleTapGestureRecognizer setNumberOfTapsRequired:2];
     [self.view addGestureRecognizer:doubleTapGestureRecognizer];
     
     [self.colView setContentOffset:CGPointMake((Device_width+20)*(self.index-1), 0)];
+    
+    [self initWaringView];
 
 }
 #pragma mark UICollectionViewDelegate
@@ -82,14 +78,10 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *mycell = [collectionView dequeueReusableCellWithReuseIdentifier:@"BigCollectionViewCell" forIndexPath:indexPath];
+    [self makeImageCell:mycell withIndex:indexPath];
 
     return mycell;
 }
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
-    [self makeImageCell:cell withIndex:indexPath];
-
-}
-//单元格数据加载
 - (void)makeImageCell:(UICollectionViewCell *)mycell withIndex:(NSIndexPath *)indexPath{
     ALAsset *asset = self.dataArray[indexPath.row];
     
@@ -126,26 +118,30 @@
     }
     
 }
-//正在滑动
+#pragma mark 正在滑动
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
     if ([scrollView isKindOfClass:[UICollectionView class]]) {
         NSInteger pageNum = (scrollView.contentOffset.x - (Device_width+20) / 2) / (Device_width+20) + 1;
-        self.titleLabel.text = [NSString stringWithFormat:@"%ld/%lu",(long)pageNum+1,(unsigned long)self.dataArray.count];
+        self.title = [NSString stringWithFormat:@"%ld/%lu",(long)pageNum+1,(unsigned long)self.dataArray.count];
 
     }
     
 }
-//选择照片动作
+#pragma mark 选择照片
 - (void)choosePicture:(UIButton *)btn{
     
+   
     ALAsset *asset = self.dataArray[btn.tag];
     if ([self.selectDic.allKeys containsObject:asset.defaultRepresentation.filename]) {
         [self.selectDic removeObjectForKey:asset.defaultRepresentation.filename];
         btn.selected = NO;
         
     }else{
-        
+        if (self.totalNum==self.selectDic.count) {
+            [self showWaringView];
+            return;
+        }
         [self.selectDic setObject:[UIImage imageWithCGImage:asset.defaultRepresentation.fullScreenImage] forKey:asset.defaultRepresentation.filename];
         [self showAnimation:btn];
         
@@ -153,7 +149,7 @@
     [self changeComfirnTitie];
     
 }
-//改变确认按钮状态
+#pragma mark 改变确认按钮状态
 - (void)changeComfirnTitie{
     
     if (self.selectDic.count==0) {
@@ -164,7 +160,7 @@
     self.navigationItem.rightBarButtonItem.title = [NSString stringWithFormat:@"确认(%ld/%ld)",(long)self.selectDic.count,(long)self.totalNum];
     
 }
-//照片选中按钮动画
+#pragma mark 照片选中按钮动画
 - (void)showAnimation:(UIButton *)but{
     but.selected = YES;
     [UIView animateWithDuration:0.1
@@ -197,7 +193,7 @@
                      }];
     
 }
-//图片确认选择
+#pragma mark 图片确认选择
 - (void)comfirnChoose{
     
     if ([self.delegate respondsToSelector:@selector(sendImageFromBig:)]) {
@@ -207,7 +203,7 @@
     }
     
 }
-//设置预览图片的大小
+#pragma mark 设置预览图片的大小
 - (CGRect)makeImageViewFrame:(UIImage *)image{
     CGSize imageSize = image.size;
     CGFloat scaleW = imageSize.width/Device_width;
@@ -226,7 +222,7 @@
     }
     return CGRectMake(0, 0, picW, picH);
 }
-//图片放大缩小后位置校正
+#pragma mark 图片放大缩小后位置校正
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView
 {
     UICollectionViewCell *mycell = self.colView.visibleCells[0];
@@ -241,8 +237,6 @@
     imgView.center = CGPointMake(scrView.contentSize.width * 0.5 + offsetX,
                                        scrView.contentSize.height * 0.5 + offsetY);
 }
-
-//手势放大图片
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)tmpScrollView
 {
     UICollectionViewCell *mycell = self.colView.visibleCells[0];
@@ -250,7 +244,7 @@
     UIImageView *imgView = (UIImageView *)[mycell viewWithTag:index.item+1000];
     return imgView;
 }
-//双击放大缩小
+#pragma mark 双击放大缩小
 -(void)doubleTap:(UITapGestureRecognizer *)gestureRecognize {
     
     UICollectionViewCell *mycell = self.colView.visibleCells[0];
@@ -274,6 +268,53 @@
         }];
     }
     
+}
+
+- (void)showWaringView{
+    [UIView animateWithDuration:0.2
+                          delay:0.
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         self.waringView.alpha = 1.0;
+                     }
+                     completion:^(BOOL finished){
+                         [UIView animateWithDuration:0.5
+                                               delay:0.5
+                                             options: UIViewAnimationOptionCurveEaseIn
+                                          animations:^{
+                                              self.waringView.alpha = 0.0;
+                                          }
+                                          completion:^(BOOL finished){
+                                              
+                                          }];
+                     }];
+    
+}
+
+#pragma mark 初始化警告弹窗
+- (void)initWaringView{
+    UIView *warning = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 180, 120)];
+    warning.center = self.view.center;
+    warning.alpha = 0.0;
+    warning.backgroundColor = [UIColor blackColor];
+    warning.layer.masksToBounds = YES;
+    warning.layer.cornerRadius = 5.0;
+    
+    UIImageView *warningImg = [[UIImageView alloc] initWithFrame:CGRectMake(warning.frame.size.width/2-15, 25, 30, 30)];
+    warningImg.image = [UIImage imageNamed:@"max_warinig"];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 70, warning.frame.size.width, 20)];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor  = [UIColor whiteColor];
+    label.text = @"照片数量已到上限";
+    
+    [warning addSubview:warningImg];
+    [warning addSubview:label];
+    
+    [self.navigationController.view addSubview:warning];
+    [self.navigationController.view bringSubviewToFront:warning];
+    self.waringView = warning;
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

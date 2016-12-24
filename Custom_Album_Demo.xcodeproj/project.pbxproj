@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4DBFB321E0E67310028C102 /* album_down.png in Resources */ = {isa = PBXBuildFile; fileRef = A4DBFB1E1E0E67310028C102 /* album_down.png */; };
+		A4DBFB331E0E67310028C102 /* AlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DBFB201E0E67310028C102 /* AlbumCollectionViewCell.m */; };
+		A4DBFB341E0E67310028C102 /* AlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4DBFB211E0E67310028C102 /* AlbumCollectionViewCell.xib */; };
+		A4DBFB351E0E67310028C102 /* BigCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DBFB231E0E67310028C102 /* BigCollectionViewController.m */; };
+		A4DBFB361E0E67310028C102 /* camera_album@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4DBFB241E0E67310028C102 /* camera_album@2x.png */; };
+		A4DBFB371E0E67310028C102 /* CTCustomAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DBFB261E0E67310028C102 /* CTCustomAlbumViewController.m */; };
+		A4DBFB381E0E67310028C102 /* CTONEPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DBFB281E0E67310028C102 /* CTONEPhoto.m */; };
+		A4DBFB391E0E67310028C102 /* CTSavePhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DBFB2A1E0E67310028C102 /* CTSavePhotos.m */; };
+		A4DBFB3A1E0E67310028C102 /* ListGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DBFB2C1E0E67310028C102 /* ListGroupViewController.m */; };
+		A4DBFB3B1E0E67310028C102 /* max_warinig.png in Resources */ = {isa = PBXBuildFile; fileRef = A4DBFB2D1E0E67310028C102 /* max_warinig.png */; };
+		A4DBFB3C1E0E67310028C102 /* selected_album@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4DBFB2E1E0E67310028C102 /* selected_album@2x.png */; };
+		A4DBFB3D1E0E67310028C102 /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DBFB301E0E67310028C102 /* UIImage+Tools.m */; };
+		A4DBFB3E1E0E67310028C102 /* unselected_album@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A4DBFB311E0E67310028C102 /* unselected_album@2x.png */; };
 		A4F80EB11D4B9655004B6C77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F80EB01D4B9655004B6C77 /* main.m */; };
 		A4F80EB41D4B9655004B6C77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F80EB31D4B9655004B6C77 /* AppDelegate.m */; };
 		A4F80EB71D4B9655004B6C77 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F80EB61D4B9655004B6C77 /* ViewController.m */; };
@@ -14,18 +27,6 @@
 		A4F80EBD1D4B9655004B6C77 /* Custom_Album_Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4F80EBB1D4B9655004B6C77 /* Custom_Album_Demo.xcdatamodeld */; };
 		A4F80EBF1D4B9655004B6C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4F80EBE1D4B9655004B6C77 /* Assets.xcassets */; };
 		A4F80EC21D4B9655004B6C77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4F80EC01D4B9655004B6C77 /* LaunchScreen.storyboard */; };
-		A4F80F021D4B9721004B6C77 /* AlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F80EE91D4B9721004B6C77 /* AlbumCollectionViewCell.m */; };
-		A4F80F031D4B9721004B6C77 /* AlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F80EEA1D4B9721004B6C77 /* AlbumCollectionViewCell.xib */; };
-		A4F80F041D4B9721004B6C77 /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F80EEC1D4B9721004B6C77 /* AlbumViewController.m */; };
-		A4F80F051D4B9721004B6C77 /* BigCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F80EEE1D4B9721004B6C77 /* BigCollectionViewController.m */; };
-		A4F80F061D4B9721004B6C77 /* camera_album.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F80EEF1D4B9721004B6C77 /* camera_album.png */; };
-		A4F80F071D4B9721004B6C77 /* down_album.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F80EF01D4B9721004B6C77 /* down_album.png */; };
-		A4F80F081D4B9721004B6C77 /* GroupAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F80EF21D4B9721004B6C77 /* GroupAlbumViewController.m */; };
-		A4F80F091D4B9721004B6C77 /* max_warinig.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F80EF31D4B9721004B6C77 /* max_warinig.png */; };
-		A4F80F0A1D4B9721004B6C77 /* ONEPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F80EF51D4B9721004B6C77 /* ONEPhoto.m */; };
-		A4F80F0B1D4B9721004B6C77 /* selected_album.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F80EF61D4B9721004B6C77 /* selected_album.png */; };
-		A4F80F0C1D4B9721004B6C77 /* unselected_album.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F80EF71D4B9721004B6C77 /* unselected_album.png */; };
-		A4F80F0D1D4B9721004B6C77 /* up_album.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F80EF81D4B9721004B6C77 /* up_album.png */; };
 		A4F80F0F1D4B9721004B6C77 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F80EFB1D4B9721004B6C77 /* close.png */; };
 		A4F80F101D4B9721004B6C77 /* CTPictureShowCollecionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F80EFD1D4B9721004B6C77 /* CTPictureShowCollecionCell.m */; };
 		A4F80F111D4B9721004B6C77 /* CTPictureShowCollecionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F80EFE1D4B9721004B6C77 /* CTPictureShowCollecionCell.xib */; };
@@ -34,6 +35,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4DBFB1E1E0E67310028C102 /* album_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = album_down.png; sourceTree = "<group>"; };
+		A4DBFB1F1E0E67310028C102 /* AlbumCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCollectionViewCell.h; sourceTree = "<group>"; };
+		A4DBFB201E0E67310028C102 /* AlbumCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCollectionViewCell.m; sourceTree = "<group>"; };
+		A4DBFB211E0E67310028C102 /* AlbumCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCollectionViewCell.xib; sourceTree = "<group>"; };
+		A4DBFB221E0E67310028C102 /* BigCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigCollectionViewController.h; sourceTree = "<group>"; };
+		A4DBFB231E0E67310028C102 /* BigCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigCollectionViewController.m; sourceTree = "<group>"; };
+		A4DBFB241E0E67310028C102 /* camera_album@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_album@2x.png"; sourceTree = "<group>"; };
+		A4DBFB251E0E67310028C102 /* CTCustomAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCustomAlbumViewController.h; sourceTree = "<group>"; };
+		A4DBFB261E0E67310028C102 /* CTCustomAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCustomAlbumViewController.m; sourceTree = "<group>"; };
+		A4DBFB271E0E67310028C102 /* CTONEPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTONEPhoto.h; sourceTree = "<group>"; };
+		A4DBFB281E0E67310028C102 /* CTONEPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTONEPhoto.m; sourceTree = "<group>"; };
+		A4DBFB291E0E67310028C102 /* CTSavePhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSavePhotos.h; sourceTree = "<group>"; };
+		A4DBFB2A1E0E67310028C102 /* CTSavePhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSavePhotos.m; sourceTree = "<group>"; };
+		A4DBFB2B1E0E67310028C102 /* ListGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListGroupViewController.h; sourceTree = "<group>"; };
+		A4DBFB2C1E0E67310028C102 /* ListGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListGroupViewController.m; sourceTree = "<group>"; };
+		A4DBFB2D1E0E67310028C102 /* max_warinig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = max_warinig.png; sourceTree = "<group>"; };
+		A4DBFB2E1E0E67310028C102 /* selected_album@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected_album@2x.png"; sourceTree = "<group>"; };
+		A4DBFB2F1E0E67310028C102 /* UIImage+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tools.h"; sourceTree = "<group>"; };
+		A4DBFB301E0E67310028C102 /* UIImage+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tools.m"; sourceTree = "<group>"; };
+		A4DBFB311E0E67310028C102 /* unselected_album@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unselected_album@2x.png"; sourceTree = "<group>"; };
 		A4F80EAC1D4B9655004B6C77 /* Custom_Album_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Custom_Album_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F80EB01D4B9655004B6C77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A4F80EB21D4B9655004B6C77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,23 +66,6 @@
 		A4F80EBE1D4B9655004B6C77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4F80EC11D4B9655004B6C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4F80EC31D4B9655004B6C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4F80EE81D4B9721004B6C77 /* AlbumCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCollectionViewCell.h; sourceTree = "<group>"; };
-		A4F80EE91D4B9721004B6C77 /* AlbumCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCollectionViewCell.m; sourceTree = "<group>"; };
-		A4F80EEA1D4B9721004B6C77 /* AlbumCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumCollectionViewCell.xib; sourceTree = "<group>"; };
-		A4F80EEB1D4B9721004B6C77 /* AlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewController.h; sourceTree = "<group>"; };
-		A4F80EEC1D4B9721004B6C77 /* AlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewController.m; sourceTree = "<group>"; };
-		A4F80EED1D4B9721004B6C77 /* BigCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigCollectionViewController.h; sourceTree = "<group>"; };
-		A4F80EEE1D4B9721004B6C77 /* BigCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigCollectionViewController.m; sourceTree = "<group>"; };
-		A4F80EEF1D4B9721004B6C77 /* camera_album.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_album.png; sourceTree = "<group>"; };
-		A4F80EF01D4B9721004B6C77 /* down_album.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_album.png; sourceTree = "<group>"; };
-		A4F80EF11D4B9721004B6C77 /* GroupAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupAlbumViewController.h; sourceTree = "<group>"; };
-		A4F80EF21D4B9721004B6C77 /* GroupAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupAlbumViewController.m; sourceTree = "<group>"; };
-		A4F80EF31D4B9721004B6C77 /* max_warinig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = max_warinig.png; sourceTree = "<group>"; };
-		A4F80EF41D4B9721004B6C77 /* ONEPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ONEPhoto.h; sourceTree = "<group>"; };
-		A4F80EF51D4B9721004B6C77 /* ONEPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ONEPhoto.m; sourceTree = "<group>"; };
-		A4F80EF61D4B9721004B6C77 /* selected_album.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected_album.png; sourceTree = "<group>"; };
-		A4F80EF71D4B9721004B6C77 /* unselected_album.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unselected_album.png; sourceTree = "<group>"; };
-		A4F80EF81D4B9721004B6C77 /* up_album.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up_album.png; sourceTree = "<group>"; };
 		A4F80EFB1D4B9721004B6C77 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		A4F80EFC1D4B9721004B6C77 /* CTPictureShowCollecionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPictureShowCollecionCell.h; sourceTree = "<group>"; };
 		A4F80EFD1D4B9721004B6C77 /* CTPictureShowCollecionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPictureShowCollecionCell.m; sourceTree = "<group>"; };
@@ -82,6 +86,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4DBFB1D1E0E67310028C102 /* CustomAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				A4DBFB1E1E0E67310028C102 /* album_down.png */,
+				A4DBFB1F1E0E67310028C102 /* AlbumCollectionViewCell.h */,
+				A4DBFB201E0E67310028C102 /* AlbumCollectionViewCell.m */,
+				A4DBFB211E0E67310028C102 /* AlbumCollectionViewCell.xib */,
+				A4DBFB221E0E67310028C102 /* BigCollectionViewController.h */,
+				A4DBFB231E0E67310028C102 /* BigCollectionViewController.m */,
+				A4DBFB241E0E67310028C102 /* camera_album@2x.png */,
+				A4DBFB251E0E67310028C102 /* CTCustomAlbumViewController.h */,
+				A4DBFB261E0E67310028C102 /* CTCustomAlbumViewController.m */,
+				A4DBFB271E0E67310028C102 /* CTONEPhoto.h */,
+				A4DBFB281E0E67310028C102 /* CTONEPhoto.m */,
+				A4DBFB291E0E67310028C102 /* CTSavePhotos.h */,
+				A4DBFB2A1E0E67310028C102 /* CTSavePhotos.m */,
+				A4DBFB2B1E0E67310028C102 /* ListGroupViewController.h */,
+				A4DBFB2C1E0E67310028C102 /* ListGroupViewController.m */,
+				A4DBFB2D1E0E67310028C102 /* max_warinig.png */,
+				A4DBFB2E1E0E67310028C102 /* selected_album@2x.png */,
+				A4DBFB2F1E0E67310028C102 /* UIImage+Tools.h */,
+				A4DBFB301E0E67310028C102 /* UIImage+Tools.m */,
+				A4DBFB311E0E67310028C102 /* unselected_album@2x.png */,
+			);
+			path = CustomAlbum;
+			sourceTree = "<group>";
+		};
 		A4F80EA31D4B9655004B6C77 = {
 			isa = PBXGroup;
 			children = (
@@ -101,12 +132,12 @@
 		A4F80EAE1D4B9655004B6C77 /* Custom_Album_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				A4DBFB1D1E0E67310028C102 /* CustomAlbum */,
 				A4F80EB21D4B9655004B6C77 /* AppDelegate.h */,
 				A4F80EB31D4B9655004B6C77 /* AppDelegate.m */,
 				A4F80EB51D4B9655004B6C77 /* ViewController.h */,
 				A4F80EB61D4B9655004B6C77 /* ViewController.m */,
 				A4F80EB81D4B9655004B6C77 /* Main.storyboard */,
-				A4F80EE71D4B9721004B6C77 /* Custom_Album */,
 				A4F80EF91D4B9721004B6C77 /* PictureShow */,
 				A4F80EBE1D4B9655004B6C77 /* Assets.xcassets */,
 				A4F80EC01D4B9655004B6C77 /* LaunchScreen.storyboard */,
@@ -123,30 +154,6 @@
 				A4F80EB01D4B9655004B6C77 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A4F80EE71D4B9721004B6C77 /* Custom_Album */ = {
-			isa = PBXGroup;
-			children = (
-				A4F80EE81D4B9721004B6C77 /* AlbumCollectionViewCell.h */,
-				A4F80EE91D4B9721004B6C77 /* AlbumCollectionViewCell.m */,
-				A4F80EEA1D4B9721004B6C77 /* AlbumCollectionViewCell.xib */,
-				A4F80EEB1D4B9721004B6C77 /* AlbumViewController.h */,
-				A4F80EEC1D4B9721004B6C77 /* AlbumViewController.m */,
-				A4F80EED1D4B9721004B6C77 /* BigCollectionViewController.h */,
-				A4F80EEE1D4B9721004B6C77 /* BigCollectionViewController.m */,
-				A4F80EEF1D4B9721004B6C77 /* camera_album.png */,
-				A4F80EF01D4B9721004B6C77 /* down_album.png */,
-				A4F80EF11D4B9721004B6C77 /* GroupAlbumViewController.h */,
-				A4F80EF21D4B9721004B6C77 /* GroupAlbumViewController.m */,
-				A4F80EF31D4B9721004B6C77 /* max_warinig.png */,
-				A4F80EF41D4B9721004B6C77 /* ONEPhoto.h */,
-				A4F80EF51D4B9721004B6C77 /* ONEPhoto.m */,
-				A4F80EF61D4B9721004B6C77 /* selected_album.png */,
-				A4F80EF71D4B9721004B6C77 /* unselected_album.png */,
-				A4F80EF81D4B9721004B6C77 /* up_album.png */,
-			);
-			path = Custom_Album;
 			sourceTree = "<group>";
 		};
 		A4F80EF91D4B9721004B6C77 /* PictureShow */ = {
@@ -220,18 +227,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4F80F031D4B9721004B6C77 /* AlbumCollectionViewCell.xib in Resources */,
-				A4F80F0C1D4B9721004B6C77 /* unselected_album.png in Resources */,
+				A4DBFB3E1E0E67310028C102 /* unselected_album@2x.png in Resources */,
+				A4DBFB361E0E67310028C102 /* camera_album@2x.png in Resources */,
 				A4F80EC21D4B9655004B6C77 /* LaunchScreen.storyboard in Resources */,
+				A4DBFB3C1E0E67310028C102 /* selected_album@2x.png in Resources */,
 				A4F80EBF1D4B9655004B6C77 /* Assets.xcassets in Resources */,
-				A4F80F0D1D4B9721004B6C77 /* up_album.png in Resources */,
-				A4F80F071D4B9721004B6C77 /* down_album.png in Resources */,
 				A4F80F0F1D4B9721004B6C77 /* close.png in Resources */,
-				A4F80F091D4B9721004B6C77 /* max_warinig.png in Resources */,
+				A4DBFB321E0E67310028C102 /* album_down.png in Resources */,
+				A4DBFB341E0E67310028C102 /* AlbumCollectionViewCell.xib in Resources */,
 				A4F80EBA1D4B9655004B6C77 /* Main.storyboard in Resources */,
-				A4F80F0B1D4B9721004B6C77 /* selected_album.png in Resources */,
 				A4F80F131D4B9721004B6C77 /* CTPictureShowViewController.xib in Resources */,
-				A4F80F061D4B9721004B6C77 /* camera_album.png in Resources */,
+				A4DBFB3B1E0E67310028C102 /* max_warinig.png in Resources */,
 				A4F80F111D4B9721004B6C77 /* CTPictureShowCollecionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,17 +249,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4DBFB391E0E67310028C102 /* CTSavePhotos.m in Sources */,
 				A4F80F121D4B9721004B6C77 /* CTPictureShowViewController.m in Sources */,
 				A4F80EB71D4B9655004B6C77 /* ViewController.m in Sources */,
-				A4F80F021D4B9721004B6C77 /* AlbumCollectionViewCell.m in Sources */,
-				A4F80F081D4B9721004B6C77 /* GroupAlbumViewController.m in Sources */,
-				A4F80F0A1D4B9721004B6C77 /* ONEPhoto.m in Sources */,
-				A4F80F041D4B9721004B6C77 /* AlbumViewController.m in Sources */,
 				A4F80EBD1D4B9655004B6C77 /* Custom_Album_Demo.xcdatamodeld in Sources */,
-				A4F80F051D4B9721004B6C77 /* BigCollectionViewController.m in Sources */,
 				A4F80EB41D4B9655004B6C77 /* AppDelegate.m in Sources */,
+				A4DBFB3D1E0E67310028C102 /* UIImage+Tools.m in Sources */,
+				A4DBFB331E0E67310028C102 /* AlbumCollectionViewCell.m in Sources */,
+				A4DBFB351E0E67310028C102 /* BigCollectionViewController.m in Sources */,
 				A4F80EB11D4B9655004B6C77 /* main.m in Sources */,
+				A4DBFB3A1E0E67310028C102 /* ListGroupViewController.m in Sources */,
 				A4F80F101D4B9721004B6C77 /* CTPictureShowCollecionCell.m in Sources */,
+				A4DBFB381E0E67310028C102 /* CTONEPhoto.m in Sources */,
+				A4DBFB371E0E67310028C102 /* CTCustomAlbumViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

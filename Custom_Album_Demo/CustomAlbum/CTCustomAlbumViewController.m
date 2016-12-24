@@ -6,16 +6,18 @@
 //
 //
 
-#import "GroupAlbumViewController.h"
+#import "CTCustomAlbumViewController.h"
 #import "AlbumCollectionViewCell.h"
-#import "AlbumViewController.h"
-#import <AssetsLibrary/AssetsLibrary.h>
+#import "ListGroupViewController.h"
 #import "BigCollectionViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+#import "CTSavePhotos.h"
+#import "UIImage+Tools.h"
 
 #define Device_height   [[UIScreen mainScreen] bounds].size.height
 #define Device_width    [[UIScreen mainScreen] bounds].size.width
 
-@interface GroupAlbumViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,AlbumViewControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource,BigCollectionViewControllerDelegate>
+@interface CTCustomAlbumViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate,AlbumViewControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource,BigCollectionViewControllerDelegate>
 
 @property (strong, nonatomic)  UICollectionView *ColView;
 @property (strong, nonatomic)  UIView *backView;
@@ -24,19 +26,18 @@
 @property (nonatomic,strong) UILabel *titleLabel;
 @property (nonatomic,strong) UIImageView *titleLImg;
 @property (nonatomic,strong) UIButton *titleBtn;
-@property (nonatomic,strong) AlbumViewController *albumGroup;
+@property (nonatomic,strong) ListGroupViewController *albumGroup;
 @property (nonatomic,strong) ALAssetsLibrary *assetsLibrary;
 @property (nonatomic,assign) BOOL isLoad;
 @property (nonatomic,assign) NSInteger selectedNum;
 @property (nonatomic,strong) UIView *waringView;
 @end
 
-@implementation GroupAlbumViewController
+@implementation CTCustomAlbumViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
@@ -55,11 +56,14 @@
     
     self.albumArray = [NSMutableArray new];
     
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     [self initCollectionView];
     [self initAlbumGroupData];
     
 }
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self.ColView reloadData];
     [self changeComfirnTitie];
 
@@ -85,7 +89,11 @@
     layout.minimumInteritemSpacing = 1.0;
     layout.itemSize = CGSizeMake((Device_width-4)/3, (Device_width-4)/3);
     
-    UICollectionView *colView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, Device_width, Device_height-64) collectionViewLayout:layout];
+    CGRect colFrame = CGRectMake(0, 0, Device_width, Device_height-64);
+    if (self.navigationController.navigationBar.translucent) {
+        colFrame = CGRectMake(0, 0, Device_width, Device_height);
+    }
+    UICollectionView *colView = [[UICollectionView alloc] initWithFrame:colFrame collectionViewLayout:layout];
     colView.delegate = self;
     colView.dataSource = self;
     [self.view addSubview:colView];
@@ -100,17 +108,17 @@
     [self.view addSubview:backview];
     self.backView = backview;
     
-    UIView *warning = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 180, 90)];
+    UIView *warning = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 180, 120)];
     warning.center = self.view.center;
     warning.alpha = 0.0;
     warning.backgroundColor = [UIColor blackColor];
     warning.layer.masksToBounds = YES;
     warning.layer.cornerRadius = 5.0;
     
-    UIImageView *warningImg = [[UIImageView alloc] initWithFrame:CGRectMake(warning.frame.size.width/2-15, 15, 30, 30)];
+    UIImageView *warningImg = [[UIImageView alloc] initWithFrame:CGRectMake(warning.frame.size.width/2-15, 25, 30, 30)];
     warningImg.image = [UIImage imageNamed:@"max_warinig"];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 55, warning.frame.size.width, 20)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 70, warning.frame.size.width, 20)];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor  = [UIColor whiteColor];
     label.text = @"照片数量已到上限";
@@ -123,11 +131,13 @@
     self.waringView = warning;
     
 }
+#pragma mark 初始化标题按钮
 - (void)initTitleView:(ALAssetsGroup *)group{
     
     UILabel *label = [self fixLabelWithGroup:group andFontSize:16];
-    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(label.frame.size.width+5, 0, 20, 20)];
-    img.image = [UIImage imageNamed:@"down_album"];
+    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(label.frame.size.width+5, 3, 20, 14)];
+    UIImage *image = [UIImage imageNamed:@"album_down"];
+    img.image = [image changeColor:self.navigationController.navigationBar.tintColor];
     self.titleLImg = img;
     
     UIView *customTitle = [[UIView alloc] initWithFrame:CGRectMake(0, 0, label.frame.size.width+35, 20)];
@@ -157,7 +167,7 @@
             }
         }else{
             
-            AlbumViewController *tbView = [AlbumViewController new];
+            ListGroupViewController *tbView = [ListGroupViewController new];
             tbView.delegate = self;
             self.albumGroup = tbView;
             tbView.view.frame = CGRectMake(0,  -Device_height/2, Device_width, Device_height/2);
@@ -193,7 +203,7 @@
           
 
         }else{
-            
+
              dispatch_async(dispatch_get_main_queue(), ^{
                  if (self.isLoad) {
                      [self choosePhotosGroup:self.titleBtn];
@@ -217,13 +227,18 @@
         [UIView setAnimationBeginsFromCurrentState:YES];
         [UIView setAnimationCurve:7];
         if (!btn.selected) {
-            self.titleLImg.image = [UIImage imageNamed:@"up_album"];
-
             self.albumGroup.view.center = CGPointMake(Device_width/2, Device_height/4);
+
+            if (self.navigationController.navigationBar.translucent) {
+                self.albumGroup.view.center = CGPointMake(Device_width/2, Device_height/4+64);
+
+            }
+            self.titleLImg.transform=CGAffineTransformMakeRotation(M_PI);
+
             self.backView.alpha = 0.5;
             btn.selected = YES;
         }else{
-            self.titleLImg.image = [UIImage imageNamed:@"down_album"];
+            self.titleLImg.transform=CGAffineTransformMakeRotation(-M_PI*2);
 
             self.albumGroup.view.center = CGPointMake(Device_width/2, -Device_height/4);
             btn.selected = NO;
@@ -311,9 +326,7 @@
         return;
     }
     
-    //BigPhotoViewController *big = [BigPhotoViewController new];
     BigCollectionViewController *big = [BigCollectionViewController new];
-
     big.delegate = self;
     big.dataArray = self.albumArray;
     big.index = indexPath.row;
@@ -413,26 +426,32 @@
 
 #pragma mark 打开摄像头
 - (void)openCamera{
-    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        //相机不可用
+    if (![[CTSavePhotos new] checkAuthorityOfCamera]) {
         return;
     }
     UIImagePickerController * picker = [[UIImagePickerController alloc]init];
     picker.delegate = self;
     picker.sourceType=UIImagePickerControllerSourceTypeCamera;
-    //picker.allowsEditing = YES;
+//    picker.allowsEditing = YES;
     [self presentViewController:picker animated:YES completion:nil];
 }
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     
-    UIImage *newImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-    UIImageWriteToSavedPhotosAlbum(newImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-
-    [picker dismissViewControllerAnimated:YES completion:^{
+    UIImage *newImage = nil;
+    if (picker.allowsEditing) {
+        newImage = [info valueForKey:UIImagePickerControllerEditedImage];
+    }else{
+        newImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+        newImage = [newImage normalizedImage];//需要重置图片的方向
+    }
+      [picker dismissViewControllerAnimated:YES completion:^{
         [self.picDataDic setObject:newImage forKey:[NSString stringWithFormat:@"%.f.JPG",[[NSDate new] timeIntervalSince1970]]];
         [self comfirnChoose];
-       
+          if (![[CTSavePhotos new] checkAuthorityOfAblum]) {
+              return;
+          }
+          [[CTSavePhotos new] saveImageIntoAlbum:newImage];
     }];
     
 }
@@ -443,10 +462,7 @@
     
 }
 
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
-    
-    NSLog(@"saved..");
-}
+
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [super touchesBegan:touches withEvent:event];
 
@@ -455,14 +471,13 @@
 
     }
 
-
 }
 
 - (UILabel *)fixLabelWithGroup:(ALAssetsGroup *)group andFontSize:(CGFloat)fontSize{
     
     
     UILabel *label = [UILabel new];
-    label.textColor = [UIColor whiteColor];
+    label.textColor = self.navigationController.navigationBar.tintColor;
     label.text = [group  valueForProperty:ALAssetsGroupPropertyName];
     label.font = [UIFont systemFontOfSize:fontSize];
     CGSize maxSize = [label.text boundingRectWithSize:CGSizeMake(MAXFLOAT, 20) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]} context:nil].size;
@@ -490,6 +505,64 @@
                                           }];
                      }];
 
+}
+
+//旋转图片
+- (UIImage *)image:(UIImage *)image rotation:(UIImageOrientation)orientation
+{
+    long double rotate = 0.0;
+    CGRect rect;
+    float translateX = 0;
+    float translateY = 0;
+    float scaleX = 1.0;
+    float scaleY = 1.0;
+    
+    switch (orientation) {
+        case UIImageOrientationLeft:
+            rotate = M_PI_2;
+            rect = CGRectMake(0, 0, image.size.height, image.size.width);
+            translateX = 0;
+            translateY = -rect.size.width;
+            scaleY = rect.size.width/rect.size.height;
+            scaleX = rect.size.height/rect.size.width;
+            break;
+        case UIImageOrientationRight:
+            rotate = 3 * M_PI_2;
+            rect = CGRectMake(0, 0, image.size.height, image.size.width);
+            translateX = -rect.size.height;
+            translateY = 0;
+            scaleY = rect.size.width/rect.size.height;
+            scaleX = rect.size.height/rect.size.width;
+            break;
+        case UIImageOrientationDown:
+            rotate = M_PI;
+            rect = CGRectMake(0, 0, image.size.width, image.size.height);
+            translateX = -rect.size.width;
+            translateY = -rect.size.height;
+            break;
+        default:
+            rotate = 0.0;
+            rect = CGRectMake(0, 0, image.size.width, image.size.height);
+            translateX = 0;
+            translateY = 0;
+            break;
+    }
+    
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    //做CTM变换
+    CGContextTranslateCTM(context, 0.0, rect.size.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    CGContextRotateCTM(context, rotate);
+    CGContextTranslateCTM(context, translateX, translateY);
+    
+    CGContextScaleCTM(context, scaleX, scaleY);
+    //绘制图片
+    CGContextDrawImage(context, CGRectMake(0, 0, rect.size.width, rect.size.height), image.CGImage);
+    
+    UIImage *newPic = UIGraphicsGetImageFromCurrentImageContext();
+    
+    return newPic;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

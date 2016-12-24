@@ -6,16 +6,20 @@
 //  Copyright © 2016年 腾. All rights reserved.
 //
 
-#import "ONEPhoto.h"
+#import "CTONEPhoto.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+#import "CTSavePhotos.h"
+#import "UIImage+Tools.h"
 
-static ONEPhoto *onePhoto = nil;
+static CTONEPhoto *onePhoto = nil;
 
-@interface ONEPhoto ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
-@property (nonatomic,strong)  UIImagePickerController *imagePicker;
+@interface CTONEPhoto ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
+@property (nonatomic,strong) UIImagePickerController *imagePicker;
 @end
-@implementation ONEPhoto
-+ (ONEPhoto *)shareSigtonPhoto
+
+@implementation CTONEPhoto
++ (CTONEPhoto *)shareSigtonPhoto
 {
     @synchronized(self){
         static dispatch_once_t pred;
@@ -31,22 +35,25 @@ static ONEPhoto *onePhoto = nil;
 }
 
 - (void)openCamera:(UIViewController *)rootVC editModal:(BOOL)enableEdit{
-    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        //相机不可用
+    if (![[CTSavePhotos new] checkAuthorityOfCamera]) {
         return;
     }
+    
     onePhoto.imagePicker.sourceType=UIImagePickerControllerSourceTypeCamera;
     onePhoto.imagePicker.allowsEditing = enableEdit;
+  
     [rootVC presentViewController:onePhoto.imagePicker animated:YES completion:nil];
 }
 - (void)openAlbum:(UIViewController *)rootVC editModal:(BOOL)enableEdit{
-   
+    if (![[CTSavePhotos new] checkAuthorityOfAblum]) {
+        return;
+    }
     //onePhoto.imagePicker.sourceType=UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     onePhoto.imagePicker.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
     onePhoto.imagePicker.allowsEditing = enableEdit;
     onePhoto.imagePicker.navigationBar.translucent = NO;
     onePhoto.imagePicker.navigationBar.tintColor = [UIColor blackColor];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    
     [rootVC presentViewController:onePhoto.imagePicker animated:YES completion:nil];
 }
 
@@ -57,29 +64,31 @@ static ONEPhoto *onePhoto = nil;
         selectedImage = [info objectForKey:UIImagePickerControllerEditedImage];
     }else{
         selectedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-
+        if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+            selectedImage = [selectedImage normalizedImage];
+        }
     }
-    if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
-        UIImageWriteToSavedPhotosAlbum([info objectForKey:UIImagePickerControllerOriginalImage], self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-
-    }
-    
+   
     [picker dismissViewControllerAnimated:YES completion:^{
+
         if ([onePhoto.delegate respondsToSelector:@selector(sendOnePhoto:)]) {
             [onePhoto.delegate sendOnePhoto:selectedImage];
+        }
+        if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+            if (![[CTSavePhotos new] checkAuthorityOfAblum]) {
+                return;
+            }
+            
+            [[CTSavePhotos new] saveImageIntoAlbum:selectedImage];
+            
         }
     }];
     
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    
+
     [picker dismissViewControllerAnimated:YES completion:nil];
     
-}
-
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{
-    
-    NSLog(@"刚刚拍摄的照片已经保存到相册");
 }
 @end

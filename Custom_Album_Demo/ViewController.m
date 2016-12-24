@@ -8,12 +8,12 @@
 
 #import "ViewController.h"
 #import "CTPictureShowViewController.h"
-#import "GroupAlbumViewController.h"
-#import "ONEPhoto.h"
+#import "CTCustomAlbumViewController.h"
+#import "CTONEPhoto.h"
 
 #define Device_height   [[UIScreen mainScreen] bounds].size.height
 #define Device_width    [[UIScreen mainScreen] bounds].size.width
-@interface ViewController ()<ONEPhotoDelegate,GroupAlbumViewControllerDelegate>
+@interface ViewController ()<CTONEPhotoDelegate,CTCustomAlbumViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *oneImage;
 @property (strong, nonatomic) CTPictureShowViewController *pictureShow;
@@ -32,13 +32,13 @@
     
     //选择单张照片 ONE
     if (sender.tag==0) {
-        [ONEPhoto shareSigtonPhoto].delegate =self;
-        [[ONEPhoto shareSigtonPhoto] openAlbum:self editModal:NO];//打开相册选择单张照片
+        [CTONEPhoto shareSigtonPhoto].delegate =self;
+        [[CTONEPhoto shareSigtonPhoto] openAlbum:self editModal:NO];//打开相册选择单张照片
         //[[ONEPhoto shareSigtonPhoto] openCamera:self editModal:NO];//打开摄像头拍摄单张照片
 
     }else{
         //选择多张照片 MULTIPLE
-        GroupAlbumViewController *album = [GroupAlbumViewController new];
+        CTCustomAlbumViewController *album = [CTCustomAlbumViewController new];
         album.delegate = self;
         album.totalNum = 12;
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:album];

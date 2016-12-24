@@ -16,11 +16,10 @@
 
 @interface BigCollectionViewController : UIViewController
 
-@property (strong,nonatomic) NSArray *dataArray;//图片数据
-@property (strong,nonatomic) NSMutableDictionary *selectDic;//选中图片
-@property (assign,nonatomic) NSInteger index;//第一次显示的图片页码
-@property (assign,nonatomic) NSInteger totalNum;//总图片数量
-
+@property (strong,nonatomic) NSArray *dataArray;
+@property (strong,nonatomic) NSMutableDictionary *selectDic;
+@property (assign,nonatomic) NSInteger index;
+@property (assign,nonatomic) NSInteger totalNum;
 @property (nonatomic,weak) id <BigCollectionViewControllerDelegate> delegate;
 
 @end

@@ -11,13 +11,12 @@
 @class ALAssetsGroup;
 @protocol AlbumViewControllerDelegate <NSObject>
 
-//切换相册类别
 - (void)initGroupDetailsData:(ALAssetsGroup *)group;
 
 @end
-@interface AlbumViewController : UIViewController
+@interface ListGroupViewController : UIViewController
 
-@property (nonatomic,strong) NSMutableArray *groupArray;//相册分类
+@property (nonatomic,strong) NSMutableArray *groupArray;
 @property (nonatomic,weak) id <AlbumViewControllerDelegate>delegate;
 @property (strong, nonatomic) UITableView *TbView;
 @end
