@@ -33,7 +33,6 @@
 		3E74E8A7207A3DC5000D3AD9 /* CTPhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E74E884207A3DC5000D3AD9 /* CTPhotosCollectionViewCell.m */; };
 		3E74E8AF207A3DC5000D3AD9 /* CTPreviewPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E74E892207A3DC5000D3AD9 /* CTPreviewPhotosCollectionViewController.m */; };
 		3E74E8B0207A3DC5000D3AD9 /* UIControl+CTControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E74E894207A3DC5000D3AD9 /* UIControl+CTControlBlock.m */; };
-		3ECE8ECF207B536F0027CBC2 /* CTCustomAlbum.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8ECE207B536F0027CBC2 /* CTCustomAlbum.podspec */; };
 		3ECE8ED7207B55540027CBC2 /* origin_unselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8ED0207B55530027CBC2 /* origin_unselect@2x.png */; };
 		3ECE8ED8207B55540027CBC2 /* ct_unselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8ED1207B55530027CBC2 /* ct_unselect@2x.png */; };
 		3ECE8ED9207B55540027CBC2 /* ctCustomback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8ED2207B55530027CBC2 /* ctCustomback@2x.png */; };
@@ -41,6 +40,7 @@
 		3ECE8EDB207B55540027CBC2 /* ct_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8ED4207B55540027CBC2 /* ct_selected@2x.png */; };
 		3ECE8EDC207B55540027CBC2 /* origin_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8ED5207B55540027CBC2 /* origin_selected@2x.png */; };
 		3ECE8EDD207B55540027CBC2 /* ct_punselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8ED6207B55540027CBC2 /* ct_punselect@2x.png */; };
+		3ECE8F4B207B56790027CBC2 /* CTCustomAlbum.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8F4A207B56790027CBC2 /* CTCustomAlbum.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,7 +95,6 @@
 		3E74E893207A3DC5000D3AD9 /* CTPhotosNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosNavigationViewController.h; sourceTree = "<group>"; };
 		3E74E894207A3DC5000D3AD9 /* UIControl+CTControlBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+CTControlBlock.m"; sourceTree = "<group>"; };
 		3E74E895207A3DC5000D3AD9 /* CTCustomAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCustomAlbum.h; sourceTree = "<group>"; };
-		3ECE8ECE207B536F0027CBC2 /* CTCustomAlbum.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CTCustomAlbum.podspec; sourceTree = "<group>"; };
 		3ECE8ED0207B55530027CBC2 /* origin_unselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origin_unselect@2x.png"; sourceTree = "<group>"; };
 		3ECE8ED1207B55530027CBC2 /* ct_unselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_unselect@2x.png"; sourceTree = "<group>"; };
 		3ECE8ED2207B55530027CBC2 /* ctCustomback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ctCustomback@2x.png"; sourceTree = "<group>"; };
@@ -103,6 +102,7 @@
 		3ECE8ED4207B55540027CBC2 /* ct_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_selected@2x.png"; sourceTree = "<group>"; };
 		3ECE8ED5207B55540027CBC2 /* origin_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origin_selected@2x.png"; sourceTree = "<group>"; };
 		3ECE8ED6207B55540027CBC2 /* ct_punselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_punselect@2x.png"; sourceTree = "<group>"; };
+		3ECE8F4A207B56790027CBC2 /* CTCustomAlbum.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CTCustomAlbum.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,7 @@
 		3E74E825207A3AD1000D3AD9 = {
 			isa = PBXGroup;
 			children = (
-				3ECE8ECE207B536F0027CBC2 /* CTCustomAlbum.podspec */,
+				3ECE8F4A207B56790027CBC2 /* CTCustomAlbum.podspec */,
 				3E74E830207A3AD1000D3AD9 /* CTCustomAlbum */,
 				3E74E82F207A3AD1000D3AD9 /* Products */,
 			);
@@ -154,10 +154,10 @@
 		3E74E863207A3DC5000D3AD9 /* CTOnePhoto */ = {
 			isa = PBXGroup;
 			children = (
-				3E74E864207A3DC5000D3AD9 /* CTONEPhoto.m */,
-				3E74E865207A3DC5000D3AD9 /* CTSavePhotos.m */,
 				3E74E866207A3DC5000D3AD9 /* CTONEPhoto.h */,
+				3E74E864207A3DC5000D3AD9 /* CTONEPhoto.m */,
 				3E74E867207A3DC5000D3AD9 /* CTSavePhotos.h */,
+				3E74E865207A3DC5000D3AD9 /* CTSavePhotos.m */,
 			);
 			path = CTOnePhoto;
 			sourceTree = "<group>";
@@ -271,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ECE8F4B207B56790027CBC2 /* CTCustomAlbum.podspec in Resources */,
 				3E74E83E207A3AD1000D3AD9 /* LaunchScreen.storyboard in Resources */,
 				3ECE8EDD207B55540027CBC2 /* ct_punselect@2x.png in Resources */,
 				3E74E83B207A3AD1000D3AD9 /* Assets.xcassets in Resources */,
@@ -280,7 +281,6 @@
 				3ECE8ED9207B55540027CBC2 /* ctCustomback@2x.png in Resources */,
 				3E74E839207A3AD1000D3AD9 /* Main.storyboard in Resources */,
 				3ECE8ED8207B55540027CBC2 /* ct_unselect@2x.png in Resources */,
-				3ECE8ECF207B536F0027CBC2 /* CTCustomAlbum.podspec in Resources */,
 				3ECE8EDA207B55540027CBC2 /* ct_pselected@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
