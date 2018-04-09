@@ -13,7 +13,7 @@
 
 @optional
 //传出图片数组
-- (void)sendImageArray:(NSArray <UIImage *> *_Nullable)imgArray;
+- (void)sendImageArray:(NSArray <UIImage *> *)imgArray;
 
 @end
 
@@ -24,7 +24,7 @@
  
  @param groupsBlock 返回相册分组
  */
-+ (void)fetchDefaultAllPhotosGroup:(void (^_Nullable)(NSArray<PHAssetCollection *> * _Nonnull groupArray))groupsBlock;
++ (void)fetchDefaultAllPhotosGroup:(void (^)(NSArray<PHAssetCollection *> * groupArray))groupsBlock;
 
 /**
  发送图片
@@ -32,7 +32,7 @@
  @param collectionModel 某个相册的数据
  @param imagesBlock 回调 dismiss
  */
-+ (void)sendImageData:(CTCollectionModel *_Nullable)collectionModel
++ (void)sendImageData:(CTCollectionModel *)collectionModel
           imagesBlock:(CTCustomImagesBLock)imagesBlock;
 //获取代理
 + (id <CTSendPhotosProtocol>)delegate;

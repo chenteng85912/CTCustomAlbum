@@ -9,8 +9,8 @@
 
 @interface CTPhotosCollectionViewCell ()
 
-@property (strong, nonatomic) UIImageView *imgView;//缩略图
-@property (strong, nonatomic) UIView *backView;//蒙版
+@property (nonatomic, strong) UIImageView *imgView;//缩略图
+@property (nonatomic, strong) UIView *backView;//蒙版
 @property (nonatomic, strong) UIActivityIndicatorView *activityView;//下载菊花
 
 @end

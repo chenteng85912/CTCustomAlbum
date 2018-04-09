@@ -15,8 +15,8 @@
 
 @property (nonatomic,strong) UIImagePickerController *imagePicker;
 
+/** @brief 代理对象 */
 @property (nonatomic,weak) id <CTONEPhotoDelegate> delegate;
-
 /** @brief 图片选择回调 */
 @property (nonatomic, copy) CTONEPhotoBLock photoBlock;
 /** @brief 视频选择回调 */
@@ -25,6 +25,7 @@
 @end
 
 @implementation CTONEPhoto
+
 static CTONEPhoto *onePhoto = nil;
 
 + (void)sigtonPhoto

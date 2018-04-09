@@ -11,19 +11,19 @@
 @interface CTCollectionModel : NSObject
 
 //相册数组
-@property (nonatomic,strong) NSMutableArray <CTPHAssetModel *> *albumArray;
+@property (nonatomic, strong) NSMutableArray <CTPHAssetModel *> *albumArray;
 
 //选中相册数组
-@property (nonatomic,strong) NSMutableArray <CTPHAssetModel *> *selectedArray;
+@property (nonatomic ,strong) NSMutableArray <CTPHAssetModel *> *selectedArray;
 
 //是否输出原图
-@property (nonatomic,assign) BOOL sendOriginImg;
+@property (nonatomic, assign) BOOL sendOriginImg;
 
 //发送按钮标题
-@property (nonatomic,copy,readonly) NSString *sendBtnTitle;
+@property (nonatomic, copy, readonly) NSString *sendBtnTitle;
 
 //点击的图片位置
-@property (nonatomic,assign) NSInteger currenIndex;
+@property (nonatomic, assign) NSInteger currenIndex;
 
 //选中
 - (void)addSelectedIndex:(NSInteger)index;

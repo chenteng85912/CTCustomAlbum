@@ -16,7 +16,7 @@
 
 @interface CTPreviewPhotosCollectionViewController : UIViewController
 
-@property (nonatomic,strong) CTCollectionModel *collectionModel;
+@property (nonatomic, strong) CTCollectionModel *collectionModel;
 
 @property (nonatomic, copy) CTCustomImagesBLock photoBlock;
 

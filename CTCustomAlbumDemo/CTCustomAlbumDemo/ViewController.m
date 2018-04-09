@@ -8,8 +8,7 @@
 
 #import "ViewController.h"
 
-#import "CTONEPhoto.h"
-#import "CTCustomAlbum.h"
+#import "CTCustomAlbumConfig.h"
 
 #define ImageCollectionIdentifier @"ImageCollectionIdentifier"
 

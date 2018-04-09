@@ -12,10 +12,9 @@
 
 @interface CTAlbumGroupController ()<PHPhotoLibraryChangeObserver>
 
-@property (nonatomic,copy) NSArray <PHAssetCollection *> *groupArray;//相册列表数组
+@property (nonatomic, copy) NSArray <PHAssetCollection *> *groupArray;//相册列表数组
 
 @end
-static NSString *albumGroupIdentify = @"albumGroupIdentify";
 
 @implementation CTAlbumGroupController
 
@@ -25,7 +24,7 @@ static NSString *albumGroupIdentify = @"albumGroupIdentify";
 
     [self.tableView registerClass:[CTGroupTableViewCell class] forCellReuseIdentifier:NSStringFromClass([CTGroupTableViewCell class])];
 
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(dismissGroupController)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(p_dismissGroupController)];
     
     //注册实施监听相册变化
     [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
@@ -50,7 +49,7 @@ static NSString *albumGroupIdentify = @"albumGroupIdentify";
         [strongSelf.tableView reloadData];
         [[PHPhotoLibrary sharedPhotoLibrary] unregisterChangeObserver:strongSelf];
 
-        [strongSelf showPhotosCollection:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO];
+        [strongSelf p_showPhotosCollection:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO];
     }];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -72,7 +71,7 @@ static NSString *albumGroupIdentify = @"albumGroupIdentify";
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self showPhotosCollection:indexPath animated:YES];
+    [self p_showPhotosCollection:indexPath animated:YES];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 0.01;
@@ -82,7 +81,7 @@ static NSString *albumGroupIdentify = @"albumGroupIdentify";
     return 0.01;
 
 }
-- (void)showPhotosCollection:(NSIndexPath *)indexPath animated:(BOOL)animated{
+- (void)p_showPhotosCollection:(NSIndexPath *)indexPath animated:(BOOL)animated{
     
     PHAssetCollection *col = self.groupArray[indexPath.row];
     CTPhotosCollectionViewController *photos = [CTPhotosCollectionViewController new];
@@ -90,7 +89,7 @@ static NSString *albumGroupIdentify = @"albumGroupIdentify";
     photos.photoBlock = self.photoBlock;
     [self.navigationController pushViewController:photos animated:animated];
 }
-- (void)dismissGroupController{
+- (void)p_dismissGroupController{
 
     [self dismissViewControllerAnimated:true completion:nil];
 }

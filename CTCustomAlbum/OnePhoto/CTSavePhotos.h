@@ -31,4 +31,11 @@
  */
 + (void)saveImageIntoAlbum:(UIImage *)image;
 
+
+/**
+ 弹出alert提示
+
+ @param msg 提示内容
+ */
++ (void)showAlertWithMessage:(NSString *)msg;
 @end

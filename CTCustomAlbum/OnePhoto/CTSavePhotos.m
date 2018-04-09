@@ -18,7 +18,7 @@
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
     if (status == PHAuthorizationStatusRestricted ||
         status == PHAuthorizationStatusDenied) {
-        [self p_showAlertWithMessage:@"相册被禁止访问了，请前往设置进行更改" ];
+        [self showAlertWithMessage:@"相册被禁止访问了，请前往设置进行更改" ];
         
         return NO ;
     }
@@ -36,7 +36,7 @@
     AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     if (status == AVAuthorizationStatusRestricted || status == AVAuthorizationStatusDenied)
     {
-        [self p_showAlertWithMessage:@"相机被禁止访问了，请前往设置进行更改" ];
+        [self showAlertWithMessage:@"相机被禁止访问了，请前往设置进行更改" ];
         return NO;
     }
     
@@ -50,11 +50,11 @@
     [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
         
         // 1.创建图片请求类(创建系统相册中新的图片)PHAssetCreationRequest
-        PHAssetCreationRequest *assetCreationRequest = [PHAssetCreationRequest creationRequestForAssetFromImage:image];
-        
+        PHAssetChangeRequest *assetCreationRequest = [PHAssetChangeRequest creationRequestForAssetFromImage:image];
+
         // 2.创建相册请求类(修改相册)PHAssetCollectionChangeRequest
         PHAssetCollectionChangeRequest *assetCollectionChangeRequest = nil;
-        
+      
         // 获取之前相册
         PHAssetCollection *assetCollection = [self p_fetchAssetCollection];
         // 判断是否已有相册
@@ -66,7 +66,11 @@
             assetCollectionChangeRequest = [PHAssetCollectionChangeRequest creationRequestForAssetCollectionWithTitle:self.APPNAME];
         }
         // 3.把图片添加到相册中
-        [assetCollectionChangeRequest addAssets:@[assetCreationRequest.placeholderForCreatedAsset]];
+        if (assetCreationRequest) {
+            
+            [assetCollectionChangeRequest addAssets:@[assetCreationRequest.placeholderForCreatedAsset]];
+        }
+        
         
     } completionHandler:^(BOOL success, NSError * _Nullable error) {
         
@@ -97,7 +101,7 @@
 
 
 //弹出前往设置提示
-+ (void)p_showAlertWithMessage:(NSString *)msg{
++ (void)showAlertWithMessage:(NSString *)msg{
 
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:msg preferredStyle:UIAlertControllerStyleAlert];
     

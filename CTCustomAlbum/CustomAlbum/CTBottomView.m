@@ -7,18 +7,11 @@
 
 #import "CTBottomView.h"
 
-@interface CTBottomView ()
-
-@end
 @implementation CTBottomView
 
 - (void)drawRect:(CGRect)rect{
-    [self initSubViews];
-}
-- (void)initSubViews{
-    
     [self addSubview:self.senderBtn];
-
+    
     [self addSubview:self.imageSizeLabel];
 }
 

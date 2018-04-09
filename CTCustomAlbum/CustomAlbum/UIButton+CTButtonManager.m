@@ -12,18 +12,18 @@
 
 - (void)blockWithControlEvents:(UIControlEvents)controlEvents
                          block:(CustomBtnBlock)btnBlcok{
-    [self addActionBlock:btnBlcok];
-    [self addTarget:self action:@selector(invoke:) forControlEvents:controlEvents];
+    [self p_addActionBlock:btnBlcok];
+    [self addTarget:self action:@selector(p_btnInvoke:) forControlEvents:controlEvents];
 }
 
-- (void)addActionBlock:(CustomBtnBlock)block {
+- (void)p_addActionBlock:(CustomBtnBlock)block {
     if (block) {
 
         objc_setAssociatedObject(self, &@selector(blockWithControlEvents:block:), block, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
 }
 
-- (void)invoke:(id)sender {
+- (void)p_btnInvoke:(id)sender {
     CustomBtnBlock block = objc_getAssociatedObject(self, &@selector(blockWithControlEvents:block:));
     if (block) {
         block(sender);

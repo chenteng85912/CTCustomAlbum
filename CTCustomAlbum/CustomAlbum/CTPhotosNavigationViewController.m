@@ -76,7 +76,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[UINavigationBar appearance] setTranslucent:NO];
-
+    
     CTAlbumGroupController *group = [CTAlbumGroupController new];
     group.photoBlock = _block;
 

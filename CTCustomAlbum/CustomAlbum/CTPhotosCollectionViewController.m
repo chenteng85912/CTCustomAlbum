@@ -12,7 +12,7 @@
 #import "PHAsset+CTPHAssetManager.h"
 #import "CTPhotoManager.h"
 
-NSString *const  reusableViewIdentifier = @"CTPhotosBottomReusableView";
+NSString *const  kCTPhotosBottomReusableView = @"kCTPhotosBottomReusableView";
 
 CGFloat const FOOTER_HEIGHT = 40;
 
@@ -177,8 +177,11 @@ CGFloat const FOOTER_HEIGHT = 40;
      */
     if ([self respondsToSelector:@selector(traitCollection)]) {
         if ([self.traitCollection respondsToSelector:@selector(forceTouchCapability)]) {
-            if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable ) {
-                [self registerForPreviewingWithDelegate:(id)self sourceView:mycell];
+            
+            if (@available(iOS 9.0, *)) {
+                if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable ) {
+                    [self registerForPreviewingWithDelegate:(id)self sourceView:mycell];
+                }
             }
         }
     }
@@ -202,7 +205,7 @@ CGFloat const FOOTER_HEIGHT = 40;
 //设置footerView
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionReusableView * resuableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:reusableViewIdentifier forIndexPath:indexPath];
+    UICollectionReusableView * resuableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:kCTPhotosBottomReusableView forIndexPath:indexPath];
     
     if (![resuableView.subviews containsObject:self.footerLabel]) {
         [resuableView addSubview:self.footerLabel];
@@ -268,7 +271,7 @@ CGFloat const FOOTER_HEIGHT = 40;
         _ColView.backgroundColor= [UIColor whiteColor];
         _ColView.alwaysBounceVertical = YES;
         [_ColView registerClass:[CTPhotosCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([CTPhotosCollectionViewCell class])];
-        [_ColView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:reusableViewIdentifier];
+        [_ColView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:kCTPhotosBottomReusableView];
         _ColView.backgroundColor= [UIColor groupTableViewBackgroundColor];
         _ColView.alwaysBounceVertical = YES;
         [self.view addSubview:_ColView];

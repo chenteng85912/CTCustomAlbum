@@ -9,7 +9,7 @@
 
 @interface CTPhotosCollectionViewController : UIViewController
 
-@property (nonatomic,strong) PHAssetCollection *collection;
+@property (nonatomic, strong) PHAssetCollection *collection;
 
 @property (nonatomic, copy) CTCustomImagesBLock photoBlock;
 

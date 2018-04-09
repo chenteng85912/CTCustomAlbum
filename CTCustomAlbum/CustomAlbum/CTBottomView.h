@@ -10,10 +10,10 @@
 @interface CTBottomView : UIView
 
 //发送按钮
-@property (nonatomic,strong) UIButton *senderBtn;
+@property (nonatomic, strong) UIButton *senderBtn;
 
 //原图切换按钮
-@property (nonatomic,strong) UIButton *originBtn;
+@property (nonatomic, strong) UIButton *originBtn;
 
 //尺寸大小标签
 @property (nonatomic, strong) UILabel *imageSizeLabel;

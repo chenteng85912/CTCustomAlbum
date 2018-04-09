@@ -13,10 +13,8 @@
 
 @interface CTPhotosConfiguration : NSObject
 
-+ (NSString *)collectionSubTypeStr:(NSInteger)subType;
-
 //照片类型
-+ (NSArray *)groupNamesConfig;
++ (NSArray <NSNumber *> *)groupNamesConfig;
 
 //输出照片压缩比 默认0.6
 + (CGFloat)outputPhotosScale;

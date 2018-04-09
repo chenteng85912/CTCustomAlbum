@@ -6,10 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Photos/Photos.h>
 #import "CTPHAssetModel.h"
-
-typedef void (^PhotosBtnBlock)(NSIndexPath *indexPath);
 
 @interface CTPhotosCollectionViewCell : UICollectionViewCell
 

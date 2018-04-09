@@ -10,7 +10,10 @@
 
 @interface CTPrviewImageScrollView ()<UIScrollViewDelegate>
 
-@property (nonatomic,strong) UIImageView *zoomImageView;
+/**
+ 图片显示
+ */
+@property (nonatomic, strong) UIImageView *zoomImageView;
 
 @end
 

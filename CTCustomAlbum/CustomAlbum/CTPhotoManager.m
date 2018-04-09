@@ -18,7 +18,7 @@ static id<CTSendPhotosProtocol>CTDelegate = nil;
     return CTDelegate;
 }
 
-+ (void)fetchDefaultAllPhotosGroup:(void (^)(NSArray<PHAssetCollection *> * _Nonnull groupArray))groupsBlock
++ (void)fetchDefaultAllPhotosGroup:(void (^)(NSArray<PHAssetCollection *> * groupArray))groupsBlock
 {
     
     [self fetchDefaultPhotosGroup:^(NSArray<PHAssetCollection *> * _Nonnull defaultGroups) {
@@ -100,10 +100,8 @@ static id<CTSendPhotosProtocol>CTDelegate = nil;
     __block  NSMutableArray <PHAssetCollection *> * preparationCollections = [NSMutableArray arrayWithCapacity:0];
     
     [fetchResult enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-        NSString *subType = [CTPhotosConfiguration collectionSubTypeStr:obj.assetCollectionSubtype];
-        
-        if ([CTPhotosConfiguration.groupNamesConfig containsObject:subType]) {
+                
+        if ([CTPhotosConfiguration.groupNamesConfig containsObject:@(obj.assetCollectionSubtype)]) {
             [preparationCollections addObject:obj];
 
         }
@@ -119,7 +117,7 @@ static id<CTSendPhotosProtocol>CTDelegate = nil;
 }
 
 //发送图片
-+ (void)sendImageData:(CTCollectionModel *_Nullable)collectionModel
++ (void)sendImageData:(CTCollectionModel *)collectionModel
           imagesBlock:(CTCustomImagesBLock)imagesBlock{
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_group_t group = dispatch_group_create();
