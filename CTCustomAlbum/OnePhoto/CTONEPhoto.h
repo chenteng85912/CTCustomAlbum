@@ -61,14 +61,26 @@ typedef NS_ENUM(NSInteger , CTShowResourceModel) {
 @interface CTONEPhoto : NSObject
 
 /**
- 打开系统摄像头
+ 打开系统相机
 
  @param rootVC 遵循 CTONEPhotoDelegate 协议的对象
+ @param autoSave 拍照后是否存入系统相册
  @param enableEdit 是否打开系统编辑功能
  */
 + (void)openCameraWithDelegate:(id <CTONEPhotoDelegate>)rootVC
+                      autoSave:(BOOL)autoSave
                     enableEdit:(BOOL)enableEdit;
 
+
+/**
+ 打开系统相机
+ 
+ @param autoSave 拍照后是否存入系统相册
+ @param photoBlock 返回选择的资源
+ */
++ (void)openCamera:(BOOL)enableEdit
+          autoSave:(BOOL)autoSave
+     photoComplete:(CTONEPhotoBLock)photoBlock;
 
 /**
   打开系统相册
@@ -96,12 +108,5 @@ typedef NS_ENUM(NSInteger , CTShowResourceModel) {
     videoComplete:(CTONEVideoBLock)videoBlock;
 
 
-/**
- 打开系统相机
-
- @param photoBlock 返回选择的资源
- */
-+ (void)openCamera:(BOOL)enableEdit
-     photoComplete:(CTONEPhotoBLock)photoBlock;
 
 @end

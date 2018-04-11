@@ -19,7 +19,7 @@
 
         #调用方式一：block
         相机
-        [CTONEPhoto openCamera:NO photoComplete:^(UIImage *image, NSString *imageName) {
+        [CTONEPhoto openCamera:NO autoSave:YES photoComplete:^(UIImage *image, NSString *imageName) {
 
         }];
 
@@ -33,8 +33,8 @@
         #调用方式二：代理 self 应当遵守 CTONEPhotoDelegate 协议
         
         相机
-        [CTCustomAlbum showCustomAlbumWithDelegate:self];
-        
+        [CTONEPhoto openCameraWithDelegate:self autoSave:YES enableEdit:NO];
+
         照片
         [CTONEPhoto openAlbum:CTShowAlbumImageModel withDelegate:self enableEdit:NO];
   

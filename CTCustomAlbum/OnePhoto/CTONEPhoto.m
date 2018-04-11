@@ -22,6 +22,8 @@
 /** @brief 视频选择回调 */
 @property (nonatomic, copy) CTONEVideoBLock videoBlock;
 
+@property (nonatomic, assign) BOOL autoSave;
+
 @end
 
 @implementation CTONEPhoto
@@ -43,6 +45,7 @@ static CTONEPhoto *onePhoto = nil;
 
 //打开系统摄像头
 + (void)openCameraWithDelegate:(id <CTONEPhotoDelegate>)rootVC
+                      autoSave:(BOOL)autoSave
                     enableEdit:(BOOL)enableEdit{
 
     if (![CTSavePhotos checkAuthorityOfCamera]) {
@@ -50,16 +53,19 @@ static CTONEPhoto *onePhoto = nil;
     }
     [self sigtonPhoto];
     onePhoto.delegate = rootVC;
+    onePhoto.autoSave = autoSave;
     [self p_initCamera:enableEdit];
 
 }
 + (void)openCamera:(BOOL)enableEdit
+          autoSave:(BOOL)autoSave
      photoComplete:(CTONEPhotoBLock)photoBlock{
     if (![CTSavePhotos checkAuthorityOfCamera]) {
         return;
     }
     [self sigtonPhoto];
     onePhoto.photoBlock = photoBlock;
+    onePhoto.autoSave = autoSave;
     [self p_initCamera:enableEdit];
     
 }
@@ -142,7 +148,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     //拍照
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
         //保存到相册
-        if ([CTSavePhotos checkAuthorityOfAblum]) {
+        if ([CTSavePhotos checkAuthorityOfAblum]&&onePhoto.autoSave) {
             [CTSavePhotos saveImageIntoAlbum:selectedImage];
 
         }

@@ -38,7 +38,8 @@
 }
 - (IBAction)btnAction:(UIButton *)sender {
     
-    if (sender.tag==1){//系统相册
+    if (sender.tag==1){
+        //系统相册
 //        [CTONEPhoto openAlbum:CTShowAlbumImageModel enableEdit:NO photoComplete:^(UIImage *image, NSString *imageName) {
 //            self.imagesArray = @[image];
 //
@@ -47,9 +48,12 @@
         [CTONEPhoto openAlbum:CTShowAlbumVideoModel withDelegate:self enableEdit:NO];
 //        [CTONEPhoto openAlbum:CTShowAlbumImageModel withDelegate:self enableEdit:NO];
 
-    }else if(sender.tag==2){//系统相机
-//        [CTONEPhoto openCameraWithDelegate:self enableEdit:NO];
-        [CTONEPhoto openCamera:NO photoComplete:^(UIImage *image, NSString *imageName) {
+    }else if(sender.tag==2){
+        //系统相机 可以选择是否保存到相册
+        [CTONEPhoto openCameraWithDelegate:self autoSave:YES enableEdit:NO];
+        [CTONEPhoto openCamera:NO
+                      autoSave:YES
+                 photoComplete:^(UIImage *image, NSString *imageName) {
             self.imagesArray = @[image];
             
             [self.colView reloadData];
