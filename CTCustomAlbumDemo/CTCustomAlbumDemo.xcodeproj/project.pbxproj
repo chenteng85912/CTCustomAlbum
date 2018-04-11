@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E73E28A207DADB800364E4C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E73E289207DADB800364E4C /* README.md */; };
 		3ECE8FDB207B68A70027CBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8FD1207B68A70027CBC2 /* Assets.xcassets */; };
 		3ECE8FDC207B68A70027CBC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE8FD2207B68A70027CBC2 /* ViewController.m */; };
 		3ECE8FDD207B68A70027CBC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8FD3207B68A70027CBC2 /* LaunchScreen.storyboard */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E73E289207DADB800364E4C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3E74E82E207A3AD1000D3AD9 /* CTCustomAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTCustomAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECE8FD0207B68A70027CBC2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3ECE8FD1207B68A70027CBC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		3E74E825207A3AD1000D3AD9 = {
 			isa = PBXGroup;
 			children = (
+				3E73E289207DADB800364E4C /* README.md */,
 				3ECE90C5207B6E600027CBC2 /* CustomAlbum */,
 				3ECE90C0207B6E600027CBC2 /* OnePhoto */,
 				3ECE9061207B693E0027CBC2 /* CTCustomAlbum.podspec */,
@@ -157,10 +160,10 @@
 		3ECE90C0207B6E600027CBC2 /* OnePhoto */ = {
 			isa = PBXGroup;
 			children = (
-				3ECE90C1207B6E600027CBC2 /* CTONEPhoto.m */,
-				3ECE90C2207B6E600027CBC2 /* CTSavePhotos.m */,
 				3ECE90C3207B6E600027CBC2 /* CTONEPhoto.h */,
+				3ECE90C1207B6E600027CBC2 /* CTONEPhoto.m */,
 				3ECE90C4207B6E600027CBC2 /* CTSavePhotos.h */,
+				3ECE90C2207B6E600027CBC2 /* CTSavePhotos.m */,
 			);
 			name = OnePhoto;
 			path = ../CTCustomAlbum/OnePhoto;
@@ -169,50 +172,50 @@
 		3ECE90C5207B6E600027CBC2 /* CustomAlbum */ = {
 			isa = PBXGroup;
 			children = (
-				3ECE90C6207B6E600027CBC2 /* CTPhotosConfiguration.m */,
-				3ECE90C7207B6E600027CBC2 /* CTPhotoManager.h */,
-				3ECE90C8207B6E600027CBC2 /* CTGroupTableViewCell.m */,
-				3ECE90C9207B6E600027CBC2 /* CTPhotosConfig.h */,
-				3ECE90CA207B6E600027CBC2 /* CTPHAssetModel.m */,
-				3ECE90CB207B6E600027CBC2 /* CTBottomView.h */,
-				3ECE90CC207B6E600027CBC2 /* UIButton+CTButtonManager.m */,
-				3ECE90CD207B6E600027CBC2 /* CTPrviewImageScrollView.m */,
-				3ECE90CE207B6E600027CBC2 /* CTPhotosCollectionViewCell.h */,
-				3ECE90CF207B6E600027CBC2 /* UIViewController+CTAlertShow.m */,
-				3ECE90D0207B6E600027CBC2 /* CTAlbumGroupController.m */,
-				3ECE90D1207B6E600027CBC2 /* PHAssetCollection+CTAssetCollectionManager.h */,
-				3ECE90D2207B6E600027CBC2 /* CTPhotosCollectionViewController.m */,
 				3ECE90D3207B6E600027CBC2 /* ct_pselected@2x.png */,
-				3ECE90D4207B6E600027CBC2 /* CTCustomAlbum.m */,
-				3ECE90D5207B6E600027CBC2 /* CTPhotosNavigationViewController.m */,
-				3ECE90D6207B6E600027CBC2 /* UIControl+CTControlBlock.h */,
-				3ECE90D7207B6E600027CBC2 /* CTPreviewPhotosCollectionViewController.h */,
-				3ECE90D8207B6E600027CBC2 /* PHAsset+CTPHAssetManager.m */,
 				3ECE90D9207B6E600027CBC2 /* ct_punselect@2x.png */,
-				3ECE90DA207B6E600027CBC2 /* CTCollectionModel.m */,
-				3ECE90DB207B6E600027CBC2 /* ct_unselect@2x.png */,
-				3ECE90DC207B6E600027CBC2 /* CTBottomView.m */,
-				3ECE90DD207B6E600027CBC2 /* CTPHAssetModel.h */,
-				3ECE90DE207B6E600027CBC2 /* CTPhotoManager.m */,
-				3ECE90DF207B6E600027CBC2 /* CTGroupTableViewCell.h */,
-				3ECE90E0207B6E600027CBC2 /* CTPhotosConfiguration.h */,
-				3ECE90E1207B6E600027CBC2 /* CTAlbumGroupController.h */,
-				3ECE90E2207B6E600027CBC2 /* PHAssetCollection+CTAssetCollectionManager.m */,
-				3ECE90E3207B6E600027CBC2 /* ctCustomback@2x.png */,
-				3ECE90E4207B6E600027CBC2 /* UIViewController+CTAlertShow.h */,
-				3ECE90E5207B6E600027CBC2 /* CTPhotosCollectionViewCell.m */,
-				3ECE90E6207B6E600027CBC2 /* CTPrviewImageScrollView.h */,
 				3ECE90E7207B6E600027CBC2 /* ct_selected@2x.png */,
-				3ECE90E8207B6E600027CBC2 /* UIButton+CTButtonManager.h */,
-				3ECE90E9207B6E600027CBC2 /* origin_selected@2x.png */,
-				3ECE90EA207B6E600027CBC2 /* CTPhotosCollectionViewController.h */,
+				3ECE90DB207B6E600027CBC2 /* ct_unselect@2x.png */,
+				3ECE90E1207B6E600027CBC2 /* CTAlbumGroupController.h */,
+				3ECE90D0207B6E600027CBC2 /* CTAlbumGroupController.m */,
+				3ECE90CB207B6E600027CBC2 /* CTBottomView.h */,
+				3ECE90DC207B6E600027CBC2 /* CTBottomView.m */,
 				3ECE90EB207B6E600027CBC2 /* CTCollectionModel.h */,
-				3ECE90EC207B6E600027CBC2 /* PHAsset+CTPHAssetManager.h */,
-				3ECE90ED207B6E600027CBC2 /* CTPreviewPhotosCollectionViewController.m */,
-				3ECE90EE207B6E600027CBC2 /* origin_unselect@2x.png */,
-				3ECE90EF207B6E600027CBC2 /* CTPhotosNavigationViewController.h */,
-				3ECE90F0207B6E600027CBC2 /* UIControl+CTControlBlock.m */,
+				3ECE90DA207B6E600027CBC2 /* CTCollectionModel.m */,
 				3ECE90F1207B6E600027CBC2 /* CTCustomAlbum.h */,
+				3ECE90D4207B6E600027CBC2 /* CTCustomAlbum.m */,
+				3ECE90E3207B6E600027CBC2 /* ctCustomback@2x.png */,
+				3ECE90DF207B6E600027CBC2 /* CTGroupTableViewCell.h */,
+				3ECE90C8207B6E600027CBC2 /* CTGroupTableViewCell.m */,
+				3ECE90DD207B6E600027CBC2 /* CTPHAssetModel.h */,
+				3ECE90CA207B6E600027CBC2 /* CTPHAssetModel.m */,
+				3ECE90C7207B6E600027CBC2 /* CTPhotoManager.h */,
+				3ECE90DE207B6E600027CBC2 /* CTPhotoManager.m */,
+				3ECE90CE207B6E600027CBC2 /* CTPhotosCollectionViewCell.h */,
+				3ECE90E5207B6E600027CBC2 /* CTPhotosCollectionViewCell.m */,
+				3ECE90EA207B6E600027CBC2 /* CTPhotosCollectionViewController.h */,
+				3ECE90D2207B6E600027CBC2 /* CTPhotosCollectionViewController.m */,
+				3ECE90C9207B6E600027CBC2 /* CTPhotosConfig.h */,
+				3ECE90E0207B6E600027CBC2 /* CTPhotosConfiguration.h */,
+				3ECE90C6207B6E600027CBC2 /* CTPhotosConfiguration.m */,
+				3ECE90EF207B6E600027CBC2 /* CTPhotosNavigationViewController.h */,
+				3ECE90D5207B6E600027CBC2 /* CTPhotosNavigationViewController.m */,
+				3ECE90D7207B6E600027CBC2 /* CTPreviewPhotosCollectionViewController.h */,
+				3ECE90ED207B6E600027CBC2 /* CTPreviewPhotosCollectionViewController.m */,
+				3ECE90E6207B6E600027CBC2 /* CTPrviewImageScrollView.h */,
+				3ECE90CD207B6E600027CBC2 /* CTPrviewImageScrollView.m */,
+				3ECE90E9207B6E600027CBC2 /* origin_selected@2x.png */,
+				3ECE90EE207B6E600027CBC2 /* origin_unselect@2x.png */,
+				3ECE90EC207B6E600027CBC2 /* PHAsset+CTPHAssetManager.h */,
+				3ECE90D8207B6E600027CBC2 /* PHAsset+CTPHAssetManager.m */,
+				3ECE90D1207B6E600027CBC2 /* PHAssetCollection+CTAssetCollectionManager.h */,
+				3ECE90E2207B6E600027CBC2 /* PHAssetCollection+CTAssetCollectionManager.m */,
+				3ECE90E8207B6E600027CBC2 /* UIButton+CTButtonManager.h */,
+				3ECE90CC207B6E600027CBC2 /* UIButton+CTButtonManager.m */,
+				3ECE90D6207B6E600027CBC2 /* UIControl+CTControlBlock.h */,
+				3ECE90F0207B6E600027CBC2 /* UIControl+CTControlBlock.m */,
+				3ECE90E4207B6E600027CBC2 /* UIViewController+CTAlertShow.h */,
+				3ECE90CF207B6E600027CBC2 /* UIViewController+CTAlertShow.m */,
 			);
 			name = CustomAlbum;
 			path = ../CTCustomAlbum/CustomAlbum;
@@ -280,6 +283,7 @@
 				3ECE9102207B6E600027CBC2 /* ct_unselect@2x.png in Resources */,
 				3ECE9062207B693E0027CBC2 /* CTCustomAlbum.podspec in Resources */,
 				3ECE8FDE207B68A70027CBC2 /* Main.storyboard in Resources */,
+				3E73E28A207DADB800364E4C /* README.md in Resources */,
 				3ECE8FE1207B68A70027CBC2 /* Info.plist in Resources */,
 				3ECE910B207B6E600027CBC2 /* origin_unselect@2x.png in Resources */,
 				3ECE8FDD207B68A70027CBC2 /* LaunchScreen.storyboard in Resources */,

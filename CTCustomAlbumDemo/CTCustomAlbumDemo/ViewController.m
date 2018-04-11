@@ -41,8 +41,8 @@
             
             [self.colView reloadData];
         } videoComplete:nil];
-//        [CTONEPhoto openAlbum:CTShowAlbumImageModel withDelegate:self enableEdit:NO];
-
+//        [CTONEPhoto openAlbum:CTShowAlbumImageAndVideoModel withDelegate:self enableEdit:NO];
+  
     }else if(sender.tag==2){//系统相机
 //        [CTONEPhoto openCameraWithDelegate:self enableEdit:NO];
         [CTONEPhoto openCamera:NO photoComplete:^(UIImage *image, NSString *imageName) {
@@ -75,7 +75,7 @@
     [self.colView reloadData];
 }
 
-#pragma mark CTCustomAlbumViewControllerDelegate
+#pragma mark CTSendPhotosProtocol
 //传出图片数组
 - (void)sendImageArray:(NSMutableArray <UIImage *> *)imgArray{
     self.imagesArray = imgArray;

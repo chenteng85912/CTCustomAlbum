@@ -38,6 +38,13 @@
 - (void)fetchOriginImageComplete:(void (^_Nullable)( UIImage * _Nonnull originImg))completeBlock;
 
 /**
+ 同步获取原图
+ 
+ @return 返回原图数据
+ */
+- (NSData *_Nullable)fetchOriginImagData;
+
+/**
  获取原始图片的大小
  
  @ 返回图片大小

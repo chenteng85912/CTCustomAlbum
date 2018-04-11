@@ -34,6 +34,7 @@
  */
 + (void)sendImageData:(CTCollectionModel *)collectionModel
           imagesBlock:(CTCustomImagesBLock)imagesBlock;
+
 //获取代理
 + (id <CTSendPhotosProtocol>)delegate;
 

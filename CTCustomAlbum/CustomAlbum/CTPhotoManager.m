@@ -124,6 +124,21 @@ static id<CTSendPhotosProtocol>CTDelegate = nil;
     
     __block NSMutableArray <UIImage *>*tempImg = [NSMutableArray new];
 
+    //同步获取
+//    for (CTPHAssetModel *model in collectionModel.selectedArray) {
+//
+//        NSData *imgData = [model.asset fetchOriginImagData];
+//        UIImage *img = [UIImage imageWithData:imgData];
+//        if (!collectionModel.sendOriginImg) {
+//            imgData = UIImageJPEGRepresentation(img, CTPhotosConfiguration.outputPhotosScale);
+//            img = [UIImage imageWithData:imgData];
+//        }
+//        [tempImg addObject:img];
+//
+//    }
+//    if (imagesBlock) {
+//        imagesBlock([tempImg copy]);
+//    }
     dispatch_group_async(group, queue, ^{
         for (CTPHAssetModel *model in collectionModel.selectedArray) {
             dispatch_semaphore_t sema = dispatch_semaphore_create(0);
@@ -137,18 +152,18 @@ static id<CTSendPhotosProtocol>CTDelegate = nil;
                 }
                 [tempImg addObject:[UIImage imageWithData:imgData]];
                 dispatch_semaphore_signal(sema);
-                
+
             }];
             dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
         }
-      
+
     });
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-      
+
         if (imagesBlock) {
             imagesBlock([tempImg copy]);
         }
-        
+
     });
 }
 

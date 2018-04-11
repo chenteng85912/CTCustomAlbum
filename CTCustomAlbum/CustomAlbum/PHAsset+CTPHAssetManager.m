@@ -79,6 +79,22 @@
 }
 
 /**
+ 获取原图
+
+ @return 返回原图
+ */
+- (NSData *_Nullable)fetchOriginImagData
+{
+    PHImageRequestOptions *option = [[PHImageRequestOptions alloc] init];
+    option.synchronous = YES;
+    
+    __block NSData *imgData;
+    [[PHCachingImageManager defaultManager] requestImageDataForAsset:self options:option resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+        imgData = imageData;
+    }];
+    return imgData;
+}
+/**
  根据size获取缩略图
 
  @param completeBlock 返回缩略图
