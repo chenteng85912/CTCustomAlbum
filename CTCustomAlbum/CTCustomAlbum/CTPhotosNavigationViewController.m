@@ -7,6 +7,7 @@
 
 #import "CTPhotosNavigationViewController.h"
 #import "CTAlbumGroupController.h"
+#import "UIImage+ColorImg.h"
 
 @interface CTPhotosNavigationViewController ()
 
@@ -75,8 +76,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[UINavigationBar appearance] setTranslucent:NO];
-    
+
+    [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setBackgroundImage:[UIImage imageFromColor:[UIColor blackColor] size:CGSizeMake(Device_width, NAVBAR_HEIGHT)] forBarMetrics:UIBarMetricsDefault];
+
     CTAlbumGroupController *group = [CTAlbumGroupController new];
     group.photoBlock = _block;
 

@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "CTCustomAlbumConfig.h"
+#import "CTONEPhoto.h"
+#import "CTCustomAlbum.h"
 #import <MediaPlayer/MediaPlayer.h>
 
 #define ImageCollectionIdentifier @"ImageCollectionIdentifier"

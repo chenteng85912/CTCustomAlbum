@@ -8,6 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		3E73E28A207DADB800364E4C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E73E289207DADB800364E4C /* README.md */; };
+		3EB5B062207E02C8008672E2 /* CTONEPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B02F207E02C8008672E2 /* CTONEPhoto.m */; };
+		3EB5B063207E02C8008672E2 /* CTSavePhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B030207E02C8008672E2 /* CTSavePhotos.m */; };
+		3EB5B064207E02C8008672E2 /* UIImage+ColorImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B034207E02C8008672E2 /* UIImage+ColorImg.m */; };
+		3EB5B065207E02C8008672E2 /* CTPhotosConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B035207E02C8008672E2 /* CTPhotosConfiguration.m */; };
+		3EB5B066207E02C8008672E2 /* CTGroupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B037207E02C8008672E2 /* CTGroupTableViewCell.m */; };
+		3EB5B067207E02C8008672E2 /* CTPHAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B039207E02C8008672E2 /* CTPHAssetModel.m */; };
+		3EB5B068207E02C8008672E2 /* UIButton+CTButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B03B207E02C8008672E2 /* UIButton+CTButtonManager.m */; };
+		3EB5B069207E02C8008672E2 /* CTPrviewImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B03C207E02C8008672E2 /* CTPrviewImageScrollView.m */; };
+		3EB5B06A207E02C8008672E2 /* UIViewController+CTAlertShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B03E207E02C8008672E2 /* UIViewController+CTAlertShow.m */; };
+		3EB5B06B207E02C8008672E2 /* CTAlbumGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B03F207E02C8008672E2 /* CTAlbumGroupController.m */; };
+		3EB5B06C207E02C8008672E2 /* CTPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B041207E02C8008672E2 /* CTPhotosCollectionViewController.m */; };
+		3EB5B06D207E02C8008672E2 /* ct_pselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B042207E02C8008672E2 /* ct_pselected@2x.png */; };
+		3EB5B06E207E02C8008672E2 /* CTCustomAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B043207E02C8008672E2 /* CTCustomAlbum.m */; };
+		3EB5B06F207E02C8008672E2 /* CTPhotosNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B044207E02C8008672E2 /* CTPhotosNavigationViewController.m */; };
+		3EB5B070207E02C8008672E2 /* PHAsset+CTPHAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B047207E02C8008672E2 /* PHAsset+CTPHAssetManager.m */; };
+		3EB5B071207E02C8008672E2 /* ct_punselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B048207E02C8008672E2 /* ct_punselect@2x.png */; };
+		3EB5B072207E02C8008672E2 /* CTCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B049207E02C8008672E2 /* CTCollectionModel.m */; };
+		3EB5B073207E02C8008672E2 /* ct_unselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B04A207E02C8008672E2 /* ct_unselect@2x.png */; };
+		3EB5B074207E02C8008672E2 /* CTBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B04B207E02C8008672E2 /* CTBottomView.m */; };
+		3EB5B075207E02C8008672E2 /* CTPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B04D207E02C8008672E2 /* CTPhotoManager.m */; };
+		3EB5B076207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B052207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.m */; };
+		3EB5B077207E02C8008672E2 /* ctCustomback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B053207E02C8008672E2 /* ctCustomback@2x.png */; };
+		3EB5B078207E02C8008672E2 /* CTPhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B055207E02C8008672E2 /* CTPhotosCollectionViewCell.m */; };
+		3EB5B079207E02C8008672E2 /* ct_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B057207E02C8008672E2 /* ct_selected@2x.png */; };
+		3EB5B07A207E02C8008672E2 /* origin_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B059207E02C8008672E2 /* origin_selected@2x.png */; };
+		3EB5B07B207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B05D207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.m */; };
+		3EB5B07C207E02C8008672E2 /* origin_unselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B05E207E02C8008672E2 /* origin_unselect@2x.png */; };
+		3EB5B07D207E02C8008672E2 /* UIControl+CTControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B060207E02C8008672E2 /* UIControl+CTControlBlock.m */; };
 		3ECE8FDB207B68A70027CBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8FD1207B68A70027CBC2 /* Assets.xcassets */; };
 		3ECE8FDC207B68A70027CBC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE8FD2207B68A70027CBC2 /* ViewController.m */; };
 		3ECE8FDD207B68A70027CBC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8FD3207B68A70027CBC2 /* LaunchScreen.storyboard */; };
@@ -16,38 +44,61 @@
 		3ECE8FE0207B68A70027CBC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE8FD8207B68A70027CBC2 /* AppDelegate.m */; };
 		3ECE8FE1207B68A70027CBC2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8FD9207B68A70027CBC2 /* Info.plist */; };
 		3ECE9062207B693E0027CBC2 /* CTCustomAlbum.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE9061207B693E0027CBC2 /* CTCustomAlbum.podspec */; };
-		3ECE90F2207B6E600027CBC2 /* CTONEPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90C1207B6E600027CBC2 /* CTONEPhoto.m */; };
-		3ECE90F3207B6E600027CBC2 /* CTSavePhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90C2207B6E600027CBC2 /* CTSavePhotos.m */; };
-		3ECE90F4207B6E600027CBC2 /* CTPhotosConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90C6207B6E600027CBC2 /* CTPhotosConfiguration.m */; };
-		3ECE90F5207B6E600027CBC2 /* CTGroupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90C8207B6E600027CBC2 /* CTGroupTableViewCell.m */; };
-		3ECE90F6207B6E600027CBC2 /* CTPHAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90CA207B6E600027CBC2 /* CTPHAssetModel.m */; };
-		3ECE90F7207B6E600027CBC2 /* UIButton+CTButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90CC207B6E600027CBC2 /* UIButton+CTButtonManager.m */; };
-		3ECE90F8207B6E600027CBC2 /* CTPrviewImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90CD207B6E600027CBC2 /* CTPrviewImageScrollView.m */; };
-		3ECE90F9207B6E600027CBC2 /* UIViewController+CTAlertShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90CF207B6E600027CBC2 /* UIViewController+CTAlertShow.m */; };
-		3ECE90FA207B6E600027CBC2 /* CTAlbumGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90D0207B6E600027CBC2 /* CTAlbumGroupController.m */; };
-		3ECE90FB207B6E600027CBC2 /* CTPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90D2207B6E600027CBC2 /* CTPhotosCollectionViewController.m */; };
-		3ECE90FC207B6E600027CBC2 /* ct_pselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE90D3207B6E600027CBC2 /* ct_pselected@2x.png */; };
-		3ECE90FD207B6E600027CBC2 /* CTCustomAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90D4207B6E600027CBC2 /* CTCustomAlbum.m */; };
-		3ECE90FE207B6E600027CBC2 /* CTPhotosNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90D5207B6E600027CBC2 /* CTPhotosNavigationViewController.m */; };
-		3ECE90FF207B6E600027CBC2 /* PHAsset+CTPHAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90D8207B6E600027CBC2 /* PHAsset+CTPHAssetManager.m */; };
-		3ECE9100207B6E600027CBC2 /* ct_punselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE90D9207B6E600027CBC2 /* ct_punselect@2x.png */; };
-		3ECE9101207B6E600027CBC2 /* CTCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90DA207B6E600027CBC2 /* CTCollectionModel.m */; };
-		3ECE9102207B6E600027CBC2 /* ct_unselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE90DB207B6E600027CBC2 /* ct_unselect@2x.png */; };
-		3ECE9103207B6E600027CBC2 /* CTBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90DC207B6E600027CBC2 /* CTBottomView.m */; };
-		3ECE9104207B6E600027CBC2 /* CTPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90DE207B6E600027CBC2 /* CTPhotoManager.m */; };
-		3ECE9105207B6E600027CBC2 /* PHAssetCollection+CTAssetCollectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90E2207B6E600027CBC2 /* PHAssetCollection+CTAssetCollectionManager.m */; };
-		3ECE9106207B6E600027CBC2 /* ctCustomback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE90E3207B6E600027CBC2 /* ctCustomback@2x.png */; };
-		3ECE9107207B6E600027CBC2 /* CTPhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90E5207B6E600027CBC2 /* CTPhotosCollectionViewCell.m */; };
-		3ECE9108207B6E600027CBC2 /* ct_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE90E7207B6E600027CBC2 /* ct_selected@2x.png */; };
-		3ECE9109207B6E600027CBC2 /* origin_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE90E9207B6E600027CBC2 /* origin_selected@2x.png */; };
-		3ECE910A207B6E600027CBC2 /* CTPreviewPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90ED207B6E600027CBC2 /* CTPreviewPhotosCollectionViewController.m */; };
-		3ECE910B207B6E600027CBC2 /* origin_unselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE90EE207B6E600027CBC2 /* origin_unselect@2x.png */; };
-		3ECE910C207B6E600027CBC2 /* UIControl+CTControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE90F0207B6E600027CBC2 /* UIControl+CTControlBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E73E289207DADB800364E4C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3E74E82E207A3AD1000D3AD9 /* CTCustomAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTCustomAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EB5B02F207E02C8008672E2 /* CTONEPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTONEPhoto.m; sourceTree = "<group>"; };
+		3EB5B030207E02C8008672E2 /* CTSavePhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSavePhotos.m; sourceTree = "<group>"; };
+		3EB5B031207E02C8008672E2 /* CTONEPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTONEPhoto.h; sourceTree = "<group>"; };
+		3EB5B032207E02C8008672E2 /* CTSavePhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSavePhotos.h; sourceTree = "<group>"; };
+		3EB5B034207E02C8008672E2 /* UIImage+ColorImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorImg.m"; sourceTree = "<group>"; };
+		3EB5B035207E02C8008672E2 /* CTPhotosConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosConfiguration.m; sourceTree = "<group>"; };
+		3EB5B036207E02C8008672E2 /* CTPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotoManager.h; sourceTree = "<group>"; };
+		3EB5B037207E02C8008672E2 /* CTGroupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGroupTableViewCell.m; sourceTree = "<group>"; };
+		3EB5B038207E02C8008672E2 /* CTPhotosConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosConfig.h; sourceTree = "<group>"; };
+		3EB5B039207E02C8008672E2 /* CTPHAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPHAssetModel.m; sourceTree = "<group>"; };
+		3EB5B03A207E02C8008672E2 /* CTBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBottomView.h; sourceTree = "<group>"; };
+		3EB5B03B207E02C8008672E2 /* UIButton+CTButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CTButtonManager.m"; sourceTree = "<group>"; };
+		3EB5B03C207E02C8008672E2 /* CTPrviewImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPrviewImageScrollView.m; sourceTree = "<group>"; };
+		3EB5B03D207E02C8008672E2 /* CTPhotosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosCollectionViewCell.h; sourceTree = "<group>"; };
+		3EB5B03E207E02C8008672E2 /* UIViewController+CTAlertShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CTAlertShow.m"; sourceTree = "<group>"; };
+		3EB5B03F207E02C8008672E2 /* CTAlbumGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAlbumGroupController.m; sourceTree = "<group>"; };
+		3EB5B040207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAssetCollection+CTAssetCollectionManager.h"; sourceTree = "<group>"; };
+		3EB5B041207E02C8008672E2 /* CTPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosCollectionViewController.m; sourceTree = "<group>"; };
+		3EB5B042207E02C8008672E2 /* ct_pselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_pselected@2x.png"; sourceTree = "<group>"; };
+		3EB5B043207E02C8008672E2 /* CTCustomAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCustomAlbum.m; sourceTree = "<group>"; };
+		3EB5B044207E02C8008672E2 /* CTPhotosNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosNavigationViewController.m; sourceTree = "<group>"; };
+		3EB5B045207E02C8008672E2 /* UIControl+CTControlBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+CTControlBlock.h"; sourceTree = "<group>"; };
+		3EB5B046207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPreviewPhotosCollectionViewController.h; sourceTree = "<group>"; };
+		3EB5B047207E02C8008672E2 /* PHAsset+CTPHAssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+CTPHAssetManager.m"; sourceTree = "<group>"; };
+		3EB5B048207E02C8008672E2 /* ct_punselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_punselect@2x.png"; sourceTree = "<group>"; };
+		3EB5B049207E02C8008672E2 /* CTCollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCollectionModel.m; sourceTree = "<group>"; };
+		3EB5B04A207E02C8008672E2 /* ct_unselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_unselect@2x.png"; sourceTree = "<group>"; };
+		3EB5B04B207E02C8008672E2 /* CTBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBottomView.m; sourceTree = "<group>"; };
+		3EB5B04C207E02C8008672E2 /* CTPHAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPHAssetModel.h; sourceTree = "<group>"; };
+		3EB5B04D207E02C8008672E2 /* CTPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotoManager.m; sourceTree = "<group>"; };
+		3EB5B04E207E02C8008672E2 /* CTGroupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGroupTableViewCell.h; sourceTree = "<group>"; };
+		3EB5B04F207E02C8008672E2 /* UIImage+ColorImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorImg.h"; sourceTree = "<group>"; };
+		3EB5B050207E02C8008672E2 /* CTPhotosConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosConfiguration.h; sourceTree = "<group>"; };
+		3EB5B051207E02C8008672E2 /* CTAlbumGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAlbumGroupController.h; sourceTree = "<group>"; };
+		3EB5B052207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAssetCollection+CTAssetCollectionManager.m"; sourceTree = "<group>"; };
+		3EB5B053207E02C8008672E2 /* ctCustomback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ctCustomback@2x.png"; sourceTree = "<group>"; };
+		3EB5B054207E02C8008672E2 /* UIViewController+CTAlertShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CTAlertShow.h"; sourceTree = "<group>"; };
+		3EB5B055207E02C8008672E2 /* CTPhotosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosCollectionViewCell.m; sourceTree = "<group>"; };
+		3EB5B056207E02C8008672E2 /* CTPrviewImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPrviewImageScrollView.h; sourceTree = "<group>"; };
+		3EB5B057207E02C8008672E2 /* ct_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_selected@2x.png"; sourceTree = "<group>"; };
+		3EB5B058207E02C8008672E2 /* UIButton+CTButtonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CTButtonManager.h"; sourceTree = "<group>"; };
+		3EB5B059207E02C8008672E2 /* origin_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origin_selected@2x.png"; sourceTree = "<group>"; };
+		3EB5B05A207E02C8008672E2 /* CTPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosCollectionViewController.h; sourceTree = "<group>"; };
+		3EB5B05B207E02C8008672E2 /* CTCollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCollectionModel.h; sourceTree = "<group>"; };
+		3EB5B05C207E02C8008672E2 /* PHAsset+CTPHAssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAsset+CTPHAssetManager.h"; sourceTree = "<group>"; };
+		3EB5B05D207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPreviewPhotosCollectionViewController.m; sourceTree = "<group>"; };
+		3EB5B05E207E02C8008672E2 /* origin_unselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origin_unselect@2x.png"; sourceTree = "<group>"; };
+		3EB5B05F207E02C8008672E2 /* CTPhotosNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosNavigationViewController.h; sourceTree = "<group>"; };
+		3EB5B060207E02C8008672E2 /* UIControl+CTControlBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+CTControlBlock.m"; sourceTree = "<group>"; };
+		3EB5B061207E02C8008672E2 /* CTCustomAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCustomAlbum.h; sourceTree = "<group>"; };
 		3ECE8FD0207B68A70027CBC2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3ECE8FD1207B68A70027CBC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ECE8FD2207B68A70027CBC2 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -58,55 +109,6 @@
 		3ECE8FD9207B68A70027CBC2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3ECE8FDA207B68A70027CBC2 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3ECE9061207B693E0027CBC2 /* CTCustomAlbum.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CTCustomAlbum.podspec; path = ../CTCustomAlbum.podspec; sourceTree = "<group>"; };
-		3ECE9072207B6D1B0027CBC2 /* CTCustomAlbumConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTCustomAlbumConfig.h; path = ../CTCustomAlbum/CTCustomAlbumConfig.h; sourceTree = "<group>"; };
-		3ECE90C1207B6E600027CBC2 /* CTONEPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTONEPhoto.m; sourceTree = "<group>"; };
-		3ECE90C2207B6E600027CBC2 /* CTSavePhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSavePhotos.m; sourceTree = "<group>"; };
-		3ECE90C3207B6E600027CBC2 /* CTONEPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTONEPhoto.h; sourceTree = "<group>"; };
-		3ECE90C4207B6E600027CBC2 /* CTSavePhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSavePhotos.h; sourceTree = "<group>"; };
-		3ECE90C6207B6E600027CBC2 /* CTPhotosConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosConfiguration.m; sourceTree = "<group>"; };
-		3ECE90C7207B6E600027CBC2 /* CTPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotoManager.h; sourceTree = "<group>"; };
-		3ECE90C8207B6E600027CBC2 /* CTGroupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGroupTableViewCell.m; sourceTree = "<group>"; };
-		3ECE90C9207B6E600027CBC2 /* CTPhotosConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosConfig.h; sourceTree = "<group>"; };
-		3ECE90CA207B6E600027CBC2 /* CTPHAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPHAssetModel.m; sourceTree = "<group>"; };
-		3ECE90CB207B6E600027CBC2 /* CTBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBottomView.h; sourceTree = "<group>"; };
-		3ECE90CC207B6E600027CBC2 /* UIButton+CTButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CTButtonManager.m"; sourceTree = "<group>"; };
-		3ECE90CD207B6E600027CBC2 /* CTPrviewImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPrviewImageScrollView.m; sourceTree = "<group>"; };
-		3ECE90CE207B6E600027CBC2 /* CTPhotosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosCollectionViewCell.h; sourceTree = "<group>"; };
-		3ECE90CF207B6E600027CBC2 /* UIViewController+CTAlertShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CTAlertShow.m"; sourceTree = "<group>"; };
-		3ECE90D0207B6E600027CBC2 /* CTAlbumGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAlbumGroupController.m; sourceTree = "<group>"; };
-		3ECE90D1207B6E600027CBC2 /* PHAssetCollection+CTAssetCollectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAssetCollection+CTAssetCollectionManager.h"; sourceTree = "<group>"; };
-		3ECE90D2207B6E600027CBC2 /* CTPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosCollectionViewController.m; sourceTree = "<group>"; };
-		3ECE90D3207B6E600027CBC2 /* ct_pselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_pselected@2x.png"; sourceTree = "<group>"; };
-		3ECE90D4207B6E600027CBC2 /* CTCustomAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCustomAlbum.m; sourceTree = "<group>"; };
-		3ECE90D5207B6E600027CBC2 /* CTPhotosNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosNavigationViewController.m; sourceTree = "<group>"; };
-		3ECE90D6207B6E600027CBC2 /* UIControl+CTControlBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+CTControlBlock.h"; sourceTree = "<group>"; };
-		3ECE90D7207B6E600027CBC2 /* CTPreviewPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPreviewPhotosCollectionViewController.h; sourceTree = "<group>"; };
-		3ECE90D8207B6E600027CBC2 /* PHAsset+CTPHAssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+CTPHAssetManager.m"; sourceTree = "<group>"; };
-		3ECE90D9207B6E600027CBC2 /* ct_punselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_punselect@2x.png"; sourceTree = "<group>"; };
-		3ECE90DA207B6E600027CBC2 /* CTCollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCollectionModel.m; sourceTree = "<group>"; };
-		3ECE90DB207B6E600027CBC2 /* ct_unselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_unselect@2x.png"; sourceTree = "<group>"; };
-		3ECE90DC207B6E600027CBC2 /* CTBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBottomView.m; sourceTree = "<group>"; };
-		3ECE90DD207B6E600027CBC2 /* CTPHAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPHAssetModel.h; sourceTree = "<group>"; };
-		3ECE90DE207B6E600027CBC2 /* CTPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotoManager.m; sourceTree = "<group>"; };
-		3ECE90DF207B6E600027CBC2 /* CTGroupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGroupTableViewCell.h; sourceTree = "<group>"; };
-		3ECE90E0207B6E600027CBC2 /* CTPhotosConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosConfiguration.h; sourceTree = "<group>"; };
-		3ECE90E1207B6E600027CBC2 /* CTAlbumGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAlbumGroupController.h; sourceTree = "<group>"; };
-		3ECE90E2207B6E600027CBC2 /* PHAssetCollection+CTAssetCollectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAssetCollection+CTAssetCollectionManager.m"; sourceTree = "<group>"; };
-		3ECE90E3207B6E600027CBC2 /* ctCustomback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ctCustomback@2x.png"; sourceTree = "<group>"; };
-		3ECE90E4207B6E600027CBC2 /* UIViewController+CTAlertShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CTAlertShow.h"; sourceTree = "<group>"; };
-		3ECE90E5207B6E600027CBC2 /* CTPhotosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosCollectionViewCell.m; sourceTree = "<group>"; };
-		3ECE90E6207B6E600027CBC2 /* CTPrviewImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPrviewImageScrollView.h; sourceTree = "<group>"; };
-		3ECE90E7207B6E600027CBC2 /* ct_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_selected@2x.png"; sourceTree = "<group>"; };
-		3ECE90E8207B6E600027CBC2 /* UIButton+CTButtonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CTButtonManager.h"; sourceTree = "<group>"; };
-		3ECE90E9207B6E600027CBC2 /* origin_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origin_selected@2x.png"; sourceTree = "<group>"; };
-		3ECE90EA207B6E600027CBC2 /* CTPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosCollectionViewController.h; sourceTree = "<group>"; };
-		3ECE90EB207B6E600027CBC2 /* CTCollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCollectionModel.h; sourceTree = "<group>"; };
-		3ECE90EC207B6E600027CBC2 /* PHAsset+CTPHAssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAsset+CTPHAssetManager.h"; sourceTree = "<group>"; };
-		3ECE90ED207B6E600027CBC2 /* CTPreviewPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPreviewPhotosCollectionViewController.m; sourceTree = "<group>"; };
-		3ECE90EE207B6E600027CBC2 /* origin_unselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origin_unselect@2x.png"; sourceTree = "<group>"; };
-		3ECE90EF207B6E600027CBC2 /* CTPhotosNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosNavigationViewController.h; sourceTree = "<group>"; };
-		3ECE90F0207B6E600027CBC2 /* UIControl+CTControlBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+CTControlBlock.m"; sourceTree = "<group>"; };
-		3ECE90F1207B6E600027CBC2 /* CTCustomAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCustomAlbum.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				3E73E289207DADB800364E4C /* README.md */,
-				3ECE90C5207B6E600027CBC2 /* CustomAlbum */,
-				3ECE90C0207B6E600027CBC2 /* OnePhoto */,
 				3ECE9061207B693E0027CBC2 /* CTCustomAlbum.podspec */,
-				3ECE9072207B6D1B0027CBC2 /* CTCustomAlbumConfig.h */,
+				3EB5B033207E02C8008672E2 /* CTCustomAlbum */,
+				3EB5B02E207E02C8008672E2 /* CTOnePhoto */,
 				3ECE8FCF207B68A70027CBC2 /* CTCustomAlbumDemo */,
 				3E74E82F207A3AD1000D3AD9 /* Products */,
 			);
@@ -139,6 +140,72 @@
 				3E74E82E207A3AD1000D3AD9 /* CTCustomAlbum.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3EB5B02E207E02C8008672E2 /* CTOnePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				3EB5B02F207E02C8008672E2 /* CTONEPhoto.m */,
+				3EB5B030207E02C8008672E2 /* CTSavePhotos.m */,
+				3EB5B031207E02C8008672E2 /* CTONEPhoto.h */,
+				3EB5B032207E02C8008672E2 /* CTSavePhotos.h */,
+			);
+			name = CTOnePhoto;
+			path = ../CTCustomAlbum/CTOnePhoto;
+			sourceTree = "<group>";
+		};
+		3EB5B033207E02C8008672E2 /* CTCustomAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				3EB5B034207E02C8008672E2 /* UIImage+ColorImg.m */,
+				3EB5B035207E02C8008672E2 /* CTPhotosConfiguration.m */,
+				3EB5B036207E02C8008672E2 /* CTPhotoManager.h */,
+				3EB5B037207E02C8008672E2 /* CTGroupTableViewCell.m */,
+				3EB5B038207E02C8008672E2 /* CTPhotosConfig.h */,
+				3EB5B039207E02C8008672E2 /* CTPHAssetModel.m */,
+				3EB5B03A207E02C8008672E2 /* CTBottomView.h */,
+				3EB5B03B207E02C8008672E2 /* UIButton+CTButtonManager.m */,
+				3EB5B03C207E02C8008672E2 /* CTPrviewImageScrollView.m */,
+				3EB5B03D207E02C8008672E2 /* CTPhotosCollectionViewCell.h */,
+				3EB5B03E207E02C8008672E2 /* UIViewController+CTAlertShow.m */,
+				3EB5B03F207E02C8008672E2 /* CTAlbumGroupController.m */,
+				3EB5B040207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.h */,
+				3EB5B041207E02C8008672E2 /* CTPhotosCollectionViewController.m */,
+				3EB5B042207E02C8008672E2 /* ct_pselected@2x.png */,
+				3EB5B043207E02C8008672E2 /* CTCustomAlbum.m */,
+				3EB5B044207E02C8008672E2 /* CTPhotosNavigationViewController.m */,
+				3EB5B045207E02C8008672E2 /* UIControl+CTControlBlock.h */,
+				3EB5B046207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.h */,
+				3EB5B047207E02C8008672E2 /* PHAsset+CTPHAssetManager.m */,
+				3EB5B048207E02C8008672E2 /* ct_punselect@2x.png */,
+				3EB5B049207E02C8008672E2 /* CTCollectionModel.m */,
+				3EB5B04A207E02C8008672E2 /* ct_unselect@2x.png */,
+				3EB5B04B207E02C8008672E2 /* CTBottomView.m */,
+				3EB5B04C207E02C8008672E2 /* CTPHAssetModel.h */,
+				3EB5B04D207E02C8008672E2 /* CTPhotoManager.m */,
+				3EB5B04E207E02C8008672E2 /* CTGroupTableViewCell.h */,
+				3EB5B04F207E02C8008672E2 /* UIImage+ColorImg.h */,
+				3EB5B050207E02C8008672E2 /* CTPhotosConfiguration.h */,
+				3EB5B051207E02C8008672E2 /* CTAlbumGroupController.h */,
+				3EB5B052207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.m */,
+				3EB5B053207E02C8008672E2 /* ctCustomback@2x.png */,
+				3EB5B054207E02C8008672E2 /* UIViewController+CTAlertShow.h */,
+				3EB5B055207E02C8008672E2 /* CTPhotosCollectionViewCell.m */,
+				3EB5B056207E02C8008672E2 /* CTPrviewImageScrollView.h */,
+				3EB5B057207E02C8008672E2 /* ct_selected@2x.png */,
+				3EB5B058207E02C8008672E2 /* UIButton+CTButtonManager.h */,
+				3EB5B059207E02C8008672E2 /* origin_selected@2x.png */,
+				3EB5B05A207E02C8008672E2 /* CTPhotosCollectionViewController.h */,
+				3EB5B05B207E02C8008672E2 /* CTCollectionModel.h */,
+				3EB5B05C207E02C8008672E2 /* PHAsset+CTPHAssetManager.h */,
+				3EB5B05D207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.m */,
+				3EB5B05E207E02C8008672E2 /* origin_unselect@2x.png */,
+				3EB5B05F207E02C8008672E2 /* CTPhotosNavigationViewController.h */,
+				3EB5B060207E02C8008672E2 /* UIControl+CTControlBlock.m */,
+				3EB5B061207E02C8008672E2 /* CTCustomAlbum.h */,
+			);
+			name = CTCustomAlbum;
+			path = ../CTCustomAlbum/CTCustomAlbum;
 			sourceTree = "<group>";
 		};
 		3ECE8FCF207B68A70027CBC2 /* CTCustomAlbumDemo */ = {
@@ -155,70 +222,6 @@
 				3ECE8FD2207B68A70027CBC2 /* ViewController.m */,
 			);
 			path = CTCustomAlbumDemo;
-			sourceTree = "<group>";
-		};
-		3ECE90C0207B6E600027CBC2 /* OnePhoto */ = {
-			isa = PBXGroup;
-			children = (
-				3ECE90C3207B6E600027CBC2 /* CTONEPhoto.h */,
-				3ECE90C1207B6E600027CBC2 /* CTONEPhoto.m */,
-				3ECE90C4207B6E600027CBC2 /* CTSavePhotos.h */,
-				3ECE90C2207B6E600027CBC2 /* CTSavePhotos.m */,
-			);
-			name = OnePhoto;
-			path = ../CTCustomAlbum/OnePhoto;
-			sourceTree = "<group>";
-		};
-		3ECE90C5207B6E600027CBC2 /* CustomAlbum */ = {
-			isa = PBXGroup;
-			children = (
-				3ECE90D3207B6E600027CBC2 /* ct_pselected@2x.png */,
-				3ECE90D9207B6E600027CBC2 /* ct_punselect@2x.png */,
-				3ECE90E7207B6E600027CBC2 /* ct_selected@2x.png */,
-				3ECE90DB207B6E600027CBC2 /* ct_unselect@2x.png */,
-				3ECE90E1207B6E600027CBC2 /* CTAlbumGroupController.h */,
-				3ECE90D0207B6E600027CBC2 /* CTAlbumGroupController.m */,
-				3ECE90CB207B6E600027CBC2 /* CTBottomView.h */,
-				3ECE90DC207B6E600027CBC2 /* CTBottomView.m */,
-				3ECE90EB207B6E600027CBC2 /* CTCollectionModel.h */,
-				3ECE90DA207B6E600027CBC2 /* CTCollectionModel.m */,
-				3ECE90F1207B6E600027CBC2 /* CTCustomAlbum.h */,
-				3ECE90D4207B6E600027CBC2 /* CTCustomAlbum.m */,
-				3ECE90E3207B6E600027CBC2 /* ctCustomback@2x.png */,
-				3ECE90DF207B6E600027CBC2 /* CTGroupTableViewCell.h */,
-				3ECE90C8207B6E600027CBC2 /* CTGroupTableViewCell.m */,
-				3ECE90DD207B6E600027CBC2 /* CTPHAssetModel.h */,
-				3ECE90CA207B6E600027CBC2 /* CTPHAssetModel.m */,
-				3ECE90C7207B6E600027CBC2 /* CTPhotoManager.h */,
-				3ECE90DE207B6E600027CBC2 /* CTPhotoManager.m */,
-				3ECE90CE207B6E600027CBC2 /* CTPhotosCollectionViewCell.h */,
-				3ECE90E5207B6E600027CBC2 /* CTPhotosCollectionViewCell.m */,
-				3ECE90EA207B6E600027CBC2 /* CTPhotosCollectionViewController.h */,
-				3ECE90D2207B6E600027CBC2 /* CTPhotosCollectionViewController.m */,
-				3ECE90C9207B6E600027CBC2 /* CTPhotosConfig.h */,
-				3ECE90E0207B6E600027CBC2 /* CTPhotosConfiguration.h */,
-				3ECE90C6207B6E600027CBC2 /* CTPhotosConfiguration.m */,
-				3ECE90EF207B6E600027CBC2 /* CTPhotosNavigationViewController.h */,
-				3ECE90D5207B6E600027CBC2 /* CTPhotosNavigationViewController.m */,
-				3ECE90D7207B6E600027CBC2 /* CTPreviewPhotosCollectionViewController.h */,
-				3ECE90ED207B6E600027CBC2 /* CTPreviewPhotosCollectionViewController.m */,
-				3ECE90E6207B6E600027CBC2 /* CTPrviewImageScrollView.h */,
-				3ECE90CD207B6E600027CBC2 /* CTPrviewImageScrollView.m */,
-				3ECE90E9207B6E600027CBC2 /* origin_selected@2x.png */,
-				3ECE90EE207B6E600027CBC2 /* origin_unselect@2x.png */,
-				3ECE90EC207B6E600027CBC2 /* PHAsset+CTPHAssetManager.h */,
-				3ECE90D8207B6E600027CBC2 /* PHAsset+CTPHAssetManager.m */,
-				3ECE90D1207B6E600027CBC2 /* PHAssetCollection+CTAssetCollectionManager.h */,
-				3ECE90E2207B6E600027CBC2 /* PHAssetCollection+CTAssetCollectionManager.m */,
-				3ECE90E8207B6E600027CBC2 /* UIButton+CTButtonManager.h */,
-				3ECE90CC207B6E600027CBC2 /* UIButton+CTButtonManager.m */,
-				3ECE90D6207B6E600027CBC2 /* UIControl+CTControlBlock.h */,
-				3ECE90F0207B6E600027CBC2 /* UIControl+CTControlBlock.m */,
-				3ECE90E4207B6E600027CBC2 /* UIViewController+CTAlertShow.h */,
-				3ECE90CF207B6E600027CBC2 /* UIViewController+CTAlertShow.m */,
-			);
-			name = CustomAlbum;
-			path = ../CTCustomAlbum/CustomAlbum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,19 +282,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ECE9108207B6E600027CBC2 /* ct_selected@2x.png in Resources */,
-				3ECE9102207B6E600027CBC2 /* ct_unselect@2x.png in Resources */,
 				3ECE9062207B693E0027CBC2 /* CTCustomAlbum.podspec in Resources */,
+				3EB5B07C207E02C8008672E2 /* origin_unselect@2x.png in Resources */,
+				3EB5B071207E02C8008672E2 /* ct_punselect@2x.png in Resources */,
+				3EB5B06D207E02C8008672E2 /* ct_pselected@2x.png in Resources */,
 				3ECE8FDE207B68A70027CBC2 /* Main.storyboard in Resources */,
+				3EB5B073207E02C8008672E2 /* ct_unselect@2x.png in Resources */,
+				3EB5B077207E02C8008672E2 /* ctCustomback@2x.png in Resources */,
 				3E73E28A207DADB800364E4C /* README.md in Resources */,
 				3ECE8FE1207B68A70027CBC2 /* Info.plist in Resources */,
-				3ECE910B207B6E600027CBC2 /* origin_unselect@2x.png in Resources */,
 				3ECE8FDD207B68A70027CBC2 /* LaunchScreen.storyboard in Resources */,
-				3ECE9109207B6E600027CBC2 /* origin_selected@2x.png in Resources */,
 				3ECE8FDB207B68A70027CBC2 /* Assets.xcassets in Resources */,
-				3ECE9106207B6E600027CBC2 /* ctCustomback@2x.png in Resources */,
-				3ECE90FC207B6E600027CBC2 /* ct_pselected@2x.png in Resources */,
-				3ECE9100207B6E600027CBC2 /* ct_punselect@2x.png in Resources */,
+				3EB5B079207E02C8008672E2 /* ct_selected@2x.png in Resources */,
+				3EB5B07A207E02C8008672E2 /* origin_selected@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,29 +305,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ECE90FA207B6E600027CBC2 /* CTAlbumGroupController.m in Sources */,
-				3ECE90F4207B6E600027CBC2 /* CTPhotosConfiguration.m in Sources */,
-				3ECE9101207B6E600027CBC2 /* CTCollectionModel.m in Sources */,
-				3ECE9107207B6E600027CBC2 /* CTPhotosCollectionViewCell.m in Sources */,
-				3ECE90FF207B6E600027CBC2 /* PHAsset+CTPHAssetManager.m in Sources */,
-				3ECE9103207B6E600027CBC2 /* CTBottomView.m in Sources */,
-				3ECE90F8207B6E600027CBC2 /* CTPrviewImageScrollView.m in Sources */,
-				3ECE90FB207B6E600027CBC2 /* CTPhotosCollectionViewController.m in Sources */,
+				3EB5B070207E02C8008672E2 /* PHAsset+CTPHAssetManager.m in Sources */,
+				3EB5B06F207E02C8008672E2 /* CTPhotosNavigationViewController.m in Sources */,
+				3EB5B066207E02C8008672E2 /* CTGroupTableViewCell.m in Sources */,
+				3EB5B065207E02C8008672E2 /* CTPhotosConfiguration.m in Sources */,
 				3ECE8FDF207B68A70027CBC2 /* main.m in Sources */,
-				3ECE9105207B6E600027CBC2 /* PHAssetCollection+CTAssetCollectionManager.m in Sources */,
-				3ECE90FD207B6E600027CBC2 /* CTCustomAlbum.m in Sources */,
-				3ECE910A207B6E600027CBC2 /* CTPreviewPhotosCollectionViewController.m in Sources */,
-				3ECE9104207B6E600027CBC2 /* CTPhotoManager.m in Sources */,
-				3ECE910C207B6E600027CBC2 /* UIControl+CTControlBlock.m in Sources */,
+				3EB5B07B207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.m in Sources */,
+				3EB5B064207E02C8008672E2 /* UIImage+ColorImg.m in Sources */,
 				3ECE8FDC207B68A70027CBC2 /* ViewController.m in Sources */,
-				3ECE90F6207B6E600027CBC2 /* CTPHAssetModel.m in Sources */,
-				3ECE90F3207B6E600027CBC2 /* CTSavePhotos.m in Sources */,
-				3ECE90F2207B6E600027CBC2 /* CTONEPhoto.m in Sources */,
-				3ECE90F9207B6E600027CBC2 /* UIViewController+CTAlertShow.m in Sources */,
+				3EB5B075207E02C8008672E2 /* CTPhotoManager.m in Sources */,
+				3EB5B078207E02C8008672E2 /* CTPhotosCollectionViewCell.m in Sources */,
+				3EB5B07D207E02C8008672E2 /* UIControl+CTControlBlock.m in Sources */,
+				3EB5B063207E02C8008672E2 /* CTSavePhotos.m in Sources */,
+				3EB5B062207E02C8008672E2 /* CTONEPhoto.m in Sources */,
+				3EB5B074207E02C8008672E2 /* CTBottomView.m in Sources */,
+				3EB5B06B207E02C8008672E2 /* CTAlbumGroupController.m in Sources */,
+				3EB5B067207E02C8008672E2 /* CTPHAssetModel.m in Sources */,
+				3EB5B076207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.m in Sources */,
+				3EB5B068207E02C8008672E2 /* UIButton+CTButtonManager.m in Sources */,
+				3EB5B06E207E02C8008672E2 /* CTCustomAlbum.m in Sources */,
+				3EB5B06A207E02C8008672E2 /* UIViewController+CTAlertShow.m in Sources */,
+				3EB5B069207E02C8008672E2 /* CTPrviewImageScrollView.m in Sources */,
+				3EB5B06C207E02C8008672E2 /* CTPhotosCollectionViewController.m in Sources */,
+				3EB5B072207E02C8008672E2 /* CTCollectionModel.m in Sources */,
 				3ECE8FE0207B68A70027CBC2 /* AppDelegate.m in Sources */,
-				3ECE90F5207B6E600027CBC2 /* CTGroupTableViewCell.m in Sources */,
-				3ECE90F7207B6E600027CBC2 /* UIButton+CTButtonManager.m in Sources */,
-				3ECE90FE207B6E600027CBC2 /* CTPhotosNavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
