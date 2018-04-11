@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-
 #import "CTCustomAlbumConfig.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 #define ImageCollectionIdentifier @"ImageCollectionIdentifier"
 
@@ -17,7 +17,10 @@
 @interface ViewController ()<CTONEPhotoDelegate,CTSendPhotosProtocol>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *colView;
+@property (weak, nonatomic) IBOutlet UIImageView *videoImageView;
 @property (strong, nonatomic) NSArray<UIImage *> *imagesArray;
+
+@property (nonatomic, copy) NSString *videoUrl;
 
 @end
 
@@ -36,13 +39,14 @@
 - (IBAction)btnAction:(UIButton *)sender {
     
     if (sender.tag==1){//系统相册
-        [CTONEPhoto openAlbum:CTShowAlbumImageModel enableEdit:NO photoComplete:^(UIImage *image, NSString *imageName) {
-            self.imagesArray = @[image];
-            
-            [self.colView reloadData];
-        } videoComplete:nil];
-//        [CTONEPhoto openAlbum:CTShowAlbumImageAndVideoModel withDelegate:self enableEdit:NO];
-  
+//        [CTONEPhoto openAlbum:CTShowAlbumImageModel enableEdit:NO photoComplete:^(UIImage *image, NSString *imageName) {
+//            self.imagesArray = @[image];
+//
+//            [self.colView reloadData];
+//        } videoComplete:nil];
+        [CTONEPhoto openAlbum:CTShowAlbumVideoModel withDelegate:self enableEdit:NO];
+//        [CTONEPhoto openAlbum:CTShowAlbumImageModel withDelegate:self enableEdit:NO];
+
     }else if(sender.tag==2){//系统相机
 //        [CTONEPhoto openCameraWithDelegate:self enableEdit:NO];
         [CTONEPhoto openCamera:NO photoComplete:^(UIImage *image, NSString *imageName) {
@@ -63,16 +67,21 @@
 }
     
 #pragma mark CTONEPhotoDelegate
-- (void)sendOnePhoto:(UIImage *)image withImageName:(NSString *)imageName
+- (void)sendOnePhoto:(UIImage *)image
+       withImageName:(NSString *)imageName
 {
     self.imagesArray = @[image];
 
     [self.colView reloadData];
 }
 
-- (void)sendMediaUrl:(NSString *)url fileName:(NSString *)fileName thumeImg:(UIImage *)img{
-    self.imagesArray = @[img];
-    [self.colView reloadData];
+- (void)sendVideoPath:(NSString *)videoPath
+            videoName:(NSString *)videoName
+       videoShotImage:(UIImage *)videoShotImage{
+    
+    _videoImageView.image = videoShotImage;
+    
+    _videoUrl = videoPath;
 }
 
 #pragma mark CTSendPhotosProtocol
@@ -110,6 +119,14 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     return CGSizeMake(CELL_WIDTH, CELL_WIDTH);
+    
+}
+- (IBAction)p_playVideoAction:(UIButton *)sender {
+    if (!_videoUrl) {
+        return;
+    }
+    MPMoviePlayerViewController *playerViewController= [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL fileURLWithPath:_videoUrl]];
+    [self presentMoviePlayerViewControllerAnimated:playerViewController];
     
 }
 

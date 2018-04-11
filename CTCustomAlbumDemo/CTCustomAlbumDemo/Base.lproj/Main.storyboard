@@ -42,8 +42,11 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bqR-im-mVH">
-                                <rect key="frame" x="0.0" y="220" width="320" height="348"/>
+                                <rect key="frame" x="0.0" y="220" width="320" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="k3n-cS-X9o"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="HRp-ac-mtn">
                                     <size key="itemSize" width="90" height="90"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -76,22 +79,55 @@
                                     <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TtC-Ps-mbY"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a24-lB-OkJ">
+                                <rect key="frame" x="0.0" y="420" width="320" height="148"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rr-W1-uIV">
+                                        <rect key="frame" x="60" y="4" width="200" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="0H7-WC-ph7"/>
+                                            <constraint firstAttribute="height" constant="140" id="6oY-XT-HAq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYh-CG-kML">
+                                        <rect key="frame" x="135" y="49" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Hwd-62-gHq"/>
+                                            <constraint firstAttribute="height" constant="50" id="vLt-eA-zef"/>
+                                        </constraints>
+                                        <state key="normal" image="播放"/>
+                                        <connections>
+                                            <action selector="p_playVideoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZKK-Nw-dE3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6rr-W1-uIV" firstAttribute="centerY" secondItem="a24-lB-OkJ" secondAttribute="centerY" id="8aj-5n-tYS"/>
+                                    <constraint firstItem="6rr-W1-uIV" firstAttribute="centerX" secondItem="a24-lB-OkJ" secondAttribute="centerX" id="UNp-A0-sjs"/>
+                                    <constraint firstItem="YYh-CG-kML" firstAttribute="centerY" secondItem="a24-lB-OkJ" secondAttribute="centerY" id="UY4-6M-B4I"/>
+                                    <constraint firstItem="YYh-CG-kML" firstAttribute="centerX" secondItem="a24-lB-OkJ" secondAttribute="centerX" id="XJJ-bA-BUA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bqR-im-mVH" secondAttribute="bottom" id="0OD-WK-n1W"/>
+                            <constraint firstItem="bqR-im-mVH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2mz-X8-kpR"/>
+                            <constraint firstItem="a24-lB-OkJ" firstAttribute="top" secondItem="bqR-im-mVH" secondAttribute="bottom" id="7Hg-hF-Hhs"/>
                             <constraint firstAttribute="trailing" secondItem="2YF-1m-AlL" secondAttribute="trailing" id="7zn-Ok-LTP"/>
                             <constraint firstItem="2YF-1m-AlL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AQf-V0-45I"/>
                             <constraint firstAttribute="trailing" secondItem="USt-5P-gov" secondAttribute="trailing" id="CL0-va-ql1"/>
+                            <constraint firstItem="a24-lB-OkJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GuH-OG-Lko"/>
                             <constraint firstItem="USt-5P-gov" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="OzG-wE-A01"/>
+                            <constraint firstAttribute="trailing" secondItem="bqR-im-mVH" secondAttribute="trailing" id="RG2-aF-gUt"/>
                             <constraint firstItem="aas-ab-2rN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TYm-bD-qcI"/>
                             <constraint firstAttribute="trailing" secondItem="2YF-1m-AlL" secondAttribute="trailing" id="UG8-ag-TaJ"/>
-                            <constraint firstAttribute="trailing" secondItem="bqR-im-mVH" secondAttribute="trailing" id="b1H-18-Oxp"/>
-                            <constraint firstItem="bqR-im-mVH" firstAttribute="top" secondItem="2YF-1m-AlL" secondAttribute="bottom" constant="20" id="h5v-gn-CGE"/>
+                            <constraint firstAttribute="trailing" secondItem="a24-lB-OkJ" secondAttribute="trailing" id="fop-yq-f1K"/>
+                            <constraint firstItem="bqR-im-mVH" firstAttribute="top" secondItem="2YF-1m-AlL" secondAttribute="bottom" constant="20" id="kUt-lw-qXI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a24-lB-OkJ" secondAttribute="bottom" id="nz4-p2-TLs"/>
                             <constraint firstItem="2YF-1m-AlL" firstAttribute="top" secondItem="aas-ab-2rN" secondAttribute="bottom" constant="20" id="oML-5D-Gs9"/>
                             <constraint firstItem="aas-ab-2rN" firstAttribute="top" secondItem="USt-5P-gov" secondAttribute="bottom" constant="20" id="row-1d-mPD"/>
                             <constraint firstItem="USt-5P-gov" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tIk-we-hBW"/>
-                            <constraint firstItem="bqR-im-mVH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tzg-cQ-1dp"/>
                             <constraint firstItem="2YF-1m-AlL" firstAttribute="top" secondItem="aas-ab-2rN" secondAttribute="bottom" constant="20" id="yiC-wf-B1Z"/>
                             <constraint firstAttribute="trailing" secondItem="aas-ab-2rN" secondAttribute="trailing" id="yuJ-Cw-y2R"/>
                         </constraints>
@@ -99,6 +135,7 @@
                     <navigationItem key="navigationItem" id="O48-4q-yPE"/>
                     <connections>
                         <outlet property="colView" destination="bqR-im-mVH" id="Hn0-P3-JcT"/>
+                        <outlet property="videoImageView" destination="6rr-W1-uIV" id="Yhf-Au-zz5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -106,4 +143,7 @@
             <point key="canvasLocation" x="-596.25" y="-439.43661971830988"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="播放" width="50" height="50"/>
+    </resources>
 </document>
