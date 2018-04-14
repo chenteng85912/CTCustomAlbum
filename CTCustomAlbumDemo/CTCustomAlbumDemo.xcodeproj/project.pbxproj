@@ -122,6 +122,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E10435B2082067800395FD7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3EB5B042207E02C8008672E2 /* ct_pselected@2x.png */,
+				3EB5B048207E02C8008672E2 /* ct_punselect@2x.png */,
+				3EB5B057207E02C8008672E2 /* ct_selected@2x.png */,
+				3EB5B04A207E02C8008672E2 /* ct_unselect@2x.png */,
+				3EB5B053207E02C8008672E2 /* ctCustomback@2x.png */,
+				3EB5B059207E02C8008672E2 /* origin_selected@2x.png */,
+				3EB5B05E207E02C8008672E2 /* origin_unselect@2x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		3E74E825207A3AD1000D3AD9 = {
 			isa = PBXGroup;
 			children = (
@@ -157,10 +171,7 @@
 		3EB5B033207E02C8008672E2 /* CTCustomAlbum */ = {
 			isa = PBXGroup;
 			children = (
-				3EB5B042207E02C8008672E2 /* ct_pselected@2x.png */,
-				3EB5B048207E02C8008672E2 /* ct_punselect@2x.png */,
-				3EB5B057207E02C8008672E2 /* ct_selected@2x.png */,
-				3EB5B04A207E02C8008672E2 /* ct_unselect@2x.png */,
+				3E10435B2082067800395FD7 /* Resource */,
 				3EB5B051207E02C8008672E2 /* CTAlbumGroupController.h */,
 				3EB5B03F207E02C8008672E2 /* CTAlbumGroupController.m */,
 				3EB5B03A207E02C8008672E2 /* CTBottomView.h */,
@@ -169,7 +180,6 @@
 				3EB5B049207E02C8008672E2 /* CTCollectionModel.m */,
 				3EB5B061207E02C8008672E2 /* CTCustomAlbum.h */,
 				3EB5B043207E02C8008672E2 /* CTCustomAlbum.m */,
-				3EB5B053207E02C8008672E2 /* ctCustomback@2x.png */,
 				3EB5B04E207E02C8008672E2 /* CTGroupTableViewCell.h */,
 				3EB5B037207E02C8008672E2 /* CTGroupTableViewCell.m */,
 				3EB5B04C207E02C8008672E2 /* CTPHAssetModel.h */,
@@ -189,8 +199,6 @@
 				3EB5B05D207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.m */,
 				3EB5B056207E02C8008672E2 /* CTPrviewImageScrollView.h */,
 				3EB5B03C207E02C8008672E2 /* CTPrviewImageScrollView.m */,
-				3EB5B059207E02C8008672E2 /* origin_selected@2x.png */,
-				3EB5B05E207E02C8008672E2 /* origin_unselect@2x.png */,
 				3EB5B05C207E02C8008672E2 /* PHAsset+CTPHAssetManager.h */,
 				3EB5B047207E02C8008672E2 /* PHAsset+CTPHAssetManager.m */,
 				3EB5B040207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.h */,
