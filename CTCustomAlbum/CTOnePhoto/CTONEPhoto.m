@@ -74,7 +74,7 @@ static CTONEPhoto *onePhoto = nil;
     onePhoto.imagePicker.allowsEditing = enableEdit;
     onePhoto.imagePicker.mediaTypes =  @[(NSString *)kUTTypeImage];
     onePhoto.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    [[self p_currentViewController] presentViewController:onePhoto.imagePicker animated:YES completion:nil];
+    [[CTSavePhotos p_currentViewController] presentViewController:onePhoto.imagePicker animated:YES completion:nil];
 }
 //打开系统相册
 + (void)openAlbum:(CTShowResourceModel)showResourceModel
@@ -129,7 +129,7 @@ static CTONEPhoto *onePhoto = nil;
             
             break;
     }
-    [[self p_currentViewController] presentViewController:onePhoto.imagePicker animated:YES completion:nil];
+    [[CTSavePhotos p_currentViewController] presentViewController:onePhoto.imagePicker animated:YES completion:nil];
 }
 
 #pragma mark - UIImagePickerControllerDelegate
@@ -186,8 +186,20 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
                 }];
             }];
         }else if ([mediaType isEqualToString:(NSString *)kUTTypeMovie]){
+            //检测剩余空间
+            [CTSavePhotos checkLocalCachesSize];
             //视频
             NSURL *vedioURL = [info valueForKey:UIImagePickerControllerMediaURL];
+            NSData *videoData = [NSData dataWithContentsOfURL:vedioURL];
+            float videoSize = videoData.length/1024.0f/1024.0f;
+            //超过剩余空间 弹出提示
+            if (videoSize >[CTSavePhotos getFreeDiskspace]) {
+                [picker dismissViewControllerAnimated:YES completion:^{
+                    [onePhoto p_showAlert];
+                }];
+                return;
+            }
+            
             [onePhoto p_encode:vedioURL withBlock:^(NSString *fileFullPath, NSString *fileName) {
                 [picker dismissViewControllerAnimated:YES completion:^{
 
@@ -213,10 +225,9 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 }
 //视频转码
 - (void)p_encode:(NSURL *)url
-     withBlock:(void (^) (NSString *fileFullPath, NSString *fileName))block
+       withBlock:(void (^) (NSString *fileFullPath, NSString *fileName))block
 {
-    
-    NSURL *doneUrl =[NSURL new];
+  
     //视频格式转换
     AVURLAsset *avAsset = [AVURLAsset URLAssetWithURL:url options:nil];
     NSArray *compatiblePresets = [AVAssetExportSession exportPresetsCompatibleWithAsset:avAsset];
@@ -224,17 +235,16 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     NSString *mp4Quality = AVAssetExportPresetMediumQuality; //AVAssetExportPreset640x480;//
     if ([compatiblePresets containsObject:mp4Quality]){
         
-        AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]initWithAsset:avAsset
+        AVAssetExportSession *exportSession = [[AVAssetExportSession alloc] initWithAsset:avAsset
                                                                               presetName:mp4Quality];
         
-        NSString *doc=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
         NSString *fileName = [NSString stringWithFormat:@"%.f.mp4", [[NSDate new] timeIntervalSince1970]];
-        NSString *mp4Path = [NSString stringWithFormat:@"%@/%@", doc, fileName];
+        NSString *mp4Path = [[CTSavePhotos documentPath] stringByAppendingPathComponent:fileName];
         
-        doneUrl = [NSURL fileURLWithPath:mp4Path];
-        exportSession.outputURL = doneUrl;
+        exportSession.outputURL = [NSURL fileURLWithPath:mp4Path];
         exportSession.shouldOptimizeForNetworkUse = YES; //是否为网络传输优化
         exportSession.outputFileType = AVFileTypeMPEG4;
+        //存入本地
         [exportSession exportAsynchronouslyWithCompletionHandler:^{
             
             switch ([exportSession status]) {
@@ -242,6 +252,12 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
                 {
                     //格式转换失败
                     NSLog(@"视频格式转换失败");
+                    dispatch_async(dispatch_get_main_queue(), ^{
+
+                        [onePhoto.imagePicker dismissViewControllerAnimated:YES completion:^{
+                            
+                        }];
+                    });
                     break;
                 }
                     
@@ -325,23 +341,11 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     }];
     
 }
-//获取最顶部控制器
-+ (UIViewController *)p_currentViewController {
-    
-    UIViewController* vc = [UIApplication sharedApplication].keyWindow.rootViewController;
-    while (1)
-    {
-        if ([vc isKindOfClass:[UITabBarController class]]) {
-            vc = ((UITabBarController *)vc).selectedViewController;
-        }else if ([vc isKindOfClass:[UINavigationController class]]) {
-            vc = ((UINavigationController *)vc).visibleViewController;
-        }else if (vc.presentedViewController) {
-            vc = vc.presentedViewController;
-        }else{
-            break;
-        }
-    }
-    return vc;
-}
 
+- (void)p_showAlert{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"你的设备剩余空间不足" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
+    [[CTSavePhotos p_currentViewController] presentViewController:alert animated:YES completion:nil];
+}
 @end

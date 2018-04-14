@@ -31,4 +31,34 @@
  */
 + (void)saveImageIntoAlbum:(UIImage *)image;
 
+
+/**
+ 获取对顶部控制器
+
+ @return 顶部控制器
+ */
++ (UIViewController *)p_currentViewController;
+
+
+/**
+ 文件存储的本地路径
+
+ @return 本地路径
+ */
++ (NSString *)documentPath;
+
+
+/**
+ 获取设备空余空间
+
+ @return 剩余空间大小 M单位
+ */
++ (float)getFreeDiskspace;
+
+
+/**
+ 检测剩余空间 超过100M 自动清理
+ */
++ (void)checkLocalCachesSize;
+
 @end

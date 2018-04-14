@@ -145,4 +145,75 @@
     return appName;
 }
 
++ (NSString *)documentPath
+{
+    //项目名称
+    NSString *executableFile = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleExecutableKey];
+    
+    NSString *cachePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:executableFile];
+    
+    BOOL isDir = YES;
+    BOOL isExist = [[NSFileManager defaultManager] fileExistsAtPath:cachePath isDirectory:&isDir];
+    if(!isExist || !isDir){
+        
+        [[NSFileManager defaultManager] createDirectoryAtPath:cachePath withIntermediateDirectories:NO attributes:nil error:nil];
+    }
+    return cachePath;
+}
+
++ (void)checkLocalCachesSize{
+    //本地缓存大小
+    NSFileManager *fileMan = [NSFileManager defaultManager];
+                                
+    NSArray *fileArray = [fileMan contentsOfDirectoryAtPath:self.documentPath error:nil];
+    long long allSize = 0.0;
+    for (NSString *fileName in fileArray) {
+        NSString *filePath = [self.documentPath stringByAppendingPathComponent:fileName];
+        if([fileMan fileExistsAtPath:filePath])
+        {
+            long long size = [fileMan attributesOfItemAtPath:filePath error:nil].fileSize;
+            allSize +=  size;
+            
+        }
+    }
+    float totalSize = allSize/1024.0f/1024.0f;
+    //超过100M 自动清理
+    if (totalSize>100.0) {
+        [[NSFileManager defaultManager] removeItemAtPath:self.documentPath error:nil];
+
+    }
+    
+}
++ (float)getFreeDiskspace {
+    
+    float totalFreeSpace = 0;
+    
+    NSError *error = nil;
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    
+    NSDictionary *dictionary = [[NSFileManager defaultManager] attributesOfFileSystemForPath:paths.lastObject error: &error];
+    
+    if (!error) {
+        
+        NSNumber *fileSystemSizeInBytes = [dictionary objectForKey:NSFileSystemSize];
+        
+        float totalSpace = [fileSystemSizeInBytes floatValue]/1024.0f/1024.0f/1024.0f;
+        
+        NSNumber *freeFileSystemSizeInBytes = [dictionary objectForKey:NSFileSystemFreeSize];
+        totalFreeSpace = [freeFileSystemSizeInBytes floatValue]/1024.0f/1024.0f;
+        
+        NSLog(@"Memory Capacity of %f GB with %f MB Free memory available.", totalSpace, totalFreeSpace);
+        
+    } else {
+        
+        NSLog(@"Error Obtaining System Memory Info: Domain = %@, Code = %ld",error.domain, (long)error.code);
+        
+    }
+    
+    return totalFreeSpace;
+    
+}
+
+
 @end
