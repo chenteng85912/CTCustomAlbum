@@ -188,12 +188,13 @@ static NSString *kPreviewCollectionCellIdengifier = @"kPreviewCollectionCellIden
 #pragma mark CTImageScrollViewDelegate 点击隐藏
 - (void)singalTapAction{
     _isHiddenTop = !_isHiddenTop;
+    WEAKSELF;
     [[UIApplication sharedApplication] setStatusBarHidden:_isHiddenTop];
 
     [UIView animateWithDuration:0.25 animations:^{
    
-        self.topBar.alpha = !_isHiddenTop;
-        self.bottomBar.alpha = !_isHiddenTop;
+        self.topBar.alpha = !weakSelf.isHiddenTop;
+        self.bottomBar.alpha = !weakSelf.isHiddenTop;
    
     }];
 }
