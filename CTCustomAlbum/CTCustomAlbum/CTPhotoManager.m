@@ -119,52 +119,64 @@ static id<CTSendPhotosProtocol>CTDelegate = nil;
 //发送图片
 + (void)sendImageData:(CTCollectionModel *)collectionModel
           imagesBlock:(CTCustomImagesBLock)imagesBlock{
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_group_t group = dispatch_group_create();
     
-    __block NSMutableArray <UIImage *>*tempImg = [NSMutableArray new];
+    CFAbsoluteTime startTime =CFAbsoluteTimeGetCurrent();
 
+    NSMutableArray <UIImage *> *tempImg = [NSMutableArray new];
     //同步获取
-//    for (CTPHAssetModel *model in collectionModel.selectedArray) {
+    for (CTPHAssetModel *model in collectionModel.selectedArray) {
+
+        NSData *imgData = [model.asset fetchOriginImagData];
+        UIImage *img = [UIImage imageWithData:imgData];
+        if (!collectionModel.sendOriginImg) {
+            imgData = UIImageJPEGRepresentation(img, CTPhotosConfiguration.outputPhotosScale);
+            img = [UIImage imageWithData:imgData];
+        }
+        [tempImg addObject:img];
+
+    }
+    
+    CFAbsoluteTime linkTime = (CFAbsoluteTimeGetCurrent() - startTime);
+    NSLog(@"Linked in %.2f s", linkTime);
+    
+    if (imagesBlock) {
+        imagesBlock([tempImg copy]);
+    }
+    
+//   __block  NSMutableArray <UIImage *> *tempImg = [NSMutableArray new];
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_group_t group = dispatch_group_create();
+//    dispatch_group_async(group, queue, ^{
+//        for (CTPHAssetModel *model in collectionModel.selectedArray) {
+//            dispatch_semaphore_t sema = dispatch_semaphore_create(0);
 //
-//        NSData *imgData = [model.asset fetchOriginImagData];
-//        UIImage *img = [UIImage imageWithData:imgData];
-//        if (!collectionModel.sendOriginImg) {
-//            imgData = UIImageJPEGRepresentation(img, CTPhotosConfiguration.outputPhotosScale);
-//            img = [UIImage imageWithData:imgData];
+//            [model.asset fetchOriginImageComplete:^(UIImage * _Nonnull originImg) {
+//                NSData *imgData;
+//                if (collectionModel.sendOriginImg) {
+//                    imgData = UIImageJPEGRepresentation(originImg, 1);
+//                }else{
+//                    imgData = UIImageJPEGRepresentation(originImg, CTPhotosConfiguration.outputPhotosScale);
+//                }
+//                [tempImg addObject:[UIImage imageWithData:imgData]];
+//                long signalValue = dispatch_semaphore_signal(sema);
+//                NSLog(@"%ld",signalValue);
+//
+//            }];
+//            dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+//
 //        }
-//        [tempImg addObject:img];
 //
-//    }
-//    if (imagesBlock) {
-//        imagesBlock([tempImg copy]);
-//    }
-    dispatch_group_async(group, queue, ^{
-        for (CTPHAssetModel *model in collectionModel.selectedArray) {
-            dispatch_semaphore_t sema = dispatch_semaphore_create(0);
-
-            [model.asset fetchOriginImageComplete:^(UIImage * _Nonnull originImg) {
-                NSData *imgData;
-                if (collectionModel.sendOriginImg) {
-                    imgData = UIImageJPEGRepresentation(originImg, 1);
-                }else{
-                    imgData = UIImageJPEGRepresentation(originImg, CTPhotosConfiguration.outputPhotosScale);
-                }
-                [tempImg addObject:[UIImage imageWithData:imgData]];
-                dispatch_semaphore_signal(sema);
-
-            }];
-            dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-        }
-
-    });
-    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-
-        if (imagesBlock) {
-            imagesBlock([tempImg copy]);
-        }
-
-    });
+//    });
+//
+//    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+//        CFAbsoluteTime linkTime = (CFAbsoluteTimeGetCurrent() - startTime);
+//
+//        NSLog(@"Linked in %.2f s", linkTime);
+//        if (imagesBlock) {
+//            imagesBlock([tempImg copy]);
+//        }
+//
+//    });
 }
 
 @end
