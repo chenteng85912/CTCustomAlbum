@@ -73,8 +73,12 @@ CGFloat const FOOTER_HEIGHT = 40;
     }];
     //发送图片
     [self.bottomBar.senderBtn blockWithControlEvents:UIControlEventTouchUpInside block:^(UIButton *sender) {
-        [weakSelf.activityView startAnimating];
+//        [weakSelf.activityView startAnimating];
+        
         [CTPhotoManager sendImageData:weakSelf.collectionModel imagesBlock:^(NSArray<UIImage *> *imagesArray) {
+            //            [weakSelf.activityView stopAnimating];
+            
+            [weakSelf dismissViewControllerAnimated:YES completion:nil];
             if (CTPhotoManager.delegate&&[CTPhotoManager.delegate respondsToSelector:@selector(sendImageArray:)]) {
                 [CTPhotoManager.delegate sendImageArray:imagesArray];
             }
@@ -82,9 +86,7 @@ CGFloat const FOOTER_HEIGHT = 40;
             if (weakSelf.photoBlock) {
                 weakSelf.photoBlock(imagesArray);
             }
-            [weakSelf.activityView stopAnimating];
             
-            [weakSelf dismissViewControllerAnimated:YES completion:nil];
         }];
     }];
     
