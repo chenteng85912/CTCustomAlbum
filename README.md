@@ -1,5 +1,6 @@
 # CTCustomAlbum CTONEPhoto
 
+pod 'CTCustomAlbum'
 
 #一句代码调用自定义相册，多选照片
 
