@@ -30,9 +30,9 @@
     [[self p_currentViewController] presentViewController:nav animated:YES completion:nil];
 
 }
-+ (void)showCustomAlbumWithBlock:(CTCustomImagesBLock)block
-                      photoScale:(CGFloat)scale
-                          maxNum:(NSInteger)maxNum{
++ (void)showCustomAlbumWithPhotoScale:(CGFloat)scale
+                               maxNum:(NSInteger)maxNum
+                                block:(CTCustomImagesBLock)block{
     CTPhotosNavigationViewController *nav = [CTPhotosNavigationViewController initWithBlock:block
                                                                                  photoScale:scale
                                                                                      maxNum:maxNum];

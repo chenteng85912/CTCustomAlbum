@@ -27,8 +27,8 @@
  @param maxNum 最大选择数量 默认为9
  */
 + (void)showCustomAlbumWithDelegate:(id <CTSendPhotosProtocol>)delegate
-                      photoScale:(CGFloat)scale
-                          maxNum:(NSInteger)maxNum;
+                         photoScale:(CGFloat)scale
+                             maxNum:(NSInteger)maxNum;
 
 
 /**
@@ -43,11 +43,11 @@
 /**
  初始化相册导航栏控制器
  
- @param block 选择图片回调
  @param scale 图片压缩比例 默认为0.6
  @param maxNum 最大选择数量 默认为9
+ @param block 选择图片回调
  */
-+ (void)showCustomAlbumWithBlock:(CTCustomImagesBLock)block
-                   photoScale:(CGFloat)scale
-                       maxNum:(NSInteger)maxNum;
++ (void)showCustomAlbumWithPhotoScale:(CGFloat)scale
+                               maxNum:(NSInteger)maxNum
+                                block:(CTCustomImagesBLock)block;
 @end

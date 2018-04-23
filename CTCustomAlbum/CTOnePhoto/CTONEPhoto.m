@@ -232,7 +232,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     AVURLAsset *avAsset = [AVURLAsset URLAssetWithURL:url options:nil];
     NSArray *compatiblePresets = [AVAssetExportSession exportPresetsCompatibleWithAsset:avAsset];
     
-    NSString *mp4Quality = AVAssetExportPresetMediumQuality; //AVAssetExportPreset640x480;//
+    NSString *mp4Quality = AVAssetExportPresetHighestQuality; //AVAssetExportPreset640x480;//
     if ([compatiblePresets containsObject:mp4Quality]){
         
         AVAssetExportSession *exportSession = [[AVAssetExportSession alloc] initWithAsset:avAsset
