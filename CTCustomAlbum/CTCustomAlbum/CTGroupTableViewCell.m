@@ -16,8 +16,8 @@ CGFloat const sub_y = 5;
 @property (nonatomic,strong) UIImageView *thumbImgView;
 @property (nonatomic,strong) UILabel *groupTitleLabel;
 
-
 @end
+
 @implementation CTGroupTableViewCell
 
 - (void)awakeFromNib {
