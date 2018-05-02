@@ -13,7 +13,7 @@ pod 'CTCustomAlbum'
         [CTCustomAlbum showCustomAlbumWithDelegate:self];
      
         #pragma mark CTSendPhotosProtocol
-        - (void)sendImageArray:(NSMutableArray <UIImage *> *)imgArray{
+        - (void)sendImageArray:(NSArray <UIImage *> *)imgArray{
         }
 
 #一句代码调用系统相册、相机，获取图片或者视频

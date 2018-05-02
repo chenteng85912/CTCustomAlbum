@@ -41,17 +41,17 @@
     
     if (sender.tag==1){
         //系统相册
-//        [CTONEPhoto openAlbum:CTShowAlbumImageModel enableEdit:NO photoComplete:^(UIImage *image, NSString *imageName) {
-//            self.imagesArray = @[image];
-//
-//            [self.colView reloadData];
-//        } videoComplete:nil];
-        [CTONEPhoto openAlbum:CTShowAlbumVideoModel withDelegate:self enableEdit:NO];
+        [CTONEPhoto openAlbum:CTShowAlbumImageModel enableEdit:NO photoComplete:^(UIImage *image, NSString *imageName) {
+            self.imagesArray = @[image];
+
+            [self.colView reloadData];
+        } videoComplete:nil];
+//        [CTONEPhoto openAlbum:CTShowAlbumVideoModel withDelegate:self enableEdit:NO];
 //        [CTONEPhoto openAlbum:CTShowAlbumImageModel withDelegate:self enableEdit:NO];
 
     }else if(sender.tag==2){
         //系统相机 可以选择是否保存到相册
-        [CTONEPhoto openCameraWithDelegate:self autoSave:YES enableEdit:NO];
+//        [CTONEPhoto openCameraWithDelegate:self autoSave:YES enableEdit:NO];
         [CTONEPhoto openCamera:NO
                       autoSave:YES
                  photoComplete:^(UIImage *image, NSString *imageName) {
@@ -91,7 +91,7 @@
 
 #pragma mark CTSendPhotosProtocol
 //传出图片数组
-- (void)sendImageArray:(NSMutableArray <UIImage *> *)imgArray{
+- (void)sendImageArray:(NSArray <UIImage *> *)imgArray{
     self.imagesArray = imgArray;
     [self.colView reloadData];
 }

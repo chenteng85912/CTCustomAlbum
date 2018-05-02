@@ -1,6 +1,5 @@
 //
 //  SaveImageTool.h
-//  webhall
 //
 //  Created by chenteng on 2016/12/21.
 //

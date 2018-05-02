@@ -44,7 +44,6 @@ typedef NS_ENUM(NSInteger , CTShowResourceModel) {
 - (void)sendOnePhoto:(UIImage *)image
        withImageName:(NSString *)imageName;
 
-
 /**
  传出视频
 
@@ -71,10 +70,10 @@ typedef NS_ENUM(NSInteger , CTShowResourceModel) {
                       autoSave:(BOOL)autoSave
                     enableEdit:(BOOL)enableEdit;
 
-
 /**
  打开系统相机
  
+ @param enableEdit 是否打开系统编辑功能
  @param autoSave 拍照后是否存入系统相册
  @param photoBlock 返回选择的资源
  */
@@ -93,7 +92,6 @@ typedef NS_ENUM(NSInteger , CTShowResourceModel) {
      withDelegate:(id <CTONEPhotoDelegate>)rootVC
        enableEdit:(BOOL)enableEdit;
 
-
 /**
  打开系统相册
 
@@ -106,7 +104,5 @@ typedef NS_ENUM(NSInteger , CTShowResourceModel) {
        enableEdit:(BOOL)enableEdit
     photoComplete:(CTONEPhotoBLock)photoBlock
     videoComplete:(CTONEVideoBLock)videoBlock;
-
-
 
 @end
