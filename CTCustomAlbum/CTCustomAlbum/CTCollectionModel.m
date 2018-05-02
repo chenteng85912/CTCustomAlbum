@@ -8,6 +8,8 @@
 #import "CTCollectionModel.h"
 #import "CTPhotosConfig.h"
 
+float const kCTPhotoStandard = 1024.0;
+
 @implementation CTCollectionModel
 
 - (void)addSelectedIndex:(NSInteger)index{
@@ -54,20 +56,18 @@
     }
     return _selectedArray;
 }
-#define CTPhotoStandard (1024.0)
-static inline NSString * photoSizeWithLength(NSUInteger length)
-{
+static inline NSString * photoSizeWithLength(NSUInteger length){
     
     //如果达到MB
-    if (length > CTPhotoStandard * CTPhotoStandard)
+    if (length > kCTPhotoStandard * kCTPhotoStandard)
     {
-        return [NSString stringWithFormat:@"%.1fMB",length / CTPhotoStandard / CTPhotoStandard];
+        return [NSString stringWithFormat:@"%.1fMB",length / kCTPhotoStandard / kCTPhotoStandard];
     }
     
     
-    else if (length > CTPhotoStandard)
+    else if (length > kCTPhotoStandard)
     {
-        return [NSString stringWithFormat:@"%.0fKB",length / CTPhotoStandard];
+        return [NSString stringWithFormat:@"%.0fKB",length / kCTPhotoStandard];
     }
     
     else
