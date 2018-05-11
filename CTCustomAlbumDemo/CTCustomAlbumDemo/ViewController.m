@@ -46,6 +46,9 @@
 
             [self.colView reloadData];
         } videoComplete:nil];
+        [CTONEPhoto openAlbum:CTShowAlbumVideoModel enableEdit:YES photoComplete:nil videoComplete:^(NSString *videoPath, NSString *videoName, UIImage *videoShotImage) {
+            
+        }];
 //        [CTONEPhoto openAlbum:CTShowAlbumVideoModel withDelegate:self enableEdit:NO];
 //        [CTONEPhoto openAlbum:CTShowAlbumImageModel withDelegate:self enableEdit:NO];
 

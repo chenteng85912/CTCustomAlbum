@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CTCustomAlbum"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "CustomAlbum make with Photos.kit "
 
   s.homepage     = "https://github.com/chenteng85912/CTCustomAlbum"

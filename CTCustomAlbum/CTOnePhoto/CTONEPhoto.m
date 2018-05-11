@@ -36,13 +36,16 @@ static CTONEPhoto *onePhoto = nil;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
         onePhoto = [[self alloc] init];
-        UIImagePickerController *picker = [UIImagePickerController new];
-        picker.delegate = onePhoto;
-        onePhoto.imagePicker = picker;
+       
     });
     
 }
 
++ (void)p_initPicker{
+    UIImagePickerController *picker = [UIImagePickerController new];
+    picker.delegate = onePhoto;
+    onePhoto.imagePicker = picker;
+}
 //打开系统摄像头
 + (void)openCameraWithDelegate:(id <CTONEPhotoDelegate>)rootVC
                       autoSave:(BOOL)autoSave
@@ -71,6 +74,7 @@ static CTONEPhoto *onePhoto = nil;
 }
 //初始化相机
 + (void)p_initCamera:(BOOL)enableEdit{
+    [self p_initPicker];
     onePhoto.imagePicker.allowsEditing = enableEdit;
     onePhoto.imagePicker.mediaTypes =  @[(NSString *)kUTTypeImage];
     onePhoto.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -107,7 +111,8 @@ static CTONEPhoto *onePhoto = nil;
 {
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
-    
+    [self p_initPicker];
+
     onePhoto.imagePicker.allowsEditing = enableEdit;
     onePhoto.imagePicker.navigationBar.tintColor = [UIColor blackColor];
     
@@ -186,7 +191,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
                 }];
             }];
         }else if ([mediaType isEqualToString:(NSString *)kUTTypeMovie]){
-            //检测剩余空间
+            //检测本地缓存大小
             [CTSavePhotos checkLocalCachesSize];
             //视频
             NSURL *vedioURL = [info valueForKey:UIImagePickerControllerMediaURL];
