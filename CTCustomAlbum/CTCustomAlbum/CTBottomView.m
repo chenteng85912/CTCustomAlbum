@@ -9,13 +9,14 @@
 
 @implementation CTBottomView
 
-- (void)drawRect:(CGRect)rect{
+- (void)drawRect:(CGRect)rect {
     [self addSubview:self.senderBtn];
     
     [self addSubview:self.imageSizeLabel];
 }
 
-- (UIButton *)originBtn{
+#pragma mark ------------------------------------ lazy
+- (UIButton *)originBtn {
     if (!_originBtn) {
         _originBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 7, 60, 30)];
         [_originBtn setTitle:@"原图" forState:UIControlStateNormal];
@@ -27,7 +28,7 @@
     }
     return _originBtn;
 }
-- (UILabel *)imageSizeLabel{
+- (UILabel *)imageSizeLabel {
     if (!_imageSizeLabel) {
         _imageSizeLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.originBtn.frame)+10, 7, 60, 30)];
         _imageSizeLabel.font = [UIFont systemFontOfSize:12];
@@ -35,7 +36,7 @@
     }
     return _imageSizeLabel;
 }
-- (UIButton *)senderBtn{
+- (UIButton *)senderBtn {
     if (!_senderBtn) {
         _senderBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.frame.size.width-70, 7, 60, 30)];
         _senderBtn.layer.masksToBounds = YES;

@@ -11,18 +11,32 @@
 
 @interface CTPHAssetModel : NSObject
 
+/**
+ 图片系统对象
+ */
 @property (nonatomic,strong) PHAsset *asset;
 
-@property (nonatomic,strong) NSString *photoName;//图片名称
+/**
+ 图片名称
+ */
+@property (nonatomic,strong) NSString *photoName;
 
+/**
+ 是否被选中
+ */
 @property (nonatomic,assign) BOOL selected;//是否选中
 
-@property (nonatomic,assign) BOOL originImg;//是否高质量图片
+/**
+ 是否包含原图
+ */
+@property (nonatomic,assign) BOOL originImg;
 
-@property (nonatomic,assign) BOOL downloading;//正在下载
+/**
+ 是否正在下载
+ */
+@property (nonatomic,assign) BOOL downloading;
 
 + (instancetype)initWithAsset:(PHAsset *)asset;
-
 
 /**
  从iCloud下载图片

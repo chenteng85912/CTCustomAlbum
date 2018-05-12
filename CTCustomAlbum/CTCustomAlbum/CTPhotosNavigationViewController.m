@@ -17,12 +17,10 @@
 
 @implementation CTPhotosNavigationViewController
 
-+ (instancetype)initWithDelegate:(id <CTSendPhotosProtocol>)delegate
-{
++ (instancetype)initWithDelegate:(id <CTSendPhotosProtocol>)delegate {
     return [[self alloc] initWithDelegate:delegate];
 }
-- (instancetype)initWithDelegate:(id <CTSendPhotosProtocol>)delegate
-{
+- (instancetype)initWithDelegate:(id <CTSendPhotosProtocol>)delegate {
     self = [super init];
     if (self) {
         [CTPhotoManager setDelegate:delegate];
@@ -32,16 +30,14 @@
 }
 + (instancetype)initWithDelegate:(id <CTSendPhotosProtocol>)delegate
                       photoScale:(CGFloat)scale
-                          maxNum:(NSInteger)maxNum
-{
+                          maxNum:(NSInteger)maxNum {
     return [[self alloc] initWithDelegate:delegate
                                photoScale:scale
                                    maxNum:maxNum];
 }
 - (instancetype)initWithDelegate:(id <CTSendPhotosProtocol>)delegate
                       photoScale:(CGFloat)scale
-                          maxNum:(NSInteger)maxNum
-{
+                          maxNum:(NSInteger)maxNum {
     self = [super init];
     if (self) {
         [CTPhotoManager setDelegate:delegate];
@@ -49,17 +45,17 @@
     }
     return self;
 }
-+ (instancetype)initWithBlock:(CTCustomImagesBLock)block{
++ (instancetype)initWithBlock:(CTCustomImagesBLock)block {
     return [[self alloc] initWithBlock:block];
 }
 + (instancetype)initWithBlock:(CTCustomImagesBLock)block
                    photoScale:(CGFloat)scale
-                       maxNum:(NSInteger)maxNum{
+                       maxNum:(NSInteger)maxNum {
     return [[self alloc] initWithBlock:block photoScale:scale maxNum:maxNum];
 }
 - (instancetype)initWithBlock:(CTCustomImagesBLock)block
                    photoScale:(CGFloat)scale
-                       maxNum:(NSInteger)maxNum{
+                       maxNum:(NSInteger)maxNum {
     self = [super init];
     if (self) {
         _block = block;
@@ -67,7 +63,7 @@
     }
     return self;
 }
-- (instancetype)initWithBlock:(CTCustomImagesBLock)block{
+- (instancetype)initWithBlock:(CTCustomImagesBLock)block {
     self = [super init];
     if (self) {
         _block = block;
@@ -85,7 +81,7 @@
     self.viewControllers = @[group];
 }
 
-- (void)dealloc{
+- (void)dealloc {
     NSLog(@"%@ dealloc",self);
 }
 @end

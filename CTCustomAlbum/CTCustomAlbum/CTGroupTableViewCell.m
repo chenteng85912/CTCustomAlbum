@@ -13,8 +13,8 @@ CGFloat const sub_y = 5;
 
 @interface CTGroupTableViewCell ()
 
-@property (nonatomic,strong) UIImageView *thumbImgView;
-@property (nonatomic,strong) UILabel *groupTitleLabel;
+@property (nonatomic, strong) UIImageView *thumbImgView;
+@property (nonatomic, strong) UILabel *groupTitleLabel;
 
 @end
 
@@ -31,7 +31,7 @@ CGFloat const sub_y = 5;
     // Configure the view for the selected state
 }
 
-- (void)processCellData:(PHAssetCollection *)collection{
+- (void)processCellData:(PHAssetCollection *)collection {
     self.groupTitleLabel.text = nil;
     self.thumbImgView.image = nil;
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -49,6 +49,7 @@ CGFloat const sub_y = 5;
         self.groupTitleLabel.attributedText = titleAtt;
     }];
 }
+#pragma mark ------------------------------------ lazy
 //缩略图
 - (UIImageView *)thumbImgView {
     if (!_thumbImgView) {

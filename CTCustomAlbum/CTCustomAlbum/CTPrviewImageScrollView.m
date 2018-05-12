@@ -10,17 +10,13 @@
 
 @interface CTPrviewImageScrollView ()<UIScrollViewDelegate>
 
-/**
- 图片显示
- */
-@property (nonatomic, strong) UIImageView *zoomImageView;
+@property (nonatomic, strong) UIImageView *zoomImageView;//图片显示
 
 @end
 
 @implementation CTPrviewImageScrollView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.delegate =self;
@@ -50,7 +46,7 @@
     }
     return self;
 }
-- (void)p_singleTap:(UISwipeGestureRecognizer *)gesture{
+- (void)p_singleTap:(UISwipeGestureRecognizer *)gesture {
     if ([self.scrolDelegate respondsToSelector:@selector(singalTapAction)]) {
         [self.scrolDelegate singalTapAction];
     }
@@ -61,14 +57,13 @@
         [self setZoomScale:1.0 animated:YES];
     } else {
         CGPoint touchPoint = [gesture locationInView:_zoomImageView];
-        CGRect newRect = [self zoomRectForScale:self.maximumZoomScale withCenter:touchPoint];;
+        CGRect newRect = [self p_zoomRectForScale:self.maximumZoomScale withCenter:touchPoint];;
         [self zoomToRect:newRect animated:YES];
     }
 }
 
 //获取显示区域
-- (CGRect)zoomRectForScale:(float)scale withCenter:(CGPoint)center
-{
+- (CGRect)p_zoomRectForScale:(float)scale withCenter:(CGPoint)center {
     CGRect zoomRect;
 
     zoomRect.size.height = self.frame.size.height / scale;
@@ -79,8 +74,8 @@
 }
 
 // 图片放大缩小后位置校正
-- (void)scrollViewDidZoom:(UIScrollView *)scrollView
-{
+#pragma mark ------------------------------------ UIScrollViewDelegate
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
     
     CGFloat offsetX = (self.bounds.size.width > self.contentSize.width)?
     (self.bounds.size.width - self.contentSize.width) * 0.5 : 0.0;
@@ -90,16 +85,15 @@
     _zoomImageView.center = CGPointMake(self.contentSize.width * 0.5 + offsetX,
                                  self.contentSize.height * 0.5 + offsetY);
 }
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
-{
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return _zoomImageView;
 }
-- (void)refreshShowImage:(UIImage *)img{
+- (void)refreshShowImage:(UIImage *)img {
     _zoomImageView.frame = [self p_makeImageViewFrame:img];
     _zoomImageView.image = img;
 }
 //根据图片大小设置imageview的frame
-- (CGRect)p_makeImageViewFrame:(UIImage *)image{
+- (CGRect)p_makeImageViewFrame:(UIImage *)image {
     
     CGSize imageSize = image.size;
     CGFloat scaleW = imageSize.width/Device_width;

@@ -9,8 +9,7 @@
 
 @implementation UIViewController (CTAlertShow)
 
-- (void)presentAlertController:(NSUInteger)maxNum
-{
+- (void)presentAlertController:(NSUInteger)maxNum {
     NSString * title = [NSString stringWithFormat:@"你最多只能选择%@张照片",@(maxNum)];
     
     UIAlertController * alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];

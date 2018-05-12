@@ -13,13 +13,25 @@
 
 @interface CTPhotosConfiguration : NSObject
 
-//照片类型
+/**
+ 显示的照片类型
+
+ @return 返回照片类型数组
+ */
 + (NSArray <NSNumber *> *)groupNamesConfig;
 
-//输出照片压缩比 默认0.6
+/**
+ 照片压缩比 默认0.6
+
+ @return 照片压缩比
+ */
 + (CGFloat)outputPhotosScale;
 
-//最大数量 默认9
+/**
+ 最大数量 默认9
+
+ @return 最大数量
+ */
 + (NSInteger)maxNum;
 
 /**

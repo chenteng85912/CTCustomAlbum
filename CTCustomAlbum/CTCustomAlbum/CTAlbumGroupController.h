@@ -10,6 +10,9 @@
 
 @interface CTAlbumGroupController : UITableViewController
 
+/**
+ 选择图片 回调
+ */
 @property (nonatomic, copy) CTCustomImagesBLock photoBlock;
 
 @end

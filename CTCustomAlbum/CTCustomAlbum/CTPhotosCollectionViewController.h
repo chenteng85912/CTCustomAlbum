@@ -9,8 +9,14 @@
 
 @interface CTPhotosCollectionViewController : UIViewController
 
+/**
+ 系统相册分类
+ */
 @property (nonatomic, strong) PHAssetCollection *collection;
 
-@property (nonatomic, copy) CTCustomImagesBLock photoBlock;
+/**
+ 图片选中回调
+ */
+@property (nonatomic,   copy) CTCustomImagesBLock photoBlock;
 
 @end

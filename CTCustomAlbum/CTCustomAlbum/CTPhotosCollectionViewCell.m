@@ -23,7 +23,7 @@
 }
 
 - (void)processData:(CTPHAssetModel *)assetModel
-          indexPath:(NSIndexPath *)indexPath{
+          indexPath:(NSIndexPath *)indexPath {
     
     self.imgView.image = nil;
     
@@ -48,7 +48,7 @@
     
 }
 
-- (void)showOrHiddenBackView:(BOOL)hidden{
+- (void)showOrHiddenBackView:(BOOL)hidden {
     self.backView.hidden = hidden;
     if (hidden) {
         [self.activityView stopAnimating];
@@ -58,6 +58,7 @@
     }
 
 }
+#pragma mark ------------------------------------ lazy
 - (UIImageView *)imgView{
     if (!_imgView) {
         _imgView = [[UIImageView alloc] initWithFrame:self.bounds];

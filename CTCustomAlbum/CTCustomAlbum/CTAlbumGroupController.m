@@ -30,17 +30,16 @@
     [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
 
     if ([CTSavePhotos checkAuthorityOfAblum]) {
-        
         [self fetchGroupDatas];
     }
 
 }
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
 
 // 获取相册数组
-- (void)fetchGroupDatas{
+- (void)fetchGroupDatas {
     
     __weak typeof(self) weakSelf = self;
     [CTPhotoManager fetchDefaultAllPhotosGroup:^(NSArray<PHAssetCollection *> * _Nonnull groupArray) {
@@ -52,36 +51,33 @@
         [strongSelf p_showPhotosCollection:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO];
     }];
 }
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.groupArray.count;
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 70;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CTGroupTableViewCell *mycell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([CTGroupTableViewCell class]) forIndexPath:indexPath];
     
     [mycell processCellData:self.groupArray[indexPath.item]];
 
     return mycell;
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self p_showPhotosCollection:indexPath animated:YES];
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 0.01;
     
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0.01;
 
 }
-- (void)p_showPhotosCollection:(NSIndexPath *)indexPath animated:(BOOL)animated{
+- (void)p_showPhotosCollection:(NSIndexPath *)indexPath animated:(BOOL)animated {
     
     PHAssetCollection *col = self.groupArray[indexPath.row];
     CTPhotosCollectionViewController *photos = [CTPhotosCollectionViewController new];
@@ -89,11 +85,11 @@
     photos.photoBlock = self.photoBlock;
     [self.navigationController pushViewController:photos animated:animated];
 }
-- (void)p_dismissGroupController{
+- (void)p_dismissGroupController {
 
     [self dismissViewControllerAnimated:true completion:nil];
 }
-#pragma mark - PHPhotoLibraryChangeObserver
+#pragma mark ------------------------------------ PHPhotoLibraryChangeObserver
 - (void)photoLibraryDidChange:(PHChange *)changeInstance{
     dispatch_sync(dispatch_get_main_queue(), ^{
 

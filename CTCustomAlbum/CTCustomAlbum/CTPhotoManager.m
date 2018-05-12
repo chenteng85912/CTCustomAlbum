@@ -11,17 +11,16 @@
 
 static id<CTSendPhotosProtocol>CTDelegate = nil;
 
-+ (void)setDelegate:(id<CTSendPhotosProtocol>)delegate{
++ (void)setDelegate:(id<CTSendPhotosProtocol>)delegate {
     CTDelegate = delegate;
 }
-+ (id <CTSendPhotosProtocol>)delegate{
++ (id <CTSendPhotosProtocol>)delegate {
     return CTDelegate;
 }
 
-+ (void)fetchDefaultAllPhotosGroup:(void (^)(NSArray<PHAssetCollection *> * groupArray))groupsBlock
-{
++ (void)fetchDefaultAllPhotosGroup:(void (^)(NSArray<PHAssetCollection *> * groupArray))groupsBlock {
     
-    [self fetchDefaultPhotosGroup:^(NSArray<PHAssetCollection *> * _Nonnull defaultGroups) {
+    [self p_fetchDefaultPhotosGroup:^(NSArray<PHAssetCollection *> * _Nonnull defaultGroups) {
         
         if ([NSThread isMainThread])
         {
@@ -41,11 +40,10 @@ static id<CTSendPhotosProtocol>CTDelegate = nil;
     
 }
 
-+ (void)fetchDefaultPhotosGroup:(void (^)(NSArray<PHAssetCollection *> * _Nonnull))groups
-{
++ (void)p_fetchDefaultPhotosGroup:(void (^)(NSArray<PHAssetCollection *> * _Nonnull))groups {
     __block NSMutableArray <PHAssetCollection *> * defaultAllGroups = [NSMutableArray arrayWithCapacity:0];
 
-    [self fetchBasePhotosGroup:^(NSArray<PHAssetCollection *> * _Nullable result) {
+    [self p_fetchBasePhotosGroup:^(NSArray<PHAssetCollection *> * _Nullable result) {
         
         [defaultAllGroups addObjectsFromArray:result];
         
@@ -61,6 +59,7 @@ static id<CTSendPhotosProtocol>CTDelegate = nil;
             
             int j = i+1;
             
+            //排序 数量最多的放前面
             while (j<num) {
                 
                 PHFetchResult * assetResult1 = [PHAsset fetchAssetsInAssetCollection:defaultAllGroups[i] options:nil];
@@ -82,21 +81,19 @@ static id<CTSendPhotosProtocol>CTDelegate = nil;
     }];
 }
 /** 获取最基本的智能分组 */
-+ (void)fetchBasePhotosGroup:(void(^)(NSArray<PHAssetCollection *> * _Nullable  result))completeBlock
-{
++ (void)p_fetchBasePhotosGroup:(void(^)(NSArray<PHAssetCollection *> * _Nullable  result))completeBlock {
 
     //获得智能分组
     PHFetchResult * smartGroups = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
     
-    [self filterGroup:smartGroups complete:^(NSArray<PHAssetCollection *>  * _Nonnull results) {
+    [self p_filterGroup:smartGroups complete:^(NSArray<PHAssetCollection *>  * _Nonnull results) {
         completeBlock(results);
     }];
     
 }
 // 将configuration属性中的类别进行筛选
-+ (void)filterGroup:(PHFetchResult<PHAssetCollection *> *)fetchResult
-           complete:(void (^)(NSArray<PHAssetCollection *>  * _Nonnull results))groups
-{
++ (void)p_filterGroup:(PHFetchResult<PHAssetCollection *> *)fetchResult
+           complete:(void (^)(NSArray<PHAssetCollection *>  * _Nonnull results))groups {
     __block  NSMutableArray <PHAssetCollection *> * preparationCollections = [NSMutableArray arrayWithCapacity:0];
     
     [fetchResult enumerateObjectsUsingBlock:^(PHAssetCollection * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -118,7 +115,7 @@ static id<CTSendPhotosProtocol>CTDelegate = nil;
 
 //发送图片
 + (void)sendImageData:(CTCollectionModel *)collectionModel
-          imagesBlock:(CTCustomImagesBLock)imagesBlock{
+          imagesBlock:(CTCustomImagesBLock)imagesBlock {
     
     CFAbsoluteTime startTime =CFAbsoluteTimeGetCurrent();
 

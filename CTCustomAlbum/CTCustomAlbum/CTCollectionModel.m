@@ -8,7 +8,7 @@
 #import "CTCollectionModel.h"
 #import "CTPhotosConfig.h"
 
-float const kCTPhotoStandard = 1024.0;
+static float const kCTPhotoStandard = 1024.0;
 
 @implementation CTCollectionModel
 
@@ -24,6 +24,7 @@ float const kCTPhotoStandard = 1024.0;
         [self.selectedArray removeObject:model];
     }
 }
+#pragma mark ------------------------------------ get
 - (NSString *)sendBtnTitle{
   
     if (self.selectedArray.count==0) {
@@ -44,18 +45,7 @@ float const kCTPhotoStandard = 1024.0;
     }
     return nil;
 }
-- (NSMutableArray <CTPHAssetModel *> *)albumArray{
-    if (!_albumArray) {
-        _albumArray = [NSMutableArray new];
-    }
-    return _albumArray;
-}
-- (NSMutableArray <CTPHAssetModel *> *)selectedArray{
-    if (!_selectedArray) {
-        _selectedArray = [NSMutableArray new];
-    }
-    return _selectedArray;
-}
+
 static inline NSString * photoSizeWithLength(NSUInteger length){
     
     //如果达到MB
@@ -76,5 +66,18 @@ static inline NSString * photoSizeWithLength(NSUInteger length){
     }
     
     return @"";
+}
+#pragma mark ------------------------------------ lazy
+- (NSMutableArray <CTPHAssetModel *> *)albumArray{
+    if (!_albumArray) {
+        _albumArray = [NSMutableArray new];
+    }
+    return _albumArray;
+}
+- (NSMutableArray <CTPHAssetModel *> *)selectedArray{
+    if (!_selectedArray) {
+        _selectedArray = [NSMutableArray new];
+    }
+    return _selectedArray;
 }
 @end

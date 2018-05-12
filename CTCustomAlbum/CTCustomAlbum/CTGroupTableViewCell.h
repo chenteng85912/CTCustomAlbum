@@ -10,6 +10,11 @@
 
 @interface CTGroupTableViewCell : UITableViewCell
 
+/**
+绘制单元格
+
+ @param collection 图片数据
+ */
 - (void)processCellData:(PHAssetCollection *)collection;
 
 @end

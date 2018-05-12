@@ -11,28 +11,28 @@
 
 @implementation CTCustomAlbum
 
-+ (void)showCustomAlbumWithDelegate:(id <CTSendPhotosProtocol>)delegate{
++ (void)showCustomAlbumWithDelegate:(id <CTSendPhotosProtocol>)delegate {
     CTPhotosNavigationViewController *nav = [CTPhotosNavigationViewController initWithDelegate:delegate];
     
     [[self p_currentViewController] presentViewController:nav animated:YES completion:nil];
 }
 + (void)showCustomAlbumWithDelegate:(id <CTSendPhotosProtocol>)delegate
                          photoScale:(CGFloat)scale
-                             maxNum:(NSInteger)maxNum{
+                             maxNum:(NSInteger)maxNum {
     CTPhotosNavigationViewController *nav = [CTPhotosNavigationViewController initWithDelegate:delegate
                                                                                     photoScale:scale
                                                                                         maxNum:maxNum];
     
     [[self p_currentViewController] presentViewController:nav animated:YES completion:nil];
 }
-+ (void)showCustomAlbumWithBlock:(CTCustomImagesBLock)block{
++ (void)showCustomAlbumWithBlock:(CTCustomImagesBLock)block {
     CTPhotosNavigationViewController *nav = [CTPhotosNavigationViewController initWithBlock:block];
     [[self p_currentViewController] presentViewController:nav animated:YES completion:nil];
 
 }
 + (void)showCustomAlbumWithPhotoScale:(CGFloat)scale
                                maxNum:(NSInteger)maxNum
-                                block:(CTCustomImagesBLock)block{
+                                block:(CTCustomImagesBLock)block {
     CTPhotosNavigationViewController *nav = [CTPhotosNavigationViewController initWithBlock:block
                                                                                  photoScale:scale
                                                                                      maxNum:maxNum];

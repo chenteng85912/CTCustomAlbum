@@ -22,6 +22,7 @@
 /** @brief 视频选择回调 */
 @property (nonatomic, copy) CTONEVideoBLock videoBlock;
 
+//拍照后是否自动保持到相册
 @property (nonatomic, assign) BOOL autoSave;
 
 @end
@@ -30,26 +31,19 @@
 
 static CTONEPhoto *onePhoto = nil;
 
-+ (void)sigtonPhoto
-{
-   
++ (void)sigtonPhoto {
     static dispatch_once_t once;
     dispatch_once(&once, ^{
         onePhoto = [[self alloc] init];
-       
+
     });
     
 }
 
-+ (void)p_initPicker{
-    UIImagePickerController *picker = [UIImagePickerController new];
-    picker.delegate = onePhoto;
-    onePhoto.imagePicker = picker;
-}
 //打开系统摄像头
 + (void)openCameraWithDelegate:(id <CTONEPhotoDelegate>)rootVC
                       autoSave:(BOOL)autoSave
-                    enableEdit:(BOOL)enableEdit{
+                    enableEdit:(BOOL)enableEdit {
 
     if (![CTSavePhotos checkAuthorityOfCamera]) {
         return;
@@ -62,7 +56,7 @@ static CTONEPhoto *onePhoto = nil;
 }
 + (void)openCamera:(BOOL)enableEdit
           autoSave:(BOOL)autoSave
-     photoComplete:(CTONEPhotoBLock)photoBlock{
+     photoComplete:(CTONEPhotoBLock)photoBlock {
     if (![CTSavePhotos checkAuthorityOfCamera]) {
         return;
     }
@@ -73,8 +67,9 @@ static CTONEPhoto *onePhoto = nil;
     
 }
 //初始化相机
-+ (void)p_initCamera:(BOOL)enableEdit{
++ (void)p_initCamera:(BOOL)enableEdit {
     [self p_initPicker];
+
     onePhoto.imagePicker.allowsEditing = enableEdit;
     onePhoto.imagePicker.mediaTypes =  @[(NSString *)kUTTypeImage];
     onePhoto.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -83,7 +78,7 @@ static CTONEPhoto *onePhoto = nil;
 //打开系统相册
 + (void)openAlbum:(CTShowResourceModel)showResourceModel
      withDelegate:(id <CTONEPhotoDelegate>)rootVC
-       enableEdit:(BOOL)enableEdit{
+       enableEdit:(BOOL)enableEdit {
     if (![CTSavePhotos checkAuthorityOfAblum]) {
         return;
     }
@@ -96,7 +91,7 @@ static CTONEPhoto *onePhoto = nil;
 + (void)openAlbum:(CTShowResourceModel)showResourceModel
        enableEdit:(BOOL)enableEdit
     photoComplete:(CTONEPhotoBLock)photoBlock
-    videoComplete:(CTONEVideoBLock)videoBlock{
+    videoComplete:(CTONEVideoBLock)videoBlock {
     if (![CTSavePhotos checkAuthorityOfAblum]) {
         return;
     }
@@ -105,14 +100,17 @@ static CTONEPhoto *onePhoto = nil;
     onePhoto.videoBlock = videoBlock;
     [self p_initImage:showResourceModel enableEdit:enableEdit];
 }
++ (void)p_initPicker {
+    UIImagePickerController *picker = [UIImagePickerController new];
+    picker.delegate = onePhoto;
+    onePhoto.imagePicker = picker;
+}
 //初始化相册
 + (void)p_initImage:(CTShowResourceModel)showResourceModel
-         enableEdit:(BOOL)enableEdit
-{
+         enableEdit:(BOOL)enableEdit {
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
     [self p_initPicker];
-
     onePhoto.imagePicker.allowsEditing = enableEdit;
     onePhoto.imagePicker.navigationBar.tintColor = [UIColor blackColor];
     
@@ -139,8 +137,7 @@ static CTONEPhoto *onePhoto = nil;
 
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker
-didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
+didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *selectedImage = nil;
     if (picker.allowsEditing) {
         selectedImage = [info objectForKey:UIImagePickerControllerEditedImage];
@@ -221,17 +218,16 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
 }
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
 
     [picker dismissViewControllerAnimated:YES completion:^{
     }];
     
 }
+
 //视频转码
 - (void)p_encode:(NSURL *)url
-       withBlock:(void (^) (NSString *fileFullPath, NSString *fileName))block
-{
+       withBlock:(void (^) (NSString *fileFullPath, NSString *fileName))block {
   
     //视频格式转换
     AVURLAsset *avAsset = [AVURLAsset URLAssetWithURL:url options:nil];
@@ -292,7 +288,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     }
 }
 //获取视频截图
-- (UIImage *)p_getVideoShotImage:(NSString *)filePath{
+- (UIImage *)p_getVideoShotImage:(NSString *)filePath {
     
     UIImage *shotImage;
     //视频路径URL
@@ -332,8 +328,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 }
 //获取图片
 - (void)p_fetchOriginImage:(PHAsset *)asset
-                complete:(void (^)( UIImage* _Nonnull originImg))completeBlock
-{
+                complete:(void (^)( UIImage* _Nonnull originImg))completeBlock {
     PHImageRequestOptions * option = [[PHImageRequestOptions alloc] init];
     
     option.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
@@ -347,7 +342,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
 }
 
-- (void)p_showAlert{
+- (void)p_showAlert {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"你的设备剩余空间不足" preferredStyle:UIAlertControllerStyleAlert];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];

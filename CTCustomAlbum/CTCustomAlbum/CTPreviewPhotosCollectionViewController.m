@@ -27,16 +27,15 @@ static NSString *kPreviewCollectionCellIdengifier = @"kPreviewCollectionCellIden
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     [self.colView setContentOffset:CGPointMake((Device_width+20)*self.collectionModel.currenIndex, 0)];
 
     [self p_blockActions];
-
     [self p_refreshSendBtn];
-    self.automaticallyAdjustsScrollViewInsets = NO;
 
 }
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 
@@ -48,12 +47,12 @@ static NSString *kPreviewCollectionCellIdengifier = @"kPreviewCollectionCellIden
     }
     
 }
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
 }
 //按钮回调
-- (void)p_blockActions{
+- (void)p_blockActions {
     
     WEAKSELF;
     [self.backBtn blockWithControlEvents:UIControlEventTouchUpInside block:^(UIButton *sender) {
@@ -112,7 +111,7 @@ static NSString *kPreviewCollectionCellIdengifier = @"kPreviewCollectionCellIden
 
 }
 //刷新发送按钮
-- (void)p_refreshSendBtn{
+- (void)p_refreshSendBtn {
     [self.bottomBar.senderBtn setTitle:self.collectionModel.sendBtnTitle forState:UIControlStateNormal];
     
     self.bottomBar.senderBtn.enabled = self.collectionModel.selectedArray.count;
@@ -127,13 +126,11 @@ static NSString *kPreviewCollectionCellIdengifier = @"kPreviewCollectionCellIden
 
 #pragma mark UICollectionViewDelegate
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.collectionModel.albumArray.count;
     
 }
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     UICollectionViewCell *mycell = [collectionView dequeueReusableCellWithReuseIdentifier:kPreviewCollectionCellIdengifier forIndexPath:indexPath];
     [mycell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
@@ -176,7 +173,7 @@ static NSString *kPreviewCollectionCellIdengifier = @"kPreviewCollectionCellIden
 }
 
 #pragma mark 正在滑动
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     NSInteger pageNum = (scrollView.contentOffset.x - (Device_width+20) / 2) / (Device_width+20) + 1;
     _currenIndex = pageNum;
@@ -186,7 +183,7 @@ static NSString *kPreviewCollectionCellIdengifier = @"kPreviewCollectionCellIden
 
 }
 #pragma mark CTImageScrollViewDelegate 点击隐藏
-- (void)singalTapAction{
+- (void)singalTapAction {
     _isHiddenTop = !_isHiddenTop;
     WEAKSELF;
     [[UIApplication sharedApplication] setStatusBarHidden:_isHiddenTop];
@@ -199,8 +196,8 @@ static NSString *kPreviewCollectionCellIdengifier = @"kPreviewCollectionCellIden
     }];
 }
 
-#pragma mark ---lazy method
-- (UICollectionView *)colView{
+#pragma mark ------------------------------------ lazy
+- (UICollectionView *)colView {
     if (!_colView) {
         UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;

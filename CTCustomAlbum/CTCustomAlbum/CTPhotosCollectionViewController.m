@@ -43,12 +43,10 @@ CGFloat const FOOTER_HEIGHT = 40;
 
     [self p_blockActions];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(backToPreVC)];
-    
     [self p_fetchAssetsData];
 
 }
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     
@@ -56,7 +54,7 @@ CGFloat const FOOTER_HEIGHT = 40;
     [self.ColView reloadData];
 }
 //按钮动作
-- (void)p_blockActions{
+- (void)p_blockActions {
     
     WEAKSELF;
     //原图切换
@@ -92,10 +90,9 @@ CGFloat const FOOTER_HEIGHT = 40;
     
 }
 //刷新发送按钮
-- (void)p_refreshBottomBtn{
+- (void)p_refreshBottomBtn {
     [self.bottomBar.senderBtn setTitle:self.collectionModel.sendBtnTitle forState:UIControlStateNormal];
     self.bottomBar.senderBtn.enabled = self.collectionModel.selectedArray.count;
-
     self.bottomBar.originBtn.selected = self.collectionModel.sendOriginImg;
 
     NSString *totalSize = nil;
@@ -104,31 +101,29 @@ CGFloat const FOOTER_HEIGHT = 40;
     }
     self.bottomBar.imageSizeLabel.text = totalSize;
 }
-- (void)backToPreVC{
+- (void)backToPreVC {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
-
 //导航栏样式
-- (void)p_updateNavigationBar{
+- (void)p_updateNavigationBar {
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16],NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(backToPreVC)];
+
 }
 #pragma mark UICollectionViewDelegate
-- (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.collectionModel.albumArray.count;
     
 }
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     CTPhotosCollectionViewCell *mycell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CTPhotosCollectionViewCell class]) forIndexPath:indexPath];
     
@@ -144,12 +139,13 @@ CGFloat const FOOTER_HEIGHT = 40;
         //超出最大选择数 弹出提示
         if (!model.selected&&weakSelf.collectionModel.selectedArray.count==CTPhotosConfiguration.maxNum) {
             [weakSelf presentAlertController:CTPhotosConfiguration.maxNum];
-            
             return;
         }
+        //正在下载
         if (model.downloading) {
             return;
         }
+        //原图不在本地
         if (![model.asset checkLocalAsset]) {
             //需要下载图片
             [mycell showOrHiddenBackView:NO];
@@ -193,8 +189,7 @@ CGFloat const FOOTER_HEIGHT = 40;
 }
 
 #pragma mark - UICollectionView Delegate
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     self.collectionModel.currenIndex = indexPath.row;
 
     CTPreviewPhotosCollectionViewController *preview = [CTPreviewPhotosCollectionViewController new];
@@ -205,8 +200,7 @@ CGFloat const FOOTER_HEIGHT = 40;
     
 }
 //设置footerView
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     UICollectionReusableView * resuableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:kCTPhotosBottomReusableView forIndexPath:indexPath];
     
     if (![resuableView.subviews containsObject:self.footerLabel]) {
@@ -216,12 +210,11 @@ CGFloat const FOOTER_HEIGHT = 40;
     return resuableView;
 }
 #pragma mark - <UICollectionViewDelegateFlowLayout>
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
-{
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
     return CGSizeMake(Device_width, FOOTER_HEIGHT);
 }
 //获取相册所有照片的数据
-- (void)p_fetchAssetsData{
+- (void)p_fetchAssetsData {
     
     PHFetchResult *result = [self.collection fetchCollectionAssets];
     for (PHAsset *asset in result) {
@@ -239,7 +232,7 @@ CGFloat const FOOTER_HEIGHT = 40;
 
 }
 //3d Touch预览
-- (UIViewController *)previewingContext:(id <UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location NS_AVAILABLE_IOS(9_0){
+- (UIViewController *)previewingContext:(id <UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location NS_AVAILABLE_IOS(9_0) {
     
     NSIndexPath *indexPath = [self.ColView indexPathForCell:(CTPhotosCollectionViewCell *)[previewingContext sourceView]];
     self.collectionModel.currenIndex = indexPath.row;
@@ -255,8 +248,9 @@ CGFloat const FOOTER_HEIGHT = 40;
 
     [self showViewController:viewControllerToCommit sender:self];
 }
-#pragma mark 懒加载
-- (UICollectionView *)ColView{
+
+#pragma mark ------------------------------------ lazy
+- (UICollectionView *)ColView {
     if (_ColView ==nil) {
         UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
         layout.sectionInset =  UIEdgeInsetsMake(1, 1, 1, 1);

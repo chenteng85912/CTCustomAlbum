@@ -11,18 +11,15 @@
 
 @implementation PHAsset (CTPHAssetManager)
 
-- (NSMutableDictionary *)originPhotoSize
-{
+- (NSMutableDictionary *)originPhotoSize {
     return objc_getAssociatedObject(self, &@selector(originPhotoSize));
 }
 
-- (void)setOriginPhotoSize:(NSMutableDictionary *)newInfo
-{
+- (void)setOriginPhotoSize:(NSMutableDictionary *)newInfo {
     objc_setAssociatedObject(self, &@selector(originPhotoSize), newInfo, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (BOOL)checkLocalAsset
-{
+- (BOOL)checkLocalAsset {
     PHImageRequestOptions *option = [[PHImageRequestOptions alloc] init];
     option.synchronous = YES;
     
@@ -38,8 +35,7 @@
  @param size 图片尺寸
  @param completeBlock block返回
  */
-- (void)fetchThumbImageWithSize:(CGSize)size complete:(nonnull void (^)(UIImage * _Nullable img,NSDictionary * _Nullable info))completeBlock
-{
+- (void)fetchThumbImageWithSize:(CGSize)size complete:(nonnull void (^)(UIImage * _Nullable img,NSDictionary * _Nullable info))completeBlock {
     __weak typeof(self)copy_self = self;
    
     CGFloat scale = [UIScreen mainScreen].scale;
@@ -57,8 +53,7 @@
 
  @param completeBlock 返回原图
  */
-- (void)fetchOriginImageComplete:(void (^)( UIImage* _Nonnull originImg))completeBlock
-{
+- (void)fetchOriginImageComplete:(void (^)( UIImage* _Nonnull originImg))completeBlock {
 
     CGSize  size = CGSizeMake(self.pixelWidth, self.pixelHeight);
     PHImageRequestOptions * option = [[PHImageRequestOptions alloc] init];
@@ -83,8 +78,7 @@
 
  @return 返回原图
  */
-- (NSData *_Nullable)fetchOriginImagData
-{
+- (NSData *_Nullable)fetchOriginImagData {
     PHImageRequestOptions *option = [[PHImageRequestOptions alloc] init];
     option.synchronous = YES;
     
@@ -99,8 +93,7 @@
 
  @param completeBlock 返回缩略图
  */
-- (void)fetchPreviewImageComplete:(nonnull void (^)(UIImage * _Nullable thumbImg,NSDictionary * _Nullable info))completeBlock
-{
+- (void)fetchPreviewImageComplete:(nonnull void (^)(UIImage * _Nullable thumbImg,NSDictionary * _Nullable info))completeBlock {
 
     CGSize newSize = CGSizeMake(self.pixelWidth, self.pixelHeight);
  
@@ -121,8 +114,7 @@
  获取原始图片的大小
 
  */
-- (NSNumber * _Nullable)getImageSize
-{
+- (NSNumber * _Nullable)getImageSize {
     
     if (!self.originPhotoSize)
     {

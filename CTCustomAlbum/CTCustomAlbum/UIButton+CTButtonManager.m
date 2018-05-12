@@ -11,7 +11,7 @@
 @implementation UIButton (CTButtonManager)
 
 - (void)blockWithControlEvents:(UIControlEvents)controlEvents
-                         block:(CustomBtnBlock)btnBlcok{
+                         block:(CustomBtnBlock)btnBlcok {
     [self p_addActionBlock:btnBlcok];
     [self addTarget:self action:@selector(p_btnInvoke:) forControlEvents:controlEvents];
 }
@@ -29,7 +29,7 @@
         block(sender);
     }
 }
-- (void)showAnimation{
+- (void)showAnimation {
 
     [UIView animateWithDuration:0.2 animations:^{
         self.transform = CGAffineTransformMakeScale(1.2,1.2);

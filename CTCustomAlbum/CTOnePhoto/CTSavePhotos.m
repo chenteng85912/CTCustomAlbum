@@ -12,7 +12,7 @@
 @implementation CTSavePhotos
 
 //检测相册权限
-+ (BOOL)checkAuthorityOfAblum{
++ (BOOL)checkAuthorityOfAblum {
     
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
     if (status == PHAuthorizationStatusRestricted ||
@@ -26,7 +26,7 @@
     
 }
 //检测相机权限
-+ (BOOL)checkAuthorityOfCamera{
++ (BOOL)checkAuthorityOfCamera {
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         NSLog(@"没有可调用的相机");
         return NO;
@@ -44,7 +44,7 @@
 }
 
 //保存图片到相册
-+ (void)saveImageIntoAlbum:(UIImage *)image{
++ (void)saveImageIntoAlbum:(UIImage *)image {
     
     [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
         
@@ -81,8 +81,7 @@
 
 }
 // 指定相册名称,获取相册
-+ (PHAssetCollection *)p_fetchAssetCollection
-{
++ (PHAssetCollection *)p_fetchAssetCollection {
     // 获取相簿中所有自定义相册
     PHFetchResult *result = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum
                                                                      subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
@@ -100,7 +99,7 @@
 
 
 //弹出前往设置提示
-+ (void)showAlertWithMessage:(NSString *)msg{
++ (void)showAlertWithMessage:(NSString *)msg {
 
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:msg preferredStyle:UIAlertControllerStyleAlert];
     
@@ -137,15 +136,14 @@
     return vc;
 }
 //获取项目名称 作为相册分类
-+ (NSString *)APPNAME{
++ (NSString *)APPNAME {
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     
     NSString *appName = [infoDictionary objectForKey:@"CFBundleDisplayName"];
     return appName;
 }
 
-+ (NSString *)documentPath
-{
++ (NSString *)documentPath {
     //项目名称
     NSString *executableFile = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleExecutableKey];
     
@@ -160,7 +158,7 @@
     return cachePath;
 }
 
-+ (void)checkLocalCachesSize{
++ (void)checkLocalCachesSize {
     //本地缓存大小
     NSFileManager *fileMan = [NSFileManager defaultManager];
                                 
@@ -213,6 +211,5 @@
     return totalFreeSpace;
     
 }
-
 
 @end

@@ -17,8 +17,7 @@
  @param completeBlock 相册名称，相册照片数量，最新照片缩略图
  */
 - (void)fetchCollectionInfoWithSize:(CGSize)size
-                          complete:(nonnull void (^)(NSString * _Nonnull title, NSUInteger assetCount, UIImage * _Nullable image))completeBlock
-{
+                          complete:(nonnull void (^)(NSString * _Nonnull title, NSUInteger assetCount, UIImage * _Nullable image))completeBlock {
     
     //获取照片资源
     PHFetchResult * assetResult = [PHAsset fetchAssetsInAssetCollection:self options:nil];
@@ -51,11 +50,10 @@
     }];
 }
 
-- (PHFetchResult *)fetchCollectionAssets{
+- (PHFetchResult *)fetchCollectionAssets {
     return  [PHAsset fetchAssetsInAssetCollection:self options:[[PHFetchOptions alloc]init]];
 }
-- (void)dealloc
-{
+- (void)dealloc {
     objc_setAssociatedObject(self, &@selector(fetchCollectionInfoWithSize:complete:), nil, OBJC_ASSOCIATION_ASSIGN);
     objc_removeAssociatedObjects(self);
 }

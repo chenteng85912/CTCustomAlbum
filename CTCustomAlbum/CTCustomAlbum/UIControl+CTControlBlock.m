@@ -11,7 +11,7 @@
 @implementation UIControl (CTControlBlock)
 
 - (void)controlEvents:(UIControlEvents)controlEvents
-               handle:(void (^)(__kindof UIControl * _Nonnull sender))eventHandleBlock{
+               handle:(void (^)(__kindof UIControl * _Nonnull sender))eventHandleBlock {
     if (!eventHandleBlock)
     {
         return;
@@ -23,7 +23,7 @@
     [self addTarget:self action:@selector(actionFunction) forControlEvents:controlEvents];
 }
 
-- (void)actionFunction{
+- (void)actionFunction {
     //获得block
     void(^block)(UIControl *)  = (void(^)(UIControl *))objc_getAssociatedObject(self, &@selector(controlEvents:handle:));
     

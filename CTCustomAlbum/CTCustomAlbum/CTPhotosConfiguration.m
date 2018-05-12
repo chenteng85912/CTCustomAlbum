@@ -13,7 +13,7 @@
 static NSInteger kMaxNum = 9;
 static CGFloat kCTPhotosScale = 0.6;
 
-+ (NSArray <NSNumber *> *)groupNamesConfig{
++ (NSArray <NSNumber *> *)groupNamesConfig {
     
     NSMutableArray <NSNumber *> *group = [NSMutableArray new];
     NSArray *groupArray = @[@(PHAssetCollectionSubtypeSmartAlbumPanoramas),     //全景照片
@@ -29,15 +29,15 @@ static CGFloat kCTPhotosScale = 0.6;
     return group;
 }
 
-+ (CGFloat)outputPhotosScale{
++ (CGFloat)outputPhotosScale {
     return  kCTPhotosScale;
 }
 
-+ (NSInteger)maxNum{
++ (NSInteger)maxNum {
     return  kMaxNum;
 }
 
-+ (void)setPhotosScale:(CGFloat)scale maxNum:(NSInteger)maxNum{
++ (void)setPhotosScale:(CGFloat)scale maxNum:(NSInteger)maxNum {
    
     if (scale>0) {
         kCTPhotosScale = scale;
@@ -47,4 +47,5 @@ static CGFloat kCTPhotosScale = 0.6;
     }
 
 }
+
 @end

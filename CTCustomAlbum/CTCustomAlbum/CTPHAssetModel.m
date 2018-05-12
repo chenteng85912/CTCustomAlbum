@@ -9,10 +9,10 @@
 
 @implementation CTPHAssetModel
 
-+ (instancetype)initWithAsset:(PHAsset *)asset{
++ (instancetype)initWithAsset:(PHAsset *)asset {
     return [[self alloc] initWithAsset:asset];
 }
-- (instancetype)initWithAsset:(PHAsset *)asset{
+- (instancetype)initWithAsset:(PHAsset *)asset {
     self = [super init];
     if (self) {
         _asset = asset;
@@ -21,7 +21,7 @@
     return self;
 }
 
-- (void)downLoadImageFromiCloud:(dispatch_block_t)block{
+- (void)downLoadImageFromiCloud:(dispatch_block_t)block {
     if (self.downloading||self.originImg) {
         return;
     }

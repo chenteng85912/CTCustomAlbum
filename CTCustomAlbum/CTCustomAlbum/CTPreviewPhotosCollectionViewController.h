@@ -16,12 +16,24 @@
 
 @interface CTPreviewPhotosCollectionViewController : UIViewController
 
+/**
+ 相册分类模型
+ */
 @property (nonatomic, strong) CTCollectionModel *collectionModel;
 
-@property (nonatomic, copy) CTCustomImagesBLock photoBlock;
+/**
+ 图片选中 回调
+ */
+@property (nonatomic,   copy) CTCustomImagesBLock photoBlock;
 
+/**
+ 点击图片的序号
+ */
 @property (nonatomic, assign) NSInteger currenIndex;
 
+/**
+ 3D touch模式进入
+ */
 @property (nonatomic, assign) BOOL preview3D;
 
 @end
