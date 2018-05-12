@@ -182,10 +182,9 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
                     [onePhoto.delegate sendOnePhoto:originImg withImageName:imageName];
                 }
                 if (onePhoto.photoBlock) {
-                    onePhoto.photoBlock(selectedImage, imageName);
+                    onePhoto.photoBlock(originImg, imageName);
                 }
-                [onePhoto.imagePicker dismissViewControllerAnimated:YES completion:^{
-                }];
+                [picker dismissViewControllerAnimated:YES completion:nil];
             }];
         }else if ([mediaType isEqualToString:(NSString *)kUTTypeMovie]){
             //检测本地缓存大小
@@ -220,8 +219,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
 
-    [picker dismissViewControllerAnimated:YES completion:^{
-    }];
+    [picker dismissViewControllerAnimated:YES completion:nil];
     
 }
 
