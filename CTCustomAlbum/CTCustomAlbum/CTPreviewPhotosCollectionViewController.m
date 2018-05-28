@@ -45,11 +45,16 @@ static NSString *kPreviewCollectionCellIdengifier = @"kPreviewCollectionCellIden
 
         [self.view sendSubviewToBack:self.colView];
     }
-    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    window.windowLevel = UIWindowLevelAlert;
 }
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    window.windowLevel = UIWindowLevelNormal;
 }
 //按钮回调
 - (void)p_blockActions {
@@ -177,7 +182,6 @@ static NSString *kPreviewCollectionCellIdengifier = @"kPreviewCollectionCellIden
     
     NSInteger pageNum = (scrollView.contentOffset.x - (Device_width+20) / 2) / (Device_width+20) + 1;
     _currenIndex = pageNum;
-    
     CTPHAssetModel *model = self.collectionModel.albumArray[_currenIndex];
     self.selectBut.selected = model.selected;
 
@@ -185,14 +189,9 @@ static NSString *kPreviewCollectionCellIdengifier = @"kPreviewCollectionCellIden
 #pragma mark CTImageScrollViewDelegate 点击隐藏
 - (void)singalTapAction {
     _isHiddenTop = !_isHiddenTop;
-    WEAKSELF;
-    [[UIApplication sharedApplication] setStatusBarHidden:_isHiddenTop];
-
     [UIView animateWithDuration:0.25 animations:^{
-   
-        self.topBar.alpha = !weakSelf.isHiddenTop;
-        self.bottomBar.alpha = !weakSelf.isHiddenTop;
-   
+        self.topBar.alpha = !self.isHiddenTop;
+        self.bottomBar.alpha = !self.isHiddenTop;
     }];
 }
 

@@ -89,8 +89,11 @@
     return _zoomImageView;
 }
 - (void)refreshShowImage:(UIImage *)img {
-    _zoomImageView.frame = [self p_makeImageViewFrame:img];
-    _zoomImageView.image = img;
+    if (img) {
+        _zoomImageView.frame = [self p_makeImageViewFrame:img];
+        _zoomImageView.image = img;
+        
+    }
 }
 //根据图片大小设置imageview的frame
 - (CGRect)p_makeImageViewFrame:(UIImage *)image {
