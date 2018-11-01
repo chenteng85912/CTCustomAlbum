@@ -290,7 +290,7 @@ CGFloat const FOOTER_HEIGHT = 40;
             return;
         }
         CTTakePhotoButtomViewModel takeModel;
-        if(CTPhotosConfiguration.chooseHead||CTPhotosConfiguration.oneChoose) {
+        if(!CTPhotosConfiguration.showVideo) {
             takeModel = CTTakePhotoModel;
         }else {
             takeModel = CTTakePhotoAndVideoModel;
