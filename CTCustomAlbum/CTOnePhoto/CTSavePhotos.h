@@ -38,7 +38,7 @@
  */
 + (UIViewController *)p_currentViewController;
 
-
++ (BOOL)checkAuthorityofAudio;
 /**
  文件存储的本地路径 
 

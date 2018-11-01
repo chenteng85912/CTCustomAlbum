@@ -21,7 +21,6 @@
 @property (nonatomic, copy) CTONEPhotoBLock photoBlock;
 /** @brief 视频选择回调 */
 @property (nonatomic, copy) CTONEVideoBLock videoBlock;
-
 //拍照后是否自动保持到相册
 @property (nonatomic, assign) BOOL autoSave;
 

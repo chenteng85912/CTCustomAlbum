@@ -7,36 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1A00E3218A92E0001B3CC1 /* CTPhotosConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A009D218A92E0001B3CC1 /* CTPhotosConfiguration.m */; };
+		3E1A00E4218A92E0001B3CC1 /* CTCustomAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00A0218A92E0001B3CC1 /* CTCustomAlbum.m */; };
+		3E1A00E5218A92E0001B3CC1 /* CTPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00A1218A92E0001B3CC1 /* CTPhotoManager.m */; };
+		3E1A00E6218A92E0001B3CC1 /* UIImage+ColorImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00A5218A92E0001B3CC1 /* UIImage+ColorImg.m */; };
+		3E1A00E7218A92E0001B3CC1 /* UIButton+CTButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00A6218A92E0001B3CC1 /* UIButton+CTButtonManager.m */; };
+		3E1A00E8218A92E0001B3CC1 /* UIViewController+CTAlertShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00A7218A92E0001B3CC1 /* UIViewController+CTAlertShow.m */; };
+		3E1A00E9218A92E0001B3CC1 /* PHAsset+CTPHAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00AB218A92E0001B3CC1 /* PHAsset+CTPHAssetManager.m */; };
+		3E1A00EA218A92E0001B3CC1 /* PHAssetCollection+CTAssetCollectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00AD218A92E0001B3CC1 /* PHAssetCollection+CTAssetCollectionManager.m */; };
+		3E1A00EB218A92E0001B3CC1 /* AVURLAsset+LQFetchVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00B0218A92E0001B3CC1 /* AVURLAsset+LQFetchVideo.m */; };
+		3E1A00EC218A92E0001B3CC1 /* UIControl+CTControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00B2218A92E0001B3CC1 /* UIControl+CTControlBlock.m */; };
+		3E1A00ED218A92E0001B3CC1 /* CTGroupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00B4218A92E0001B3CC1 /* CTGroupTableViewCell.m */; };
+		3E1A00EE218A92E0001B3CC1 /* CTPreviewScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00B6218A92E0001B3CC1 /* CTPreviewScrollView.m */; };
+		3E1A00EF218A92E0001B3CC1 /* CTBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00BA218A92E0001B3CC1 /* CTBottomView.m */; };
+		3E1A00F0218A92E0001B3CC1 /* CTPhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00BC218A92E0001B3CC1 /* CTPhotosCollectionViewCell.m */; };
+		3E1A00F1218A92E0001B3CC1 /* CTPreviewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00BD218A92E0001B3CC1 /* CTPreviewCollectionViewCell.m */; };
+		3E1A00F2218A92E0001B3CC1 /* CTPreviewImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00BF218A92E0001B3CC1 /* CTPreviewImageView.m */; };
+		3E1A00F3218A92E0001B3CC1 /* playVideo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A00C1218A92E0001B3CC1 /* playVideo.pdf */; };
+		3E1A00F4218A92E0001B3CC1 /* play_pause.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A00C2218A92E0001B3CC1 /* play_pause.pdf */; };
+		3E1A00F7218A92E0001B3CC1 /* origin_selected.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A00C5218A92E0001B3CC1 /* origin_selected.pdf */; };
+		3E1A00F8218A92E0001B3CC1 /* back_black.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A00C6218A92E0001B3CC1 /* back_black.pdf */; };
+		3E1A00F9218A92E0001B3CC1 /* origin_unselect.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A00C7218A92E0001B3CC1 /* origin_unselect.pdf */; };
+		3E1A00FF218A92E0001B3CC1 /* CTPHAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00D4218A92E0001B3CC1 /* CTPHAssetModel.m */; };
+		3E1A0100218A92E0001B3CC1 /* CTCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00D6218A92E0001B3CC1 /* CTCollectionModel.m */; };
+		3E1A0101218A92E0001B3CC1 /* CTGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00D8218A92E0001B3CC1 /* CTGroupModel.m */; };
+		3E1A0102218A92E0001B3CC1 /* CTAlbumGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00DB218A92E0001B3CC1 /* CTAlbumGroupController.m */; };
+		3E1A0103218A92E0001B3CC1 /* CTPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00DC218A92E0001B3CC1 /* CTPhotosCollectionViewController.m */; };
+		3E1A0104218A92E0001B3CC1 /* CTPhotosNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00DD218A92E0001B3CC1 /* CTPhotosNavigationViewController.m */; };
+		3E1A0105218A92E0001B3CC1 /* CTPreviewPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00E1218A92E0001B3CC1 /* CTPreviewPhotosCollectionViewController.m */; };
+		3E1A010C218A9FE0001B3CC1 /* CTPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A0107218A9FE0001B3CC1 /* CTPlayerItem.m */; };
+		3E1A010E218A9FE0001B3CC1 /* CTVideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A010A218A9FE0001B3CC1 /* CTVideoPlayView.m */; };
+		3E1A0111218AA33F001B3CC1 /* UIAlertController+CTAlertBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A0110218AA33F001B3CC1 /* UIAlertController+CTAlertBlock.m */; };
+		3E1A011E218AA659001B3CC1 /* CTCutImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A0114218AA659001B3CC1 /* CTCutImageController.m */; };
+		3E1A011F218AA659001B3CC1 /* CTBesselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A0119218AA659001B3CC1 /* CTBesselView.m */; };
+		3E1A0120218AA659001B3CC1 /* CTTakePhotoHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A011A218AA659001B3CC1 /* CTTakePhotoHeadView.m */; };
+		3E1A0121218AA659001B3CC1 /* CTTakePhotoButtomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A011C218AA659001B3CC1 /* CTTakePhotoButtomView.m */; };
+		3E1A0122218AA659001B3CC1 /* CTTakePhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A011D218AA659001B3CC1 /* CTTakePhotoController.m */; };
+		3E1A0125218AA963001B3CC1 /* NSTimer+timerBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A0123218AA963001B3CC1 /* NSTimer+timerBlock.m */; };
+		3E1A012F218AD2E8001B3CC1 /* rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A0126218AD2E7001B3CC1 /* rectangle.png */; };
+		3E1A0130218AD2E8001B3CC1 /* 摄像头转换.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A0127218AD2E7001B3CC1 /* 摄像头转换.pdf */; };
+		3E1A0131218AD2E8001B3CC1 /* small_video.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A0128218AD2E7001B3CC1 /* small_video.pdf */; };
+		3E1A0132218AD2E8001B3CC1 /* takePhoto.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A0129218AD2E7001B3CC1 /* takePhoto.pdf */; };
+		3E1A0133218AD2E8001B3CC1 /* 照片选中.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A012A218AD2E7001B3CC1 /* 照片选中.pdf */; };
+		3E1A0134218AD2E8001B3CC1 /* 闪光灯关闭.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A012B218AD2E8001B3CC1 /* 闪光灯关闭.pdf */; };
+		3E1A0135218AD2E8001B3CC1 /* close.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A012C218AD2E8001B3CC1 /* close.pdf */; };
+		3E1A0136218AD2E8001B3CC1 /* 闪光灯开启.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A012D218AD2E8001B3CC1 /* 闪光灯开启.pdf */; };
+		3E1A0137218AD2E8001B3CC1 /* 对焦框.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A012E218AD2E8001B3CC1 /* 对焦框.pdf */; };
+		3E1A0139218ADD29001B3CC1 /* back_white.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A0138218ADD29001B3CC1 /* back_white.pdf */; };
 		3E58B2D220A53D6900FD761B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E58B2D120A53D6800FD761B /* LaunchScreen.xib */; };
 		3E73E28A207DADB800364E4C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E73E289207DADB800364E4C /* README.md */; };
 		3EB5B062207E02C8008672E2 /* CTONEPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B02F207E02C8008672E2 /* CTONEPhoto.m */; };
 		3EB5B063207E02C8008672E2 /* CTSavePhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B030207E02C8008672E2 /* CTSavePhotos.m */; };
-		3EB5B064207E02C8008672E2 /* UIImage+ColorImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B034207E02C8008672E2 /* UIImage+ColorImg.m */; };
-		3EB5B065207E02C8008672E2 /* CTPhotosConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B035207E02C8008672E2 /* CTPhotosConfiguration.m */; };
-		3EB5B066207E02C8008672E2 /* CTGroupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B037207E02C8008672E2 /* CTGroupTableViewCell.m */; };
-		3EB5B067207E02C8008672E2 /* CTPHAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B039207E02C8008672E2 /* CTPHAssetModel.m */; };
-		3EB5B068207E02C8008672E2 /* UIButton+CTButtonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B03B207E02C8008672E2 /* UIButton+CTButtonManager.m */; };
-		3EB5B069207E02C8008672E2 /* CTPrviewImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B03C207E02C8008672E2 /* CTPrviewImageScrollView.m */; };
-		3EB5B06A207E02C8008672E2 /* UIViewController+CTAlertShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B03E207E02C8008672E2 /* UIViewController+CTAlertShow.m */; };
-		3EB5B06B207E02C8008672E2 /* CTAlbumGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B03F207E02C8008672E2 /* CTAlbumGroupController.m */; };
-		3EB5B06C207E02C8008672E2 /* CTPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B041207E02C8008672E2 /* CTPhotosCollectionViewController.m */; };
-		3EB5B06D207E02C8008672E2 /* ct_pselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B042207E02C8008672E2 /* ct_pselected@2x.png */; };
-		3EB5B06E207E02C8008672E2 /* CTCustomAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B043207E02C8008672E2 /* CTCustomAlbum.m */; };
-		3EB5B06F207E02C8008672E2 /* CTPhotosNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B044207E02C8008672E2 /* CTPhotosNavigationViewController.m */; };
-		3EB5B070207E02C8008672E2 /* PHAsset+CTPHAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B047207E02C8008672E2 /* PHAsset+CTPHAssetManager.m */; };
-		3EB5B071207E02C8008672E2 /* ct_punselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B048207E02C8008672E2 /* ct_punselect@2x.png */; };
-		3EB5B072207E02C8008672E2 /* CTCollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B049207E02C8008672E2 /* CTCollectionModel.m */; };
-		3EB5B073207E02C8008672E2 /* ct_unselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B04A207E02C8008672E2 /* ct_unselect@2x.png */; };
-		3EB5B074207E02C8008672E2 /* CTBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B04B207E02C8008672E2 /* CTBottomView.m */; };
-		3EB5B075207E02C8008672E2 /* CTPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B04D207E02C8008672E2 /* CTPhotoManager.m */; };
-		3EB5B076207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B052207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.m */; };
-		3EB5B077207E02C8008672E2 /* ctCustomback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B053207E02C8008672E2 /* ctCustomback@2x.png */; };
-		3EB5B078207E02C8008672E2 /* CTPhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B055207E02C8008672E2 /* CTPhotosCollectionViewCell.m */; };
-		3EB5B079207E02C8008672E2 /* ct_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B057207E02C8008672E2 /* ct_selected@2x.png */; };
-		3EB5B07A207E02C8008672E2 /* origin_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B059207E02C8008672E2 /* origin_selected@2x.png */; };
-		3EB5B07B207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B05D207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.m */; };
-		3EB5B07C207E02C8008672E2 /* origin_unselect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5B05E207E02C8008672E2 /* origin_unselect@2x.png */; };
-		3EB5B07D207E02C8008672E2 /* UIControl+CTControlBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5B060207E02C8008672E2 /* UIControl+CTControlBlock.m */; };
 		3ECE8FDB207B68A70027CBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8FD1207B68A70027CBC2 /* Assets.xcassets */; };
 		3ECE8FDC207B68A70027CBC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE8FD2207B68A70027CBC2 /* ViewController.m */; };
 		3ECE8FDE207B68A70027CBC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ECE8FD5207B68A70027CBC2 /* Main.storyboard */; };
@@ -46,6 +67,86 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E1A009D218A92E0001B3CC1 /* CTPhotosConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosConfiguration.m; sourceTree = "<group>"; };
+		3E1A009E218A92E0001B3CC1 /* CTPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotoManager.h; sourceTree = "<group>"; };
+		3E1A009F218A92E0001B3CC1 /* CTPhotosConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosConfig.h; sourceTree = "<group>"; };
+		3E1A00A0218A92E0001B3CC1 /* CTCustomAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCustomAlbum.m; sourceTree = "<group>"; };
+		3E1A00A1218A92E0001B3CC1 /* CTPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotoManager.m; sourceTree = "<group>"; };
+		3E1A00A2218A92E0001B3CC1 /* CTPhotosConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosConfiguration.h; sourceTree = "<group>"; };
+		3E1A00A3218A92E0001B3CC1 /* CTCustomAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCustomAlbum.h; sourceTree = "<group>"; };
+		3E1A00A5218A92E0001B3CC1 /* UIImage+ColorImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorImg.m"; sourceTree = "<group>"; };
+		3E1A00A6218A92E0001B3CC1 /* UIButton+CTButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CTButtonManager.m"; sourceTree = "<group>"; };
+		3E1A00A7218A92E0001B3CC1 /* UIViewController+CTAlertShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CTAlertShow.m"; sourceTree = "<group>"; };
+		3E1A00A8218A92E0001B3CC1 /* PHAssetCollection+CTAssetCollectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAssetCollection+CTAssetCollectionManager.h"; sourceTree = "<group>"; };
+		3E1A00A9218A92E0001B3CC1 /* AVURLAsset+LQFetchVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVURLAsset+LQFetchVideo.h"; sourceTree = "<group>"; };
+		3E1A00AA218A92E0001B3CC1 /* UIControl+CTControlBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+CTControlBlock.h"; sourceTree = "<group>"; };
+		3E1A00AB218A92E0001B3CC1 /* PHAsset+CTPHAssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+CTPHAssetManager.m"; sourceTree = "<group>"; };
+		3E1A00AC218A92E0001B3CC1 /* UIImage+ColorImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorImg.h"; sourceTree = "<group>"; };
+		3E1A00AD218A92E0001B3CC1 /* PHAssetCollection+CTAssetCollectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAssetCollection+CTAssetCollectionManager.m"; sourceTree = "<group>"; };
+		3E1A00AE218A92E0001B3CC1 /* UIViewController+CTAlertShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CTAlertShow.h"; sourceTree = "<group>"; };
+		3E1A00AF218A92E0001B3CC1 /* UIButton+CTButtonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CTButtonManager.h"; sourceTree = "<group>"; };
+		3E1A00B0218A92E0001B3CC1 /* AVURLAsset+LQFetchVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVURLAsset+LQFetchVideo.m"; sourceTree = "<group>"; };
+		3E1A00B1218A92E0001B3CC1 /* PHAsset+CTPHAssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAsset+CTPHAssetManager.h"; sourceTree = "<group>"; };
+		3E1A00B2218A92E0001B3CC1 /* UIControl+CTControlBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+CTControlBlock.m"; sourceTree = "<group>"; };
+		3E1A00B4218A92E0001B3CC1 /* CTGroupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGroupTableViewCell.m; sourceTree = "<group>"; };
+		3E1A00B5218A92E0001B3CC1 /* CTBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBottomView.h; sourceTree = "<group>"; };
+		3E1A00B6218A92E0001B3CC1 /* CTPreviewScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPreviewScrollView.m; sourceTree = "<group>"; };
+		3E1A00B7218A92E0001B3CC1 /* CTPreviewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPreviewCollectionViewCell.h; sourceTree = "<group>"; };
+		3E1A00B8218A92E0001B3CC1 /* CTPhotosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosCollectionViewCell.h; sourceTree = "<group>"; };
+		3E1A00B9218A92E0001B3CC1 /* CTPreviewImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPreviewImageView.h; sourceTree = "<group>"; };
+		3E1A00BA218A92E0001B3CC1 /* CTBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBottomView.m; sourceTree = "<group>"; };
+		3E1A00BB218A92E0001B3CC1 /* CTGroupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGroupTableViewCell.h; sourceTree = "<group>"; };
+		3E1A00BC218A92E0001B3CC1 /* CTPhotosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosCollectionViewCell.m; sourceTree = "<group>"; };
+		3E1A00BD218A92E0001B3CC1 /* CTPreviewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPreviewCollectionViewCell.m; sourceTree = "<group>"; };
+		3E1A00BE218A92E0001B3CC1 /* CTPreviewScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPreviewScrollView.h; sourceTree = "<group>"; };
+		3E1A00BF218A92E0001B3CC1 /* CTPreviewImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPreviewImageView.m; sourceTree = "<group>"; };
+		3E1A00C1218A92E0001B3CC1 /* playVideo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = playVideo.pdf; sourceTree = "<group>"; };
+		3E1A00C2218A92E0001B3CC1 /* play_pause.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = play_pause.pdf; sourceTree = "<group>"; };
+		3E1A00C5218A92E0001B3CC1 /* origin_selected.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = origin_selected.pdf; sourceTree = "<group>"; };
+		3E1A00C6218A92E0001B3CC1 /* back_black.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = back_black.pdf; sourceTree = "<group>"; };
+		3E1A00C7218A92E0001B3CC1 /* origin_unselect.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = origin_unselect.pdf; sourceTree = "<group>"; };
+		3E1A00D4218A92E0001B3CC1 /* CTPHAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPHAssetModel.m; sourceTree = "<group>"; };
+		3E1A00D5218A92E0001B3CC1 /* CTGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGroupModel.h; sourceTree = "<group>"; };
+		3E1A00D6218A92E0001B3CC1 /* CTCollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCollectionModel.m; sourceTree = "<group>"; };
+		3E1A00D7218A92E0001B3CC1 /* CTPHAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPHAssetModel.h; sourceTree = "<group>"; };
+		3E1A00D8218A92E0001B3CC1 /* CTGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGroupModel.m; sourceTree = "<group>"; };
+		3E1A00D9218A92E0001B3CC1 /* CTCollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCollectionModel.h; sourceTree = "<group>"; };
+		3E1A00DB218A92E0001B3CC1 /* CTAlbumGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAlbumGroupController.m; sourceTree = "<group>"; };
+		3E1A00DC218A92E0001B3CC1 /* CTPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosCollectionViewController.m; sourceTree = "<group>"; };
+		3E1A00DD218A92E0001B3CC1 /* CTPhotosNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosNavigationViewController.m; sourceTree = "<group>"; };
+		3E1A00DE218A92E0001B3CC1 /* CTPreviewPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPreviewPhotosCollectionViewController.h; sourceTree = "<group>"; };
+		3E1A00DF218A92E0001B3CC1 /* CTAlbumGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAlbumGroupController.h; sourceTree = "<group>"; };
+		3E1A00E0218A92E0001B3CC1 /* CTPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosCollectionViewController.h; sourceTree = "<group>"; };
+		3E1A00E1218A92E0001B3CC1 /* CTPreviewPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPreviewPhotosCollectionViewController.m; sourceTree = "<group>"; };
+		3E1A00E2218A92E0001B3CC1 /* CTPhotosNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosNavigationViewController.h; sourceTree = "<group>"; };
+		3E1A0106218A9FE0001B3CC1 /* CTVideoPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTVideoPlayView.h; sourceTree = "<group>"; };
+		3E1A0107218A9FE0001B3CC1 /* CTPlayerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPlayerItem.m; sourceTree = "<group>"; };
+		3E1A0108218A9FE0001B3CC1 /* CTPlayerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPlayerItem.h; sourceTree = "<group>"; };
+		3E1A010A218A9FE0001B3CC1 /* CTVideoPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTVideoPlayView.m; sourceTree = "<group>"; };
+		3E1A010F218AA33F001B3CC1 /* UIAlertController+CTAlertBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+CTAlertBlock.h"; sourceTree = "<group>"; };
+		3E1A0110218AA33F001B3CC1 /* UIAlertController+CTAlertBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+CTAlertBlock.m"; sourceTree = "<group>"; };
+		3E1A0114218AA659001B3CC1 /* CTCutImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCutImageController.m; sourceTree = "<group>"; };
+		3E1A0115218AA659001B3CC1 /* CTTakePhotoHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTakePhotoHeadView.h; sourceTree = "<group>"; };
+		3E1A0116218AA659001B3CC1 /* CTBesselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBesselView.h; sourceTree = "<group>"; };
+		3E1A0117218AA659001B3CC1 /* CTTakePhotoButtomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTakePhotoButtomView.h; sourceTree = "<group>"; };
+		3E1A0118218AA659001B3CC1 /* CTTakePhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTakePhotoController.h; sourceTree = "<group>"; };
+		3E1A0119218AA659001B3CC1 /* CTBesselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBesselView.m; sourceTree = "<group>"; };
+		3E1A011A218AA659001B3CC1 /* CTTakePhotoHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTakePhotoHeadView.m; sourceTree = "<group>"; };
+		3E1A011B218AA659001B3CC1 /* CTCutImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCutImageController.h; sourceTree = "<group>"; };
+		3E1A011C218AA659001B3CC1 /* CTTakePhotoButtomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTakePhotoButtomView.m; sourceTree = "<group>"; };
+		3E1A011D218AA659001B3CC1 /* CTTakePhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTakePhotoController.m; sourceTree = "<group>"; };
+		3E1A0123218AA963001B3CC1 /* NSTimer+timerBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+timerBlock.m"; sourceTree = "<group>"; };
+		3E1A0124218AA963001B3CC1 /* NSTimer+timerBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+timerBlock.h"; sourceTree = "<group>"; };
+		3E1A0126218AD2E7001B3CC1 /* rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rectangle.png; sourceTree = "<group>"; };
+		3E1A0127218AD2E7001B3CC1 /* 摄像头转换.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "摄像头转换.pdf"; sourceTree = "<group>"; };
+		3E1A0128218AD2E7001B3CC1 /* small_video.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = small_video.pdf; sourceTree = "<group>"; };
+		3E1A0129218AD2E7001B3CC1 /* takePhoto.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = takePhoto.pdf; sourceTree = "<group>"; };
+		3E1A012A218AD2E7001B3CC1 /* 照片选中.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "照片选中.pdf"; sourceTree = "<group>"; };
+		3E1A012B218AD2E8001B3CC1 /* 闪光灯关闭.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "闪光灯关闭.pdf"; sourceTree = "<group>"; };
+		3E1A012C218AD2E8001B3CC1 /* close.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = close.pdf; sourceTree = "<group>"; };
+		3E1A012D218AD2E8001B3CC1 /* 闪光灯开启.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "闪光灯开启.pdf"; sourceTree = "<group>"; };
+		3E1A012E218AD2E8001B3CC1 /* 对焦框.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "对焦框.pdf"; sourceTree = "<group>"; };
+		3E1A0138218ADD29001B3CC1 /* back_white.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = back_white.pdf; sourceTree = "<group>"; };
 		3E58B2D120A53D6800FD761B /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		3E73E289207DADB800364E4C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3E74E82E207A3AD1000D3AD9 /* CTCustomAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTCustomAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,52 +154,6 @@
 		3EB5B030207E02C8008672E2 /* CTSavePhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSavePhotos.m; sourceTree = "<group>"; };
 		3EB5B031207E02C8008672E2 /* CTONEPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTONEPhoto.h; sourceTree = "<group>"; };
 		3EB5B032207E02C8008672E2 /* CTSavePhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSavePhotos.h; sourceTree = "<group>"; };
-		3EB5B034207E02C8008672E2 /* UIImage+ColorImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorImg.m"; sourceTree = "<group>"; };
-		3EB5B035207E02C8008672E2 /* CTPhotosConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosConfiguration.m; sourceTree = "<group>"; };
-		3EB5B036207E02C8008672E2 /* CTPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotoManager.h; sourceTree = "<group>"; };
-		3EB5B037207E02C8008672E2 /* CTGroupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTGroupTableViewCell.m; sourceTree = "<group>"; };
-		3EB5B038207E02C8008672E2 /* CTPhotosConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosConfig.h; sourceTree = "<group>"; };
-		3EB5B039207E02C8008672E2 /* CTPHAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPHAssetModel.m; sourceTree = "<group>"; };
-		3EB5B03A207E02C8008672E2 /* CTBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBottomView.h; sourceTree = "<group>"; };
-		3EB5B03B207E02C8008672E2 /* UIButton+CTButtonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CTButtonManager.m"; sourceTree = "<group>"; };
-		3EB5B03C207E02C8008672E2 /* CTPrviewImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPrviewImageScrollView.m; sourceTree = "<group>"; };
-		3EB5B03D207E02C8008672E2 /* CTPhotosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosCollectionViewCell.h; sourceTree = "<group>"; };
-		3EB5B03E207E02C8008672E2 /* UIViewController+CTAlertShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CTAlertShow.m"; sourceTree = "<group>"; };
-		3EB5B03F207E02C8008672E2 /* CTAlbumGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAlbumGroupController.m; sourceTree = "<group>"; };
-		3EB5B040207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAssetCollection+CTAssetCollectionManager.h"; sourceTree = "<group>"; };
-		3EB5B041207E02C8008672E2 /* CTPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosCollectionViewController.m; sourceTree = "<group>"; };
-		3EB5B042207E02C8008672E2 /* ct_pselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_pselected@2x.png"; sourceTree = "<group>"; };
-		3EB5B043207E02C8008672E2 /* CTCustomAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCustomAlbum.m; sourceTree = "<group>"; };
-		3EB5B044207E02C8008672E2 /* CTPhotosNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosNavigationViewController.m; sourceTree = "<group>"; };
-		3EB5B045207E02C8008672E2 /* UIControl+CTControlBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+CTControlBlock.h"; sourceTree = "<group>"; };
-		3EB5B046207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPreviewPhotosCollectionViewController.h; sourceTree = "<group>"; };
-		3EB5B047207E02C8008672E2 /* PHAsset+CTPHAssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAsset+CTPHAssetManager.m"; sourceTree = "<group>"; };
-		3EB5B048207E02C8008672E2 /* ct_punselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_punselect@2x.png"; sourceTree = "<group>"; };
-		3EB5B049207E02C8008672E2 /* CTCollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCollectionModel.m; sourceTree = "<group>"; };
-		3EB5B04A207E02C8008672E2 /* ct_unselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_unselect@2x.png"; sourceTree = "<group>"; };
-		3EB5B04B207E02C8008672E2 /* CTBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBottomView.m; sourceTree = "<group>"; };
-		3EB5B04C207E02C8008672E2 /* CTPHAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPHAssetModel.h; sourceTree = "<group>"; };
-		3EB5B04D207E02C8008672E2 /* CTPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotoManager.m; sourceTree = "<group>"; };
-		3EB5B04E207E02C8008672E2 /* CTGroupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTGroupTableViewCell.h; sourceTree = "<group>"; };
-		3EB5B04F207E02C8008672E2 /* UIImage+ColorImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorImg.h"; sourceTree = "<group>"; };
-		3EB5B050207E02C8008672E2 /* CTPhotosConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosConfiguration.h; sourceTree = "<group>"; };
-		3EB5B051207E02C8008672E2 /* CTAlbumGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAlbumGroupController.h; sourceTree = "<group>"; };
-		3EB5B052207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PHAssetCollection+CTAssetCollectionManager.m"; sourceTree = "<group>"; };
-		3EB5B053207E02C8008672E2 /* ctCustomback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ctCustomback@2x.png"; sourceTree = "<group>"; };
-		3EB5B054207E02C8008672E2 /* UIViewController+CTAlertShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CTAlertShow.h"; sourceTree = "<group>"; };
-		3EB5B055207E02C8008672E2 /* CTPhotosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosCollectionViewCell.m; sourceTree = "<group>"; };
-		3EB5B056207E02C8008672E2 /* CTPrviewImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPrviewImageScrollView.h; sourceTree = "<group>"; };
-		3EB5B057207E02C8008672E2 /* ct_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ct_selected@2x.png"; sourceTree = "<group>"; };
-		3EB5B058207E02C8008672E2 /* UIButton+CTButtonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CTButtonManager.h"; sourceTree = "<group>"; };
-		3EB5B059207E02C8008672E2 /* origin_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origin_selected@2x.png"; sourceTree = "<group>"; };
-		3EB5B05A207E02C8008672E2 /* CTPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosCollectionViewController.h; sourceTree = "<group>"; };
-		3EB5B05B207E02C8008672E2 /* CTCollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCollectionModel.h; sourceTree = "<group>"; };
-		3EB5B05C207E02C8008672E2 /* PHAsset+CTPHAssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PHAsset+CTPHAssetManager.h"; sourceTree = "<group>"; };
-		3EB5B05D207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPreviewPhotosCollectionViewController.m; sourceTree = "<group>"; };
-		3EB5B05E207E02C8008672E2 /* origin_unselect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "origin_unselect@2x.png"; sourceTree = "<group>"; };
-		3EB5B05F207E02C8008672E2 /* CTPhotosNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosNavigationViewController.h; sourceTree = "<group>"; };
-		3EB5B060207E02C8008672E2 /* UIControl+CTControlBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+CTControlBlock.m"; sourceTree = "<group>"; };
-		3EB5B061207E02C8008672E2 /* CTCustomAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCustomAlbum.h; sourceTree = "<group>"; };
 		3ECE8FD0207B68A70027CBC2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3ECE8FD1207B68A70027CBC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ECE8FD2207B68A70027CBC2 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -121,11 +176,142 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E1A009C218A92E0001B3CC1 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3E1A00A3218A92E0001B3CC1 /* CTCustomAlbum.h */,
+				3E1A00A0218A92E0001B3CC1 /* CTCustomAlbum.m */,
+				3E1A009E218A92E0001B3CC1 /* CTPhotoManager.h */,
+				3E1A00A1218A92E0001B3CC1 /* CTPhotoManager.m */,
+				3E1A009F218A92E0001B3CC1 /* CTPhotosConfig.h */,
+				3E1A00A2218A92E0001B3CC1 /* CTPhotosConfiguration.h */,
+				3E1A009D218A92E0001B3CC1 /* CTPhotosConfiguration.m */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		3E1A00A4218A92E0001B3CC1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3E1A00A9218A92E0001B3CC1 /* AVURLAsset+LQFetchVideo.h */,
+				3E1A00B0218A92E0001B3CC1 /* AVURLAsset+LQFetchVideo.m */,
+				3E1A00B1218A92E0001B3CC1 /* PHAsset+CTPHAssetManager.h */,
+				3E1A00AB218A92E0001B3CC1 /* PHAsset+CTPHAssetManager.m */,
+				3E1A00A8218A92E0001B3CC1 /* PHAssetCollection+CTAssetCollectionManager.h */,
+				3E1A00AD218A92E0001B3CC1 /* PHAssetCollection+CTAssetCollectionManager.m */,
+				3E1A00AF218A92E0001B3CC1 /* UIButton+CTButtonManager.h */,
+				3E1A00A6218A92E0001B3CC1 /* UIButton+CTButtonManager.m */,
+				3E1A00AA218A92E0001B3CC1 /* UIControl+CTControlBlock.h */,
+				3E1A00B2218A92E0001B3CC1 /* UIControl+CTControlBlock.m */,
+				3E1A00AC218A92E0001B3CC1 /* UIImage+ColorImg.h */,
+				3E1A00A5218A92E0001B3CC1 /* UIImage+ColorImg.m */,
+				3E1A00AE218A92E0001B3CC1 /* UIViewController+CTAlertShow.h */,
+				3E1A00A7218A92E0001B3CC1 /* UIViewController+CTAlertShow.m */,
+				3E1A010F218AA33F001B3CC1 /* UIAlertController+CTAlertBlock.h */,
+				3E1A0110218AA33F001B3CC1 /* UIAlertController+CTAlertBlock.m */,
+				3E1A0124218AA963001B3CC1 /* NSTimer+timerBlock.h */,
+				3E1A0123218AA963001B3CC1 /* NSTimer+timerBlock.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		3E1A00B3218A92E0001B3CC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E1A00B5218A92E0001B3CC1 /* CTBottomView.h */,
+				3E1A00BA218A92E0001B3CC1 /* CTBottomView.m */,
+				3E1A00BB218A92E0001B3CC1 /* CTGroupTableViewCell.h */,
+				3E1A00B4218A92E0001B3CC1 /* CTGroupTableViewCell.m */,
+				3E1A00B8218A92E0001B3CC1 /* CTPhotosCollectionViewCell.h */,
+				3E1A00BC218A92E0001B3CC1 /* CTPhotosCollectionViewCell.m */,
+				3E1A00B7218A92E0001B3CC1 /* CTPreviewCollectionViewCell.h */,
+				3E1A00BD218A92E0001B3CC1 /* CTPreviewCollectionViewCell.m */,
+				3E1A00B9218A92E0001B3CC1 /* CTPreviewImageView.h */,
+				3E1A00BF218A92E0001B3CC1 /* CTPreviewImageView.m */,
+				3E1A00BE218A92E0001B3CC1 /* CTPreviewScrollView.h */,
+				3E1A00B6218A92E0001B3CC1 /* CTPreviewScrollView.m */,
+				3E1A0108218A9FE0001B3CC1 /* CTPlayerItem.h */,
+				3E1A0107218A9FE0001B3CC1 /* CTPlayerItem.m */,
+				3E1A0106218A9FE0001B3CC1 /* CTVideoPlayView.h */,
+				3E1A010A218A9FE0001B3CC1 /* CTVideoPlayView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3E1A00C0218A92E0001B3CC1 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				3E1A0138218ADD29001B3CC1 /* back_white.pdf */,
+				3E1A012E218AD2E8001B3CC1 /* 对焦框.pdf */,
+				3E1A012B218AD2E8001B3CC1 /* 闪光灯关闭.pdf */,
+				3E1A012D218AD2E8001B3CC1 /* 闪光灯开启.pdf */,
+				3E1A0127218AD2E7001B3CC1 /* 摄像头转换.pdf */,
+				3E1A012A218AD2E7001B3CC1 /* 照片选中.pdf */,
+				3E1A012C218AD2E8001B3CC1 /* close.pdf */,
+				3E1A0126218AD2E7001B3CC1 /* rectangle.png */,
+				3E1A0128218AD2E7001B3CC1 /* small_video.pdf */,
+				3E1A0129218AD2E7001B3CC1 /* takePhoto.pdf */,
+				3E1A00C1218A92E0001B3CC1 /* playVideo.pdf */,
+				3E1A00C2218A92E0001B3CC1 /* play_pause.pdf */,
+				3E1A00C5218A92E0001B3CC1 /* origin_selected.pdf */,
+				3E1A00C6218A92E0001B3CC1 /* back_black.pdf */,
+				3E1A00C7218A92E0001B3CC1 /* origin_unselect.pdf */,
+			);
+			path = Icon;
+			sourceTree = "<group>";
+		};
+		3E1A00D3218A92E0001B3CC1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E1A00D4218A92E0001B3CC1 /* CTPHAssetModel.m */,
+				3E1A00D5218A92E0001B3CC1 /* CTGroupModel.h */,
+				3E1A00D6218A92E0001B3CC1 /* CTCollectionModel.m */,
+				3E1A00D7218A92E0001B3CC1 /* CTPHAssetModel.h */,
+				3E1A00D8218A92E0001B3CC1 /* CTGroupModel.m */,
+				3E1A00D9218A92E0001B3CC1 /* CTCollectionModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3E1A00DA218A92E0001B3CC1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3E1A00DF218A92E0001B3CC1 /* CTAlbumGroupController.h */,
+				3E1A00DB218A92E0001B3CC1 /* CTAlbumGroupController.m */,
+				3E1A00E0218A92E0001B3CC1 /* CTPhotosCollectionViewController.h */,
+				3E1A00DC218A92E0001B3CC1 /* CTPhotosCollectionViewController.m */,
+				3E1A00E2218A92E0001B3CC1 /* CTPhotosNavigationViewController.h */,
+				3E1A00DD218A92E0001B3CC1 /* CTPhotosNavigationViewController.m */,
+				3E1A00DE218A92E0001B3CC1 /* CTPreviewPhotosCollectionViewController.h */,
+				3E1A00E1218A92E0001B3CC1 /* CTPreviewPhotosCollectionViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3E1A0113218AA659001B3CC1 /* CTTakePhotoAndVideo */ = {
+			isa = PBXGroup;
+			children = (
+				3E1A0116218AA659001B3CC1 /* CTBesselView.h */,
+				3E1A0119218AA659001B3CC1 /* CTBesselView.m */,
+				3E1A011B218AA659001B3CC1 /* CTCutImageController.h */,
+				3E1A0114218AA659001B3CC1 /* CTCutImageController.m */,
+				3E1A0117218AA659001B3CC1 /* CTTakePhotoButtomView.h */,
+				3E1A011C218AA659001B3CC1 /* CTTakePhotoButtomView.m */,
+				3E1A0118218AA659001B3CC1 /* CTTakePhotoController.h */,
+				3E1A011D218AA659001B3CC1 /* CTTakePhotoController.m */,
+				3E1A0115218AA659001B3CC1 /* CTTakePhotoHeadView.h */,
+				3E1A011A218AA659001B3CC1 /* CTTakePhotoHeadView.m */,
+			);
+			name = CTTakePhotoAndVideo;
+			path = ../CTCustomAlbum/CTTakePhotoAndVideo;
+			sourceTree = "<group>";
+		};
 		3E74E825207A3AD1000D3AD9 = {
 			isa = PBXGroup;
 			children = (
 				3E73E289207DADB800364E4C /* README.md */,
 				3ECE9061207B693E0027CBC2 /* CTCustomAlbum.podspec */,
+				3E1A0113218AA659001B3CC1 /* CTTakePhotoAndVideo */,
 				3EB5B033207E02C8008672E2 /* CTCustomAlbum */,
 				3EB5B02E207E02C8008672E2 /* CTOnePhoto */,
 				3ECE8FCF207B68A70027CBC2 /* CTCustomAlbumDemo */,
@@ -156,52 +342,12 @@
 		3EB5B033207E02C8008672E2 /* CTCustomAlbum */ = {
 			isa = PBXGroup;
 			children = (
-				3EB5B042207E02C8008672E2 /* ct_pselected@2x.png */,
-				3EB5B048207E02C8008672E2 /* ct_punselect@2x.png */,
-				3EB5B057207E02C8008672E2 /* ct_selected@2x.png */,
-				3EB5B04A207E02C8008672E2 /* ct_unselect@2x.png */,
-				3EB5B053207E02C8008672E2 /* ctCustomback@2x.png */,
-				3EB5B059207E02C8008672E2 /* origin_selected@2x.png */,
-				3EB5B05E207E02C8008672E2 /* origin_unselect@2x.png */,
-				3EB5B051207E02C8008672E2 /* CTAlbumGroupController.h */,
-				3EB5B03F207E02C8008672E2 /* CTAlbumGroupController.m */,
-				3EB5B03A207E02C8008672E2 /* CTBottomView.h */,
-				3EB5B04B207E02C8008672E2 /* CTBottomView.m */,
-				3EB5B05B207E02C8008672E2 /* CTCollectionModel.h */,
-				3EB5B049207E02C8008672E2 /* CTCollectionModel.m */,
-				3EB5B061207E02C8008672E2 /* CTCustomAlbum.h */,
-				3EB5B043207E02C8008672E2 /* CTCustomAlbum.m */,
-				3EB5B04E207E02C8008672E2 /* CTGroupTableViewCell.h */,
-				3EB5B037207E02C8008672E2 /* CTGroupTableViewCell.m */,
-				3EB5B04C207E02C8008672E2 /* CTPHAssetModel.h */,
-				3EB5B039207E02C8008672E2 /* CTPHAssetModel.m */,
-				3EB5B036207E02C8008672E2 /* CTPhotoManager.h */,
-				3EB5B04D207E02C8008672E2 /* CTPhotoManager.m */,
-				3EB5B03D207E02C8008672E2 /* CTPhotosCollectionViewCell.h */,
-				3EB5B055207E02C8008672E2 /* CTPhotosCollectionViewCell.m */,
-				3EB5B05A207E02C8008672E2 /* CTPhotosCollectionViewController.h */,
-				3EB5B041207E02C8008672E2 /* CTPhotosCollectionViewController.m */,
-				3EB5B038207E02C8008672E2 /* CTPhotosConfig.h */,
-				3EB5B050207E02C8008672E2 /* CTPhotosConfiguration.h */,
-				3EB5B035207E02C8008672E2 /* CTPhotosConfiguration.m */,
-				3EB5B05F207E02C8008672E2 /* CTPhotosNavigationViewController.h */,
-				3EB5B044207E02C8008672E2 /* CTPhotosNavigationViewController.m */,
-				3EB5B046207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.h */,
-				3EB5B05D207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.m */,
-				3EB5B056207E02C8008672E2 /* CTPrviewImageScrollView.h */,
-				3EB5B03C207E02C8008672E2 /* CTPrviewImageScrollView.m */,
-				3EB5B05C207E02C8008672E2 /* PHAsset+CTPHAssetManager.h */,
-				3EB5B047207E02C8008672E2 /* PHAsset+CTPHAssetManager.m */,
-				3EB5B040207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.h */,
-				3EB5B052207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.m */,
-				3EB5B058207E02C8008672E2 /* UIButton+CTButtonManager.h */,
-				3EB5B03B207E02C8008672E2 /* UIButton+CTButtonManager.m */,
-				3EB5B045207E02C8008672E2 /* UIControl+CTControlBlock.h */,
-				3EB5B060207E02C8008672E2 /* UIControl+CTControlBlock.m */,
-				3EB5B04F207E02C8008672E2 /* UIImage+ColorImg.h */,
-				3EB5B034207E02C8008672E2 /* UIImage+ColorImg.m */,
-				3EB5B054207E02C8008672E2 /* UIViewController+CTAlertShow.h */,
-				3EB5B03E207E02C8008672E2 /* UIViewController+CTAlertShow.m */,
+				3E1A00A4218A92E0001B3CC1 /* Category */,
+				3E1A00DA218A92E0001B3CC1 /* Controller */,
+				3E1A00C0218A92E0001B3CC1 /* Icon */,
+				3E1A009C218A92E0001B3CC1 /* Library */,
+				3E1A00D3218A92E0001B3CC1 /* Model */,
+				3E1A00B3218A92E0001B3CC1 /* Views */,
 			);
 			name = CTCustomAlbum;
 			path = ../CTCustomAlbum/CTCustomAlbum;
@@ -281,18 +427,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E1A0135218AD2E8001B3CC1 /* close.pdf in Resources */,
+				3E1A0136218AD2E8001B3CC1 /* 闪光灯开启.pdf in Resources */,
+				3E1A0134218AD2E8001B3CC1 /* 闪光灯关闭.pdf in Resources */,
+				3E1A0139218ADD29001B3CC1 /* back_white.pdf in Resources */,
+				3E1A0137218AD2E8001B3CC1 /* 对焦框.pdf in Resources */,
+				3E1A012F218AD2E8001B3CC1 /* rectangle.png in Resources */,
 				3ECE9062207B693E0027CBC2 /* CTCustomAlbum.podspec in Resources */,
-				3EB5B07C207E02C8008672E2 /* origin_unselect@2x.png in Resources */,
-				3EB5B071207E02C8008672E2 /* ct_punselect@2x.png in Resources */,
-				3EB5B06D207E02C8008672E2 /* ct_pselected@2x.png in Resources */,
+				3E1A00F8218A92E0001B3CC1 /* back_black.pdf in Resources */,
+				3E1A00F9218A92E0001B3CC1 /* origin_unselect.pdf in Resources */,
+				3E1A00F4218A92E0001B3CC1 /* play_pause.pdf in Resources */,
+				3E1A0132218AD2E8001B3CC1 /* takePhoto.pdf in Resources */,
 				3E58B2D220A53D6900FD761B /* LaunchScreen.xib in Resources */,
 				3ECE8FDE207B68A70027CBC2 /* Main.storyboard in Resources */,
-				3EB5B073207E02C8008672E2 /* ct_unselect@2x.png in Resources */,
-				3EB5B077207E02C8008672E2 /* ctCustomback@2x.png in Resources */,
+				3E1A00F3218A92E0001B3CC1 /* playVideo.pdf in Resources */,
 				3E73E28A207DADB800364E4C /* README.md in Resources */,
+				3E1A00F7218A92E0001B3CC1 /* origin_selected.pdf in Resources */,
 				3ECE8FDB207B68A70027CBC2 /* Assets.xcassets in Resources */,
-				3EB5B079207E02C8008672E2 /* ct_selected@2x.png in Resources */,
-				3EB5B07A207E02C8008672E2 /* origin_selected@2x.png in Resources */,
+				3E1A0131218AD2E8001B3CC1 /* small_video.pdf in Resources */,
+				3E1A0133218AD2E8001B3CC1 /* 照片选中.pdf in Resources */,
+				3E1A0130218AD2E8001B3CC1 /* 摄像头转换.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,30 +457,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EB5B070207E02C8008672E2 /* PHAsset+CTPHAssetManager.m in Sources */,
-				3EB5B06F207E02C8008672E2 /* CTPhotosNavigationViewController.m in Sources */,
-				3EB5B066207E02C8008672E2 /* CTGroupTableViewCell.m in Sources */,
-				3EB5B065207E02C8008672E2 /* CTPhotosConfiguration.m in Sources */,
+				3E1A0104218A92E0001B3CC1 /* CTPhotosNavigationViewController.m in Sources */,
+				3E1A011E218AA659001B3CC1 /* CTCutImageController.m in Sources */,
+				3E1A00E3218A92E0001B3CC1 /* CTPhotosConfiguration.m in Sources */,
 				3ECE8FDF207B68A70027CBC2 /* main.m in Sources */,
-				3EB5B07B207E02C8008672E2 /* CTPreviewPhotosCollectionViewController.m in Sources */,
-				3EB5B064207E02C8008672E2 /* UIImage+ColorImg.m in Sources */,
+				3E1A0103218A92E0001B3CC1 /* CTPhotosCollectionViewController.m in Sources */,
+				3E1A00EA218A92E0001B3CC1 /* PHAssetCollection+CTAssetCollectionManager.m in Sources */,
+				3E1A00E9218A92E0001B3CC1 /* PHAsset+CTPHAssetManager.m in Sources */,
+				3E1A00F1218A92E0001B3CC1 /* CTPreviewCollectionViewCell.m in Sources */,
+				3E1A0102218A92E0001B3CC1 /* CTAlbumGroupController.m in Sources */,
+				3E1A00EF218A92E0001B3CC1 /* CTBottomView.m in Sources */,
+				3E1A00FF218A92E0001B3CC1 /* CTPHAssetModel.m in Sources */,
+				3E1A0105218A92E0001B3CC1 /* CTPreviewPhotosCollectionViewController.m in Sources */,
+				3E1A0111218AA33F001B3CC1 /* UIAlertController+CTAlertBlock.m in Sources */,
+				3E1A011F218AA659001B3CC1 /* CTBesselView.m in Sources */,
+				3E1A00F0218A92E0001B3CC1 /* CTPhotosCollectionViewCell.m in Sources */,
+				3E1A0100218A92E0001B3CC1 /* CTCollectionModel.m in Sources */,
 				3ECE8FDC207B68A70027CBC2 /* ViewController.m in Sources */,
-				3EB5B075207E02C8008672E2 /* CTPhotoManager.m in Sources */,
-				3EB5B078207E02C8008672E2 /* CTPhotosCollectionViewCell.m in Sources */,
-				3EB5B07D207E02C8008672E2 /* UIControl+CTControlBlock.m in Sources */,
 				3EB5B063207E02C8008672E2 /* CTSavePhotos.m in Sources */,
+				3E1A00E6218A92E0001B3CC1 /* UIImage+ColorImg.m in Sources */,
+				3E1A00EC218A92E0001B3CC1 /* UIControl+CTControlBlock.m in Sources */,
+				3E1A00ED218A92E0001B3CC1 /* CTGroupTableViewCell.m in Sources */,
 				3EB5B062207E02C8008672E2 /* CTONEPhoto.m in Sources */,
-				3EB5B074207E02C8008672E2 /* CTBottomView.m in Sources */,
-				3EB5B06B207E02C8008672E2 /* CTAlbumGroupController.m in Sources */,
-				3EB5B067207E02C8008672E2 /* CTPHAssetModel.m in Sources */,
-				3EB5B076207E02C8008672E2 /* PHAssetCollection+CTAssetCollectionManager.m in Sources */,
-				3EB5B068207E02C8008672E2 /* UIButton+CTButtonManager.m in Sources */,
-				3EB5B06E207E02C8008672E2 /* CTCustomAlbum.m in Sources */,
-				3EB5B06A207E02C8008672E2 /* UIViewController+CTAlertShow.m in Sources */,
-				3EB5B069207E02C8008672E2 /* CTPrviewImageScrollView.m in Sources */,
-				3EB5B06C207E02C8008672E2 /* CTPhotosCollectionViewController.m in Sources */,
-				3EB5B072207E02C8008672E2 /* CTCollectionModel.m in Sources */,
+				3E1A0122218AA659001B3CC1 /* CTTakePhotoController.m in Sources */,
+				3E1A00E4218A92E0001B3CC1 /* CTCustomAlbum.m in Sources */,
+				3E1A0121218AA659001B3CC1 /* CTTakePhotoButtomView.m in Sources */,
+				3E1A00E8218A92E0001B3CC1 /* UIViewController+CTAlertShow.m in Sources */,
+				3E1A0125218AA963001B3CC1 /* NSTimer+timerBlock.m in Sources */,
+				3E1A010E218A9FE0001B3CC1 /* CTVideoPlayView.m in Sources */,
+				3E1A0120218AA659001B3CC1 /* CTTakePhotoHeadView.m in Sources */,
+				3E1A0101218A92E0001B3CC1 /* CTGroupModel.m in Sources */,
+				3E1A010C218A9FE0001B3CC1 /* CTPlayerItem.m in Sources */,
 				3ECE8FE0207B68A70027CBC2 /* AppDelegate.m in Sources */,
+				3E1A00E7218A92E0001B3CC1 /* UIButton+CTButtonManager.m in Sources */,
+				3E1A00EE218A92E0001B3CC1 /* CTPreviewScrollView.m in Sources */,
+				3E1A00E5218A92E0001B3CC1 /* CTPhotoManager.m in Sources */,
+				3E1A00EB218A92E0001B3CC1 /* AVURLAsset+LQFetchVideo.m in Sources */,
+				3E1A00F2218A92E0001B3CC1 /* CTPreviewImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

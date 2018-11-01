@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,7 +26,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="0tb-xW-P02"/>
                                 </constraints>
-                                <state key="normal" title="相册"/>
+                                <state key="normal" title="原生相册"/>
                                 <connections>
                                     <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NWp-fV-5sW"/>
                                 </connections>
@@ -36,13 +36,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="W5R-vb-bsl"/>
                                 </constraints>
-                                <state key="normal" title="相机"/>
+                                <state key="normal" title="原生相机"/>
                                 <connections>
                                     <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nm2-sN-svh"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bqR-im-mVH">
-                                <rect key="frame" x="0.0" y="180" width="320" height="248"/>
+                                <rect key="frame" x="0.0" y="208" width="320" height="240"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="HRp-ac-mtn">
                                     <size key="itemSize" width="90" height="90"/>
@@ -71,26 +71,36 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="4ki-ad-Kod"/>
                                     <constraint firstAttribute="height" constant="40" id="upB-Ar-FM8"/>
                                 </constraints>
-                                <state key="normal" title="自定义相册"/>
+                                <state key="normal" title="自定义相机"/>
                                 <connections>
                                     <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TtC-Ps-mbY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xz8-aC-iuV">
+                                <rect key="frame" x="0.0" y="160" width="320" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ok5-MA-HNW"/>
+                                </constraints>
+                                <state key="normal" title="自定义相册"/>
+                                <connections>
+                                    <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gYE-a3-iXS"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a24-lB-OkJ">
-                                <rect key="frame" x="0.0" y="428" width="320" height="140"/>
+                                <rect key="frame" x="0.0" y="448" width="320" height="120"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rr-W1-uIV">
-                                        <rect key="frame" x="60" y="0.0" width="200" height="140"/>
+                                        <rect key="frame" x="70" y="0.0" width="180" height="120"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="0H7-WC-ph7"/>
-                                            <constraint firstAttribute="height" constant="140" id="6oY-XT-HAq"/>
+                                            <constraint firstAttribute="height" constant="120" id="Y0l-ot-gtN"/>
+                                            <constraint firstAttribute="width" constant="180" id="kqx-5n-tFt"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYh-CG-kML">
-                                        <rect key="frame" x="140" y="50" width="40" height="40"/>
+                                        <rect key="frame" x="140" y="40" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="Hwd-62-gHq"/>
-                                            <constraint firstAttribute="height" constant="40" id="vLt-eA-zef"/>
+                                            <constraint firstAttribute="height" constant="40" id="Tax-KR-lEH"/>
+                                            <constraint firstAttribute="width" constant="40" id="epp-Za-N7x"/>
                                         </constraints>
                                         <state key="normal" image="播放"/>
                                         <connections>
@@ -100,32 +110,36 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="6rr-W1-uIV" firstAttribute="centerY" secondItem="a24-lB-OkJ" secondAttribute="centerY" id="8aj-5n-tYS"/>
-                                    <constraint firstItem="6rr-W1-uIV" firstAttribute="centerX" secondItem="a24-lB-OkJ" secondAttribute="centerX" id="UNp-A0-sjs"/>
-                                    <constraint firstItem="YYh-CG-kML" firstAttribute="centerY" secondItem="a24-lB-OkJ" secondAttribute="centerY" id="UY4-6M-B4I"/>
-                                    <constraint firstAttribute="height" constant="140" id="VJ7-UE-Rk9"/>
-                                    <constraint firstItem="YYh-CG-kML" firstAttribute="centerX" secondItem="a24-lB-OkJ" secondAttribute="centerX" id="XJJ-bA-BUA"/>
+                                    <constraint firstItem="6rr-W1-uIV" firstAttribute="top" secondItem="a24-lB-OkJ" secondAttribute="top" id="6T7-OK-dcb"/>
+                                    <constraint firstItem="6rr-W1-uIV" firstAttribute="centerX" secondItem="a24-lB-OkJ" secondAttribute="centerX" id="U4L-Pr-alU"/>
+                                    <constraint firstItem="YYh-CG-kML" firstAttribute="centerY" secondItem="a24-lB-OkJ" secondAttribute="centerY" id="cKp-Na-4vG"/>
+                                    <constraint firstAttribute="bottom" secondItem="6rr-W1-uIV" secondAttribute="bottom" id="o1s-zd-bXj"/>
+                                    <constraint firstItem="YYh-CG-kML" firstAttribute="centerX" secondItem="a24-lB-OkJ" secondAttribute="centerX" id="sl2-RK-C9w"/>
+                                    <constraint firstAttribute="height" constant="120" id="uTl-bu-Fis"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bqR-im-mVH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2mz-X8-kpR"/>
-                            <constraint firstItem="a24-lB-OkJ" firstAttribute="top" secondItem="bqR-im-mVH" secondAttribute="bottom" id="7Hg-hF-Hhs"/>
                             <constraint firstAttribute="trailing" secondItem="2YF-1m-AlL" secondAttribute="trailing" id="7zn-Ok-LTP"/>
                             <constraint firstItem="2YF-1m-AlL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AQf-V0-45I"/>
                             <constraint firstAttribute="trailing" secondItem="USt-5P-gov" secondAttribute="trailing" id="CL0-va-ql1"/>
-                            <constraint firstItem="a24-lB-OkJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GuH-OG-Lko"/>
+                            <constraint firstItem="a24-lB-OkJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="E7o-FE-Y5t"/>
+                            <constraint firstItem="xz8-aC-iuV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IqA-o5-6pT"/>
+                            <constraint firstItem="a24-lB-OkJ" firstAttribute="top" secondItem="bqR-im-mVH" secondAttribute="bottom" id="KlC-gX-Gfo"/>
+                            <constraint firstAttribute="trailing" secondItem="a24-lB-OkJ" secondAttribute="trailing" id="Ntm-oD-9DN"/>
                             <constraint firstItem="USt-5P-gov" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="OzG-wE-A01"/>
-                            <constraint firstAttribute="trailing" secondItem="bqR-im-mVH" secondAttribute="trailing" id="RG2-aF-gUt"/>
                             <constraint firstItem="aas-ab-2rN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TYm-bD-qcI"/>
+                            <constraint firstItem="bqR-im-mVH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TfP-r8-xu1"/>
                             <constraint firstAttribute="trailing" secondItem="2YF-1m-AlL" secondAttribute="trailing" id="UG8-ag-TaJ"/>
-                            <constraint firstAttribute="trailing" secondItem="a24-lB-OkJ" secondAttribute="trailing" id="fop-yq-f1K"/>
-                            <constraint firstItem="bqR-im-mVH" firstAttribute="top" secondItem="2YF-1m-AlL" secondAttribute="bottom" constant="20" id="kUt-lw-qXI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a24-lB-OkJ" secondAttribute="bottom" id="nz4-p2-TLs"/>
+                            <constraint firstAttribute="trailing" secondItem="bqR-im-mVH" secondAttribute="trailing" id="VWn-Kt-EbL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="a24-lB-OkJ" secondAttribute="bottom" id="Vst-uT-7Jm"/>
+                            <constraint firstItem="xz8-aC-iuV" firstAttribute="top" secondItem="2YF-1m-AlL" secondAttribute="bottom" id="bXN-qS-cSl"/>
                             <constraint firstItem="2YF-1m-AlL" firstAttribute="top" secondItem="aas-ab-2rN" secondAttribute="bottom" constant="10" id="oML-5D-Gs9"/>
                             <constraint firstItem="aas-ab-2rN" firstAttribute="top" secondItem="USt-5P-gov" secondAttribute="bottom" constant="10" id="row-1d-mPD"/>
+                            <constraint firstItem="bqR-im-mVH" firstAttribute="top" secondItem="xz8-aC-iuV" secondAttribute="bottom" constant="8" id="saT-ds-c3H"/>
                             <constraint firstItem="USt-5P-gov" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tIk-we-hBW"/>
+                            <constraint firstAttribute="trailing" secondItem="xz8-aC-iuV" secondAttribute="trailing" id="ytL-4E-Wxb"/>
                             <constraint firstAttribute="trailing" secondItem="aas-ab-2rN" secondAttribute="trailing" id="yuJ-Cw-y2R"/>
                         </constraints>
                     </view>
@@ -141,6 +155,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="播放" width="50" height="50"/>
+        <image name="播放" width="100" height="100"/>
     </resources>
 </document>

@@ -21,9 +21,7 @@
         
         return NO ;
     }
-    
     return YES;
-    
 }
 //检测相机权限
 + (BOOL)checkAuthorityOfCamera {
@@ -33,16 +31,21 @@
     }
     
     AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-    if (status == AVAuthorizationStatusRestricted || status == AVAuthorizationStatusDenied)
-    {
+    if (status == AVAuthorizationStatusRestricted || status == AVAuthorizationStatusDenied) {
         [self showAlertWithMessage:@"相机被禁止访问了，请前往设置进行更改" ];
+        return NO;
+    }
+    return YES;
+}
++ (BOOL)checkAuthorityofAudio {
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+    if (status == AVAuthorizationStatusRestricted || status == AVAuthorizationStatusDenied) {
+        [self showAlertWithMessage:@"麦克风被禁止访问了，请前往设置进行更改" ];
         return NO;
     }
     
     return YES;
-    
 }
-
 //保存图片到相册
 + (void)saveImageIntoAlbum:(UIImage *)image {
     
