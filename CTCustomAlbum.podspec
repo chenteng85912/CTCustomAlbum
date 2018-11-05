@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CTCustomAlbum"
-  s.version      = "0.0.3"
+  s.version      = "2.0.0"
   s.summary      = "CustomAlbum make with Photos.kit "
 
   s.homepage     = "https://github.com/chenteng85912/CTCustomAlbum"
@@ -14,17 +14,20 @@ Pod::Spec.new do |s|
 
   s.frameworks = "Photos", "AVFoundation"
 
-#自定义相册
+    #调用系统相机和相册
+    s.subspec 'CTOnePhoto' do |ss|
+        ss.source_files = "CTCustomAlbum/CTOnePhoto/*.{h,m}"
+    end
+    #定制化相册
     s.subspec 'CTCustomAlbum' do |ss|
         ss.source_files = "CTCustomAlbum/CTCustomAlbum/*.{h,m}"
         ss.resources = "CTCustomAlbum/CTCustomAlbum/*.{png,xib}"
         ss.dependency 'CTCustomAlbum/CTOnePhoto'
-
     end
-
-#调用系统相机和相册
-    s.subspec 'CTOnePhoto' do |ss|
-        ss.source_files = "CTCustomAlbum/CTOnePhoto/*.{h,m}"
+    #定制化的拍摄
+    s.subspec 'CTTakePhotoAndVideo' do |ss|
+        ss.source_files = "CTCustomAlbum/CTTakePhotoAndVideo/*.{h,m}"
+        ss.dependency 'CTCustomAlbum/CTOnePhoto'
     end
 
 end
