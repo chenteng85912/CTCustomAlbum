@@ -20,14 +20,8 @@ Pod::Spec.new do |s|
     end
     #定制化相册
     s.subspec 'CTCustomAlbum' do |ss|
-        ss.source_files = "CTCustomAlbum/CTCustomAlbum/*.{h,m}"
-        ss.resources = "CTCustomAlbum/CTCustomAlbum/*.{png,xib}"
+        ss.source_files = "CTCustomAlbum/CTCustomAlbum/**/*.{h,m}"
+        ss.resources = "CTCustomAlbum/CTCustomAlbum/Icon/*.{png,pdf}"
         ss.dependency 'CTCustomAlbum/CTOnePhoto'
     end
-    #定制化的拍摄
-    s.subspec 'CTTakePhotoAndVideo' do |ss|
-        ss.source_files = "CTCustomAlbum/CTTakePhotoAndVideo/*.{h,m}"
-        ss.dependency 'CTCustomAlbum/CTOnePhoto'
-    end
-
 end

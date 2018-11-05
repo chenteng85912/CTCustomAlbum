@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0CFD27219036610045467C /* CTBesselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0CFD1E219036610045467C /* CTBesselView.m */; };
+		3E0CFD28219036610045467C /* CTTakePhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0CFD1F219036610045467C /* CTTakePhotoController.m */; };
+		3E0CFD29219036610045467C /* CTCutImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0CFD20219036610045467C /* CTCutImageController.m */; };
+		3E0CFD2A219036610045467C /* CTTakePhotoButtomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0CFD21219036610045467C /* CTTakePhotoButtomView.m */; };
+		3E0CFD2B219036610045467C /* CTTakePhotoHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0CFD25219036610045467C /* CTTakePhotoHeadView.m */; };
 		3E1A00E3218A92E0001B3CC1 /* CTPhotosConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A009D218A92E0001B3CC1 /* CTPhotosConfiguration.m */; };
 		3E1A00E4218A92E0001B3CC1 /* CTCustomAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00A0218A92E0001B3CC1 /* CTCustomAlbum.m */; };
 		3E1A00E5218A92E0001B3CC1 /* CTPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A00A1218A92E0001B3CC1 /* CTPhotoManager.m */; };
@@ -38,11 +43,6 @@
 		3E1A010C218A9FE0001B3CC1 /* CTPlayerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A0107218A9FE0001B3CC1 /* CTPlayerItem.m */; };
 		3E1A010E218A9FE0001B3CC1 /* CTVideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A010A218A9FE0001B3CC1 /* CTVideoPlayView.m */; };
 		3E1A0111218AA33F001B3CC1 /* UIAlertController+CTAlertBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A0110218AA33F001B3CC1 /* UIAlertController+CTAlertBlock.m */; };
-		3E1A011E218AA659001B3CC1 /* CTCutImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A0114218AA659001B3CC1 /* CTCutImageController.m */; };
-		3E1A011F218AA659001B3CC1 /* CTBesselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A0119218AA659001B3CC1 /* CTBesselView.m */; };
-		3E1A0120218AA659001B3CC1 /* CTTakePhotoHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A011A218AA659001B3CC1 /* CTTakePhotoHeadView.m */; };
-		3E1A0121218AA659001B3CC1 /* CTTakePhotoButtomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A011C218AA659001B3CC1 /* CTTakePhotoButtomView.m */; };
-		3E1A0122218AA659001B3CC1 /* CTTakePhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A011D218AA659001B3CC1 /* CTTakePhotoController.m */; };
 		3E1A0125218AA963001B3CC1 /* NSTimer+timerBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A0123218AA963001B3CC1 /* NSTimer+timerBlock.m */; };
 		3E1A012F218AD2E8001B3CC1 /* rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A0126218AD2E7001B3CC1 /* rectangle.png */; };
 		3E1A0130218AD2E8001B3CC1 /* 摄像头转换.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A0127218AD2E7001B3CC1 /* 摄像头转换.pdf */; };
@@ -67,6 +67,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E0CFD1D219036610045467C /* CTTakePhotoHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTakePhotoHeadView.h; sourceTree = "<group>"; };
+		3E0CFD1E219036610045467C /* CTBesselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBesselView.m; sourceTree = "<group>"; };
+		3E0CFD1F219036610045467C /* CTTakePhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTakePhotoController.m; sourceTree = "<group>"; };
+		3E0CFD20219036610045467C /* CTCutImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCutImageController.m; sourceTree = "<group>"; };
+		3E0CFD21219036610045467C /* CTTakePhotoButtomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTakePhotoButtomView.m; sourceTree = "<group>"; };
+		3E0CFD22219036610045467C /* CTCutImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCutImageController.h; sourceTree = "<group>"; };
+		3E0CFD23219036610045467C /* CTBesselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBesselView.h; sourceTree = "<group>"; };
+		3E0CFD24219036610045467C /* CTTakePhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTakePhotoController.h; sourceTree = "<group>"; };
+		3E0CFD25219036610045467C /* CTTakePhotoHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTakePhotoHeadView.m; sourceTree = "<group>"; };
+		3E0CFD26219036610045467C /* CTTakePhotoButtomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTakePhotoButtomView.h; sourceTree = "<group>"; };
 		3E1A009D218A92E0001B3CC1 /* CTPhotosConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPhotosConfiguration.m; sourceTree = "<group>"; };
 		3E1A009E218A92E0001B3CC1 /* CTPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotoManager.h; sourceTree = "<group>"; };
 		3E1A009F218A92E0001B3CC1 /* CTPhotosConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPhotosConfig.h; sourceTree = "<group>"; };
@@ -125,16 +135,6 @@
 		3E1A010A218A9FE0001B3CC1 /* CTVideoPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTVideoPlayView.m; sourceTree = "<group>"; };
 		3E1A010F218AA33F001B3CC1 /* UIAlertController+CTAlertBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+CTAlertBlock.h"; sourceTree = "<group>"; };
 		3E1A0110218AA33F001B3CC1 /* UIAlertController+CTAlertBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+CTAlertBlock.m"; sourceTree = "<group>"; };
-		3E1A0114218AA659001B3CC1 /* CTCutImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCutImageController.m; sourceTree = "<group>"; };
-		3E1A0115218AA659001B3CC1 /* CTTakePhotoHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTakePhotoHeadView.h; sourceTree = "<group>"; };
-		3E1A0116218AA659001B3CC1 /* CTBesselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBesselView.h; sourceTree = "<group>"; };
-		3E1A0117218AA659001B3CC1 /* CTTakePhotoButtomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTakePhotoButtomView.h; sourceTree = "<group>"; };
-		3E1A0118218AA659001B3CC1 /* CTTakePhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTakePhotoController.h; sourceTree = "<group>"; };
-		3E1A0119218AA659001B3CC1 /* CTBesselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBesselView.m; sourceTree = "<group>"; };
-		3E1A011A218AA659001B3CC1 /* CTTakePhotoHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTakePhotoHeadView.m; sourceTree = "<group>"; };
-		3E1A011B218AA659001B3CC1 /* CTCutImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCutImageController.h; sourceTree = "<group>"; };
-		3E1A011C218AA659001B3CC1 /* CTTakePhotoButtomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTakePhotoButtomView.m; sourceTree = "<group>"; };
-		3E1A011D218AA659001B3CC1 /* CTTakePhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTakePhotoController.m; sourceTree = "<group>"; };
 		3E1A0123218AA963001B3CC1 /* NSTimer+timerBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+timerBlock.m"; sourceTree = "<group>"; };
 		3E1A0124218AA963001B3CC1 /* NSTimer+timerBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+timerBlock.h"; sourceTree = "<group>"; };
 		3E1A0126218AD2E7001B3CC1 /* rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rectangle.png; sourceTree = "<group>"; };
@@ -176,6 +176,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E0CFD1C219036610045467C /* CTTakePhotoAndVideo */ = {
+			isa = PBXGroup;
+			children = (
+				3E0CFD1D219036610045467C /* CTTakePhotoHeadView.h */,
+				3E0CFD1E219036610045467C /* CTBesselView.m */,
+				3E0CFD1F219036610045467C /* CTTakePhotoController.m */,
+				3E0CFD20219036610045467C /* CTCutImageController.m */,
+				3E0CFD21219036610045467C /* CTTakePhotoButtomView.m */,
+				3E0CFD22219036610045467C /* CTCutImageController.h */,
+				3E0CFD23219036610045467C /* CTBesselView.h */,
+				3E0CFD24219036610045467C /* CTTakePhotoController.h */,
+				3E0CFD25219036610045467C /* CTTakePhotoHeadView.m */,
+				3E0CFD26219036610045467C /* CTTakePhotoButtomView.h */,
+			);
+			path = CTTakePhotoAndVideo;
+			sourceTree = "<group>";
+		};
 		3E1A009C218A92E0001B3CC1 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,30 +305,11 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		3E1A0113218AA659001B3CC1 /* CTTakePhotoAndVideo */ = {
-			isa = PBXGroup;
-			children = (
-				3E1A0116218AA659001B3CC1 /* CTBesselView.h */,
-				3E1A0119218AA659001B3CC1 /* CTBesselView.m */,
-				3E1A011B218AA659001B3CC1 /* CTCutImageController.h */,
-				3E1A0114218AA659001B3CC1 /* CTCutImageController.m */,
-				3E1A0117218AA659001B3CC1 /* CTTakePhotoButtomView.h */,
-				3E1A011C218AA659001B3CC1 /* CTTakePhotoButtomView.m */,
-				3E1A0118218AA659001B3CC1 /* CTTakePhotoController.h */,
-				3E1A011D218AA659001B3CC1 /* CTTakePhotoController.m */,
-				3E1A0115218AA659001B3CC1 /* CTTakePhotoHeadView.h */,
-				3E1A011A218AA659001B3CC1 /* CTTakePhotoHeadView.m */,
-			);
-			name = CTTakePhotoAndVideo;
-			path = ../CTCustomAlbum/CTTakePhotoAndVideo;
-			sourceTree = "<group>";
-		};
 		3E74E825207A3AD1000D3AD9 = {
 			isa = PBXGroup;
 			children = (
 				3E73E289207DADB800364E4C /* README.md */,
 				3ECE9061207B693E0027CBC2 /* CTCustomAlbum.podspec */,
-				3E1A0113218AA659001B3CC1 /* CTTakePhotoAndVideo */,
 				3EB5B033207E02C8008672E2 /* CTCustomAlbum */,
 				3EB5B02E207E02C8008672E2 /* CTOnePhoto */,
 				3ECE8FCF207B68A70027CBC2 /* CTCustomAlbumDemo */,
@@ -342,6 +340,7 @@
 		3EB5B033207E02C8008672E2 /* CTCustomAlbum */ = {
 			isa = PBXGroup;
 			children = (
+				3E0CFD1C219036610045467C /* CTTakePhotoAndVideo */,
 				3E1A00A4218A92E0001B3CC1 /* Category */,
 				3E1A00DA218A92E0001B3CC1 /* Controller */,
 				3E1A00C0218A92E0001B3CC1 /* Icon */,
@@ -458,7 +457,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E1A0104218A92E0001B3CC1 /* CTPhotosNavigationViewController.m in Sources */,
-				3E1A011E218AA659001B3CC1 /* CTCutImageController.m in Sources */,
 				3E1A00E3218A92E0001B3CC1 /* CTPhotosConfiguration.m in Sources */,
 				3ECE8FDF207B68A70027CBC2 /* main.m in Sources */,
 				3E1A0103218A92E0001B3CC1 /* CTPhotosCollectionViewController.m in Sources */,
@@ -470,27 +468,28 @@
 				3E1A00FF218A92E0001B3CC1 /* CTPHAssetModel.m in Sources */,
 				3E1A0105218A92E0001B3CC1 /* CTPreviewPhotosCollectionViewController.m in Sources */,
 				3E1A0111218AA33F001B3CC1 /* UIAlertController+CTAlertBlock.m in Sources */,
-				3E1A011F218AA659001B3CC1 /* CTBesselView.m in Sources */,
 				3E1A00F0218A92E0001B3CC1 /* CTPhotosCollectionViewCell.m in Sources */,
 				3E1A0100218A92E0001B3CC1 /* CTCollectionModel.m in Sources */,
 				3ECE8FDC207B68A70027CBC2 /* ViewController.m in Sources */,
 				3EB5B063207E02C8008672E2 /* CTSavePhotos.m in Sources */,
 				3E1A00E6218A92E0001B3CC1 /* UIImage+ColorImg.m in Sources */,
+				3E0CFD2B219036610045467C /* CTTakePhotoHeadView.m in Sources */,
 				3E1A00EC218A92E0001B3CC1 /* UIControl+CTControlBlock.m in Sources */,
+				3E0CFD28219036610045467C /* CTTakePhotoController.m in Sources */,
 				3E1A00ED218A92E0001B3CC1 /* CTGroupTableViewCell.m in Sources */,
 				3EB5B062207E02C8008672E2 /* CTONEPhoto.m in Sources */,
-				3E1A0122218AA659001B3CC1 /* CTTakePhotoController.m in Sources */,
 				3E1A00E4218A92E0001B3CC1 /* CTCustomAlbum.m in Sources */,
-				3E1A0121218AA659001B3CC1 /* CTTakePhotoButtomView.m in Sources */,
 				3E1A00E8218A92E0001B3CC1 /* UIViewController+CTAlertShow.m in Sources */,
 				3E1A0125218AA963001B3CC1 /* NSTimer+timerBlock.m in Sources */,
 				3E1A010E218A9FE0001B3CC1 /* CTVideoPlayView.m in Sources */,
-				3E1A0120218AA659001B3CC1 /* CTTakePhotoHeadView.m in Sources */,
 				3E1A0101218A92E0001B3CC1 /* CTGroupModel.m in Sources */,
+				3E0CFD2A219036610045467C /* CTTakePhotoButtomView.m in Sources */,
 				3E1A010C218A9FE0001B3CC1 /* CTPlayerItem.m in Sources */,
 				3ECE8FE0207B68A70027CBC2 /* AppDelegate.m in Sources */,
+				3E0CFD29219036610045467C /* CTCutImageController.m in Sources */,
 				3E1A00E7218A92E0001B3CC1 /* UIButton+CTButtonManager.m in Sources */,
 				3E1A00EE218A92E0001B3CC1 /* CTPreviewScrollView.m in Sources */,
+				3E0CFD27219036610045467C /* CTBesselView.m in Sources */,
 				3E1A00E5218A92E0001B3CC1 /* CTPhotoManager.m in Sources */,
 				3E1A00EB218A92E0001B3CC1 /* AVURLAsset+LQFetchVideo.m in Sources */,
 				3E1A00F2218A92E0001B3CC1 /* CTPreviewImageView.m in Sources */,
